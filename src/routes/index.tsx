@@ -99,11 +99,6 @@ const STATS = [
   { n: "Local", l: "Los Andes y el Valle de Aconcagua", d: "Presencia local, cerca de tu operación." },
 ];
 
-const CHIPS = [
-  "Cara a cara, no un formulario",
-  "Impuestos al día con el SII",
-  "Un solo partner para tu empresa",
-];
 
 const NAV = [
   { href: "#inicio", label: "Inicio" },
