@@ -315,7 +315,9 @@ function Index() {
                     <p.icon className="size-5 text-brand-lime" />
                   </span>
                   <h3 className="mt-6 text-lg leading-snug font-bold text-brand-ink">{p.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-brand-ink/65">Nos aseguramos de que entiendas todo</p>
+                  <p className="mt-2.5 text-sm leading-relaxed text-brand-ink/65">
+                    {p.title === "Asesoría 1 a 1" ? "Nos aseguramos de que entiendas todo" : p.text}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -444,7 +446,7 @@ function Index() {
                   className="h-14 w-auto object-contain object-left"
                 />
                 <p className="mt-4 text-sm text-white/60">
-                  Asesoría contable, tributaria y estratégica en Los Andes, Valle de Aconcagua.
+                  Asesoría contable, tributaria y estratégica.
                 </p>
               </div>
               <nav aria-label="Pie de página">
