@@ -62,7 +62,7 @@ const SERVICIOS = [
   },
   {
     n: "03",
-    title: "Remuneraciones",
+    title: "Gestión de personas",
     icon: Users,
     featured: false,
     text: "Aplicamos la normativa laboral vigente para que enfrentes con tranquilidad el día a día de tu equipo: contratos y gente en regla, mejores relaciones laborales.",
@@ -93,9 +93,9 @@ const PILARES = [
 ];
 
 const STATS = [
-  { n: "+XX", l: "años de experiencia", d: "Trayectoria acompañando a empresas." },
-  { n: "+XXX", l: "empresas acompañadas", d: "Desde emprendedores hasta pymes consolidadas." },
-  { n: "100%", l: "atención personalizada", d: "Siempre hablas con quien conoce tu negocio." },
+  { n: "+XX", l: "Años de experiencia", d: "Trayectoria acompañando a empresas." },
+  { n: "+XXX", l: "Empresas acompañadas", d: "Desde emprendedores hasta empresas consolidadas." },
+  { n: "100%", l: "Atención personalizada", d: "Siempre hablas con quien conoce tu negocio." },
   { n: "Local", l: "Los Andes y el Valle de Aconcagua", d: "Presencia local, cerca de tu operación." },
 ];
 
@@ -141,7 +141,7 @@ function Index() {
                   <span className="text-brand-lime">crecer tu negocio</span>
                 </h1>
                 <p className="mt-7 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-                  Te acompañamos en cada decisión: contabilidad, impuestos, finanzas y personas.
+                  Te acompañamos en cada decisión: asesorías, contabilidad, impuestos, finanzas y personas.
                 </p>
                 <div className="mt-9 flex flex-wrap items-center gap-3">
                   <a
@@ -218,15 +218,15 @@ function Index() {
               <div className="mt-8 grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-end">
                 <Reveal>
                   <h2 className="text-3xl leading-[1.1] font-bold sm:text-4xl lg:text-[3.25rem]">
-                    Todo lo de tu empresa,
+                    Tu empresa
                     <br />
-                    en un solo partner
+                    <br />
+                    en buenas manos
                   </h2>
                 </Reveal>
                 <Reveal delay={100}>
                   <p className="text-sm leading-relaxed text-white/60">
-                    Nuestra especialidad es la asesoría tributaria, y la complementamos con la
-                    contabilidad y las personas de tu empresa.
+                    Complementamos nuestra especialidad en asesoría tributaria, con la contabilidad y la gestión de personas.
                   </p>
                 </Reveal>
               </div>
@@ -278,7 +278,7 @@ function Index() {
                           s.featured ? "text-brand-lime" : "text-white"
                         }`}
                       >
-                        Conversemos
+                        Quiero saber más
                         <span
                           className={`grid size-7 place-items-center rounded-full transition-transform group-hover:translate-x-1 ${
                             s.featured ? "bg-brand-lime/20" : "bg-white/10"
@@ -300,7 +300,11 @@ function Index() {
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
             <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3rem]">
-              Los números claros, las decisiones acompañadas
+              Nos sentamos contigo, entendemos tu negocio&nbsp;
+              <br />
+              y&nbsp;te acompañamos&nbsp;
+              <br />
+              en cada decisión
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -311,7 +315,9 @@ function Index() {
                     <p.icon className="size-5 text-brand-lime" />
                   </span>
                   <h3 className="mt-6 text-lg leading-snug font-bold text-brand-ink">{p.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-brand-ink/65">{p.text}</p>
+                  <p className="mt-2.5 text-sm leading-relaxed text-brand-ink/65">
+                    {p.title === "Asesoría 1 a 1" ? "Nos aseguramos de que entiendas todo" : p.text}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -331,9 +337,7 @@ function Index() {
                   Cowork Andino
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-ink/75 sm:text-lg">
-                  Si EGestión acompaña a las personas que trabajan, Cowork Andino les da además el
-                  lugar para hacerlo. Uno de los primeros coworks de la ciudad, hecho por alguien de
-                  la ciudad.
+                  Cowork Andino es una extensión de EGestión que le entrega a las personas un espacio para trabajar. Uno de los primeros coworks de la ciudad, hecho por alguien de la ciudad.
                 </p>
                 <a
                   href="#contacto"
@@ -368,10 +372,10 @@ function Index() {
             <Reveal>
               <div className="h-full rounded-[28px] border border-brand-ink/10 bg-white p-7 sm:p-10">
                 <h2 className="text-3xl leading-tight font-bold text-brand-ink sm:text-4xl">
-                  ¿Estás pensando en tu negocio? Partamos por un café.
+                  ¿Nos tomamos un café?
                 </h2>
                 <p className="mt-4 text-sm text-brand-ink/65">
-                  Déjanos tus datos y te respondemos a la brevedad. Sin compromiso, en simple.
+                  Déjanos tus datos y te respondemos a la brevedad.
                 </p>
                 <div className="mt-9">
                   <ContactForm />
@@ -442,7 +446,7 @@ function Index() {
                   className="h-14 w-auto object-contain object-left"
                 />
                 <p className="mt-4 text-sm text-white/60">
-                  Asesoría contable, tributaria y estratégica en Los Andes, Valle de Aconcagua.
+                  Asesoría contable, tributaria y estratégica.
                 </p>
               </div>
               <nav aria-label="Pie de página">
