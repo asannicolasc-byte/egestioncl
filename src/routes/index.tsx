@@ -96,7 +96,7 @@ const STATS = [
   { n: "+XX", l: "años de experiencia", d: "Trayectoria acompañando a empresas del valle." },
   { n: "+XXX", l: "empresas acompañadas", d: "Desde emprendedores hasta pymes consolidadas." },
   { n: "100%", l: "atención personalizada", d: "Siempre hablas con quien conoce tu negocio." },
-  { n: "Aconcagua", l: "Los Andes y el valle", d: "Presencia local, cerca de tu operación." },
+  { n: "Local", l: "Los Andes y el Valle de Aconcagua", d: "Presencia local, cerca de tu operación." },
 ];
 
 const CHIPS = [
