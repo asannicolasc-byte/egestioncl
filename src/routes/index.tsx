@@ -214,7 +214,7 @@ function Index() {
               <Reveal>
                 <Eyebrow tone="light">Servicios</Eyebrow>
               </Reveal>
-              <div className="mt-8 grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+              <div className="mt-8 flex flex-col gap-6">
                 <Reveal>
                   <h2 className="text-3xl leading-[1.1] font-bold sm:text-4xl lg:text-[3.25rem]">
                     Tu empresa
@@ -223,7 +223,7 @@ function Index() {
                   </h2>
                 </Reveal>
                 <Reveal delay={100}>
-                  <p className="text-sm leading-relaxed text-white/60">
+                  <p className="max-w-2xl text-sm leading-relaxed text-white/60">
                     Complementamos nuestra especialidad en asesoría tributaria, con la contabilidad y la gestión de personas.
                   </p>
                 </Reveal>
