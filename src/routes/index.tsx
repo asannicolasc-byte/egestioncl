@@ -224,7 +224,8 @@ function Index() {
                 </Reveal>
                 <Reveal delay={100}>
                   <p className="max-w-2xl text-sm leading-relaxed text-white/60">
-                    Complementamos nuestra especialidad en asesoría tributaria, con la contabilidad y la gestión de personas.
+                    Complementamos nuestra especialidad en asesoría tributaria,{" "}<br />
+                    con la contabilidad{" "}y la gestión de personas.
                   </p>
                 </Reveal>
               </div>
