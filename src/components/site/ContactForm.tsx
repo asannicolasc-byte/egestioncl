@@ -11,7 +11,7 @@ const schema = z.object({
 });
 
 const field =
-  "w-full rounded-2xl border border-brand-ink/15 bg-white px-4 py-3 text-sm text-brand-ink outline-none transition-colors placeholder:text-brand-ink/40 focus:border-brand-blue";
+  "w-full rounded-2xl border border-transparent bg-brand-soft px-4 py-3.5 text-sm text-brand-ink outline-none transition-colors placeholder:text-brand-ink/35 focus:border-brand-blue focus:bg-white";
 
 export function ContactForm() {
   const [sending, setSending] = useState(false);
