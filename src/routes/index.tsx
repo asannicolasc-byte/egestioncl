@@ -99,11 +99,6 @@ const STATS = [
   { n: "Local", l: "Los Andes y el Valle de Aconcagua", d: "Presencia local, cerca de tu operación." },
 ];
 
-const CHIPS = [
-  "Cara a cara, no un formulario",
-  "Impuestos al día con el SII",
-  "Un solo partner para tu empresa",
-];
 
 const NAV = [
   { href: "#inicio", label: "Inicio" },
@@ -169,18 +164,6 @@ function Index() {
                 </div>
               </Reveal>
 
-              <Reveal delay={160} className="mt-14">
-                <ul className="grid gap-2.5 sm:grid-cols-3">
-                  {CHIPS.map((c) => (
-                    <li
-                      key={c}
-                      className="rounded-2xl border border-white/15 bg-white/10 px-5 py-3.5 text-[13px] font-medium text-white/90 backdrop-blur"
-                    >
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
             </div>
           </div>
         </section>
