@@ -224,7 +224,7 @@ function Index() {
             </Reveal>
 
             {SERVICIOS_EXTRA.map((s, i) => (
-              <Reveal key={s.title} delay={i * 100} className="lg:col-span-3/2 lg:[grid-column:span_1.5]">
+              <Reveal key={s.title} delay={i * 100}>
                 <article className="flex h-full flex-col rounded-[20px] border border-brand-ink/10 bg-white p-8 transition-shadow hover:shadow-lg">
                   <span className="grid size-11 place-items-center rounded-full bg-brand-lime">
                     <s.icon className="size-5 text-brand-blue" />
