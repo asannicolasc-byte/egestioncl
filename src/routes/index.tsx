@@ -140,15 +140,13 @@ function Index() {
 
             <div className="relative mx-auto flex min-h-[620px] max-w-6xl flex-col justify-end px-5 pt-36 pb-8 sm:min-h-[680px] sm:px-8 md:pt-44 lg:min-h-[760px]">
               <Reveal className="max-w-3xl">
-                <Eyebrow tone="light">Asesoría contable y estratégica · Los Andes</Eyebrow>
+                <Eyebrow tone="light">ASESORÍA CONTABLE Y ESTRATÉGICA </Eyebrow>
                 <h1 className="mt-6 text-[2.5rem] leading-[1.02] font-bold text-white sm:text-6xl lg:text-7xl">
-                  El partner estratégico
-                  <br />
-                  que se sienta <span className="text-brand-lime">contigo</span>
+                  Queremos ver{" "}
+                  <span className="text-brand-lime">crecer tu negocio</span>
                 </h1>
                 <p className="mt-7 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-                  No te entregamos un balance y adiós. Entendemos tu negocio y te acompañamos en
-                  cada decisión: contabilidad, impuestos, finanzas y personas.
+                  Te acompañamos en cada decisión: contabilidad, impuestos, finanzas y personas.
                 </p>
                 <div className="mt-9 flex flex-wrap items-center gap-3">
                   <a
