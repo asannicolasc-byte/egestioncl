@@ -192,10 +192,10 @@ function Index() {
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-x-10 gap-y-10 border-t border-brand-ink/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-x-10 gap-y-10 border-t border-brand-ink/10 pt-10 text-center sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {STATS.map((s, i) => (
               <Reveal key={s.l} delay={i * 80}>
-                <div className="lg:border-l lg:border-brand-ink/10 lg:pl-6 lg:first:border-l-0 lg:first:pl-0">
+                <div className="max-w-[220px]">
                   <p className="font-display text-4xl font-bold text-brand-blue lg:text-5xl">
                     {s.n}
                   </p>
