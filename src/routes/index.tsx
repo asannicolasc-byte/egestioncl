@@ -138,7 +138,7 @@ function Index() {
                 <Eyebrow tone="light">ASESORÍA CONTABLE Y ESTRATÉGICA </Eyebrow>
                 <h1 className="mt-6 text-[2.5rem] leading-[1.02] font-bold text-white sm:text-6xl lg:text-7xl">
                   Queremos ver{" "}
-                  <span className="text-brand-lime">crecer tu negocio</span>
+                  <span className="block text-brand-lime">crecer tu negocio</span>
                 </h1>
                 <p className="mt-7 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
                   Te acompañamos en cada decisión: asesorías, contabilidad, impuestos, finanzas y personas.
