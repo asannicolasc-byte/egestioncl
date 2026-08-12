@@ -93,7 +93,7 @@ const PILARES = [
 ];
 
 const STATS = [
-  { n: "+XX", l: "años de experiencia", d: "Trayectoria acompañando a empresas del valle." },
+  { n: "+XX", l: "años de experiencia", d: "Trayectoria acompañando a empresas." },
   { n: "+XXX", l: "empresas acompañadas", d: "Desde emprendedores hasta pymes consolidadas." },
   { n: "100%", l: "atención personalizada", d: "Siempre hablas con quien conoce tu negocio." },
   { n: "Local", l: "Los Andes y el Valle de Aconcagua", d: "Presencia local, cerca de tu operación." },
@@ -176,17 +176,12 @@ function Index() {
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
             <Reveal>
               <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
-                Experiencia de contador,{" "}
-                <span className="text-brand-ink/35">
-                  trato de socio. Vamos a tu local, entendemos tu negocio y recién ahí hablamos de
-                  números.
-                </span>
+                Somos un equipo de profesionales dedicados a la contabilidad y gestión de empresas.
               </h2>
             </Reveal>
             <Reveal delay={120}>
               <p className="text-base leading-relaxed text-brand-ink/70">
-                Te explicamos qué significa cada número y qué hacer con él. Nada de informes que
-                nadie lee.
+                Te explicamos qué significa cada número y qué hacer con él.{" "}
               </p>
               <a
                 href="#servicios"
