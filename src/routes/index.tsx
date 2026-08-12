@@ -177,7 +177,7 @@ function Index() {
             <Reveal>
               <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
                 Somos un equipo de profesionales dedicados a{" "}
-                <span className="text-brand-lime">contabilidad y gestión de empresas</span>
+                <span className="text-brand-blue">contabilidad y gestión de empresas</span>
               </h2>
             </Reveal>
             <Reveal delay={120}>
