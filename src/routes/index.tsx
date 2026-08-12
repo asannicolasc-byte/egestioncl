@@ -298,7 +298,7 @@ function Index() {
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
             <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3rem]">
-              Nos sentamos contigo, entendemos tu negocio&nbsp;
+              Entendemos tu negocio&nbsp;
               <br />
               y&nbsp;te acompañamos&nbsp;
               <br />
