@@ -48,14 +48,14 @@ export const Route = createFileRoute("/")({
 const SERVICIOS = [
   {
     n: "01",
-    title: "Consultoría y asesoría tributaria",
+    title: "Asesoría tributaria ",
     icon: ShieldCheck,
     featured: true,
     text: "Planificamos tus impuestos a partir del análisis de tus obligaciones y beneficios tributarios, con visión estratégica: que pagues lo justo, sin sorpresas con el SII, y que tus impuestos jueguen a favor del crecimiento de tu negocio.",
   },
   {
     n: "02",
-    title: "Contabilidad",
+    title: "Asesoría de contabilidad",
     icon: Calculator,
     featured: false,
     text: "Registramos tu información según las normas vigentes y la convertimos en informes claros que reflejan la realidad de tu empresa, para decidir con datos reales.",
@@ -73,12 +73,12 @@ const PILARES = [
   {
     icon: ShieldCheck,
     title: "Asesoría tributaria experta",
-    text: "Impuestos al día, sin sorpresas y pagando lo justo.",
+    text: "Impuestos al día, beneficiando siempre tu negocio.",
   },
   {
     icon: Handshake,
     title: "Asesoría 1 a 1",
-    text: "Tu empresa, en una conversación. Cara a cara, no un formulario.",
+    text: "Nos aseguramos de explicarte todo de forma personalizada.",
   },
   {
     icon: Calculator,
@@ -136,11 +136,11 @@ function Index() {
               <Reveal className="max-w-3xl">
                 <Eyebrow tone="light">ASESORÍA CONTABLE Y ESTRATÉGICA </Eyebrow>
                 <h1 className="mt-6 text-[2.5rem] leading-[1.02] font-bold text-white sm:text-6xl lg:text-7xl">
-                  Queremos ver{" "}
+                  Queremos ver{"\n"}
                   <span className="block text-brand-lime">crecer tu negocio</span>
                 </h1>
                 <p className="mt-7 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-                  Te acompañamos en cada decisión: asesorías, contabilidad, impuestos, finanzas y personas.
+                  Te acompañamos en cada decisión: Asesoría contable, tributaria y estratégica, finanzas y gestión de personas.
                 </p>
                 <div className="mt-9 flex flex-wrap items-center gap-3">
                   <a
@@ -175,8 +175,8 @@ function Index() {
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
             <Reveal>
               <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
-                Somos un equipo de profesionales dedicados a{" "}
-                <span className="text-brand-blue">contabilidad y gestión de empresas</span>
+                Somos un equipo de profesionales expertos en{"\n"}
+                <span className="text-brand-blue">asesoría contable, tributaria y estratégica</span>
               </h2>
             </Reveal>
             <Reveal delay={120}>
@@ -314,7 +314,7 @@ function Index() {
                   </span>
                   <h3 className="mt-6 text-lg leading-snug font-bold text-brand-ink">{p.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-brand-ink/65">
-                    {p.title === "Asesoría 1 a 1" ? "Nos aseguramos de que entiendas todo" : p.text}
+                    {p.text}
                   </p>
                 </div>
               </Reveal>
