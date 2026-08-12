@@ -176,7 +176,8 @@ function Index() {
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
             <Reveal>
               <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
-                Somos un equipo de profesionales dedicados a la contabilidad y gestión de empresas.
+                Somos un equipo de profesionales dedicados a la{" "}
+                <span className="text-brand-lime">contabilidad y gestión de empresas</span>.
               </h2>
             </Reveal>
             <Reveal delay={120}>
