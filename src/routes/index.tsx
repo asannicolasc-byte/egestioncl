@@ -73,12 +73,12 @@ const PILARES = [
   {
     icon: ShieldCheck,
     title: "Asesoría tributaria experta",
-    text: "Impuestos al día, sin sorpresas y pagando lo justo.",
+    text: "Impuestos al día, beneficiando siempre tu negocio.",
   },
   {
     icon: Handshake,
     title: "Asesoría 1 a 1",
-    text: "Tu empresa, en una conversación. Cara a cara, no un formulario.",
+    text: "Nos aseguramos de explicarte todo de forma personalizada.",
   },
   {
     icon: Calculator,
