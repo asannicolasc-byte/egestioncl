@@ -200,8 +200,8 @@ function Index() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            <Reveal className="lg:col-span-3">
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <Reveal className="lg:col-span-2">
               <article className="rounded-[20px] bg-brand-blue p-8 text-white shadow-xl md:p-12">
                 <span className="inline-flex rounded-full bg-brand-lime px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-blue uppercase">
                   Nuestra especialidad
