@@ -220,7 +220,6 @@ function Index() {
                   <h2 className="text-3xl leading-[1.1] font-bold sm:text-4xl lg:text-[3.25rem]">
                     Tu empresa
                     <br />
-                    <br />
                     en buenas manos
                   </h2>
                 </Reveal>
