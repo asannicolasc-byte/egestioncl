@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import egBlue from "@/assets/eg-blue.png.asset.json";
+import logo from "@/assets/eg-logo-web.png.asset.json";
 
 const NAV = [
   { href: "#inicio", label: "Inicio" },
