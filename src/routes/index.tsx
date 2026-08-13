@@ -321,7 +321,7 @@ function Index() {
                   </h2>
                 </Reveal>
                 <Reveal delay={100}>
-                  <p className="max-w-3xl text-base leading-relaxed text-white/60">
+                  <p className="max-w-3xl text-base leading-relaxed whitespace-nowrap text-white/60">
                     Complementamos nuestra especialidad en asesoría tributaria, con la contabilidad y la gestión de personas.
                   </p>
                 </Reveal>
