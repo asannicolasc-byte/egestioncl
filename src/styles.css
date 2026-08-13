@@ -218,8 +218,7 @@
   --tab: 92px;
   mask:
     radial-gradient(circle var(--tab) at 100% 0, transparent 99%, #000 100%);
-  -webkit-mask:
-    radial-gradient(circle var(--tab) at 100% 0, transparent 99%, #000 100%);
+
 
 }
 
