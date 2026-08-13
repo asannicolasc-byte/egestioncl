@@ -201,8 +201,8 @@ function Index() {
                   />
                 </div>
               </Reveal>
-              <Reveal delay={220} className="grid gap-4">
-                <div className="flex h-full flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white">
+              <Reveal delay={220} className="grid h-full gap-4">
+                <div className="flex flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white">
                   <span className="grid size-11 place-items-center rounded-2xl bg-brand-lime">
                     <ShieldCheck className="size-5 text-brand-blue" />
                   </span>
