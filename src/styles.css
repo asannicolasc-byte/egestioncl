@@ -63,19 +63,23 @@
   --color-brand-lime: var(--brand-lime);
   --color-brand-ink: var(--brand-ink);
   --color-brand-soft: var(--brand-soft);
+  --color-brand-mist: var(--brand-mist);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
+
 }
 
 :root {
   --radius: 1.125rem;
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --brand-blue: oklch(0.4989 0.26 263.55);
-  --brand-lime: oklch(0.9033 0.2057 120.58);
-  --brand-ink: oklch(0.1448 0 90);
-  --brand-soft: oklch(0.9729 0.0029 264.54);
+  --brand-blue: oklch(0.5084 0.2679 265.76);
+  --brand-lime: oklch(0.9033 0.2061 120.56);
+  --brand-ink: oklch(0.2901 0.0478 276.32);
+  --brand-soft: oklch(0.909 0.0178 279.04);
+  --brand-mist: oklch(0.9729 0.0029 264.54);
   --background: oklch(1 0 0);
+
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
@@ -168,8 +172,8 @@
 
 @utility reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @utility reveal-in {
@@ -177,6 +181,53 @@
   transform: none;
 }
 
+/* Elevación suave en tarjetas y botones */
+@utility lift {
+  transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease, border-color 300ms ease;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px -22px color-mix(in oklab, var(--brand-ink) 55%, transparent);
+  }
+}
+
+/* Subrayado animado del navbar */
+@utility nav-underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.3rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms ease;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Esquina recortada estilo squircle/tab (con esquinas redondeadas reales) */
+@utility tab-corner {
+  border-radius: 36px;
+  --tab: 92px;
+  mask:
+    radial-gradient(circle var(--tab) at 100% 0, transparent 99%, #000 100%);
+
+
+}
+
+@utility blob {
+  border-radius: 62% 38% 46% 54% / 54% 44% 56% 46%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .lift:hover { transform: none; }
 }
+
