@@ -22,7 +22,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-2 sm:px-5 sm:pt-3">
       <div
         className={`mx-auto max-w-6xl rounded-[28px] transition-all duration-300 ${
           scrolled
@@ -30,7 +30,7 @@ export function Header() {
             : "border border-transparent bg-white/55 backdrop-blur-md"
         }`}
       >
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-2.5 sm:px-4 lg:flex lg:justify-between">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-1.5 sm:px-4 lg:flex lg:justify-between">
           <a href="#inicio" className="flex min-w-0 items-center" aria-label="EGestión, inicio">
             <img
               src={logo.url}
