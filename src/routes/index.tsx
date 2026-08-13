@@ -17,7 +17,7 @@ import { Eyebrow } from "@/components/site/Eyebrow";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/site/Counter";
-import heroImg from "@/assets/hero-reunion.jpg";
+import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
 import coworkImg from "@/assets/cowork-andino.jpg.asset.json";
 import cafeImg from "@/assets/equipo-cafe.jpg";
 import valleImg from "@/assets/valle-andes.jpg";
@@ -193,7 +193,7 @@ function Index() {
               <Reveal delay={120}>
                 <div className="tab-corner relative overflow-hidden bg-brand-soft">
                   <img
-                    src={heroImg}
+                    src={heroImg.url}
                     alt="Reunión de asesoría entre el equipo de EGestión y un cliente"
                     width={1600}
                     height={1104}
