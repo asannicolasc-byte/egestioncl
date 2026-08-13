@@ -212,10 +212,15 @@
   }
 }
 
-/* Esquina recortada estilo squircle/tab */
+/* Esquina recortada estilo squircle/tab (con esquinas redondeadas reales) */
 @utility tab-corner {
-  border-radius: 32px;
-  clip-path: polygon(0 0, calc(100% - 64px) 0, 100% 64px, 100% 100%, 0 100%);
+  border-radius: 36px;
+  --tab: 92px;
+  mask:
+    radial-gradient(circle var(--tab) at 100% 0, transparent 99%, #000 100%);
+  -webkit-mask:
+    radial-gradient(circle var(--tab) at 100% 0, transparent 99%, #000 100%);
+
 }
 
 @utility blob {
