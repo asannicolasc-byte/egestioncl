@@ -235,22 +235,22 @@ function Index() {
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
-          <div className="mt-8 grid gap-10">
+          <div className="mt-8 grid">
             <Reveal>
-              <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
+              <h2 className="mb-4 text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
                 <span className="text-brand-ink">Somos un equipo de expertos en</span>
                 <span className="block text-brand-blue">asesoría contable, tributaria</span>
                 <span className="block text-brand-blue">y estratégica</span>
               </h2>
             </Reveal>
             <Reveal delay={120}>
-              <p className="my-4 max-w-3xl text-base leading-relaxed text-brand-ink/70">
+              <p className="mt-0 max-w-3xl text-base leading-relaxed text-brand-ink/70">
                 Te explicamos qué significa cada número y qué hacer con él.{" "}
               </p>
             </Reveal>
           </div>
 
-          <div className="mt-14 grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+          <div className="mt-8 grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
             <Reveal>
               <div className="group relative h-full max-h-[420px] w-full overflow-hidden rounded-[32px]">
                 <img
