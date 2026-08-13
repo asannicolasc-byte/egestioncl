@@ -18,7 +18,7 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion.jpg";
-import coworkImg from "@/assets/cowork-andino.jpg";
+import coworkImg from "@/assets/cowork-andino.jpg.asset.json";
 import cafeImg from "@/assets/equipo-cafe.jpg";
 import valleImg from "@/assets/valle-andes.jpg";
 import egLime from "@/assets/eg-lime.png.asset.json";
@@ -448,7 +448,7 @@ function Index() {
               <Reveal delay={140}>
                 <div className="tab-corner overflow-hidden bg-white/40">
                   <img
-                    src={coworkImg}
+                    src={coworkImg.url}
                     alt="Interior del Cowork Andino en Los Andes"
                     width={1408}
                     height={1056}
