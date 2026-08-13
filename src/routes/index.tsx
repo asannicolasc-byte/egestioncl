@@ -316,10 +316,8 @@ function Index() {
               </Reveal>
               <div className="mt-8 flex flex-col gap-6">
                 <Reveal>
-                  <h2 className="text-3xl leading-[1.1] font-bold sm:text-4xl lg:text-[3.25rem]">
-                    Tu empresa
-                    <br />
-                    en buenas manos
+                  <h2 className="text-3xl leading-[1.1] font-bold sm:text-4xl lg:text-[3.75rem]">
+                    Tu empresa en buenas manos
                   </h2>
                 </Reveal>
                 <Reveal delay={100}>
