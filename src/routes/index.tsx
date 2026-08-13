@@ -19,7 +19,7 @@ import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
 import coworkImg from "@/assets/cowork-andino.jpg.asset.json";
-import cafeImg from "@/assets/equipo-cafe.jpg";
+import reneImg from "@/assets/rene-ponce.png.asset.json";
 import valleImg from "@/assets/valle-andes.jpg";
 import egLime from "@/assets/eg-lime.png.asset.json";
 import logoVideo from "@/assets/egestion-logo-animado.mp4.asset.json";
@@ -251,14 +251,32 @@ function Index() {
 
           <div className="mt-14 grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
             <Reveal>
-              <img
-                src={cafeImg}
-                alt="Equipo de EGestión conversando con un cliente"
-                width={1200}
-                height={1200}
-                loading="lazy"
-                className="h-full max-h-[420px] w-full rounded-[32px] object-cover"
-              />
+              <div className="group relative h-full max-h-[420px] w-full overflow-hidden rounded-[32px]">
+                <img
+                  src={reneImg.url}
+                  alt="René Ponce, fundador de EGestión"
+                  width={1200}
+                  height={1200}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
+                />
+                {/* Overlay desktop: aparece al hacer hover */}
+                <div className="absolute inset-x-0 bottom-0 hidden h-[55%] translate-y-full flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-6 transition-transform duration-300 ease-out group-hover:translate-y-0 lg:flex">
+                  <h3 className="text-lg font-bold text-white">René Ponce</h3>
+                  <p className="text-sm font-semibold text-brand-lime">Fundador de EGestión</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/90">
+                    Tu empresa en buenas manos, las de alguien que conoce tu negocio.
+                  </p>
+                </div>
+                {/* Overlay móvil: siempre visible compacto */}
+                <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-4 lg:hidden">
+                  <h3 className="text-base font-bold text-white">René Ponce</h3>
+                  <p className="text-xs font-semibold text-brand-lime">Fundador de EGestión</p>
+                  <p className="mt-1 text-xs leading-relaxed text-white/90">
+                    Tu empresa en buenas manos, las de alguien que conoce tu negocio.
+                  </p>
+                </div>
+              </div>
             </Reveal>
             <div className="grid gap-4 sm:grid-cols-2">
               {STATS.map((s, i) => (
