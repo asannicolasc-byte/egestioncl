@@ -228,7 +228,7 @@ function Index() {
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
-          <div className="mt-8 grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
+          <div className="mt-8 grid gap-10">
             <Reveal>
               <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
                 Somos un equipo de profesionales expertos en{"\n"}
@@ -236,16 +236,9 @@ function Index() {
               </h2>
             </Reveal>
             <Reveal delay={120}>
-              <p className="text-base leading-relaxed text-brand-ink/70">
+              <p className="max-w-3xl text-base leading-relaxed text-brand-ink/70">
                 Te explicamos qué significa cada número y qué hacer con él.{" "}
               </p>
-              <a
-                href="#servicios"
-                className="group mt-6 inline-flex items-center gap-2 rounded-full bg-brand-soft px-5 py-3 text-sm font-semibold text-brand-blue transition-all duration-300 hover:-translate-y-1 hover:bg-brand-blue hover:text-white"
-              >
-                Ver nuestros servicios
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
             </Reveal>
           </div>
 
