@@ -472,15 +472,40 @@ function Index() {
           </Reveal>
           <div className="mt-8 grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <Reveal>
-              <div className="h-full rounded-[32px] border border-brand-soft bg-white p-7 shadow-[0_28px_60px_-45px_rgba(37,41,67,0.6)] sm:p-10">
+              <div className="flex h-full flex-col rounded-[32px] border border-brand-soft bg-white p-7 shadow-[0_28px_60px_-45px_rgba(37,41,67,0.6)] sm:p-10">
                 <h2 className="text-3xl leading-tight font-bold text-brand-ink sm:text-4xl">
                   ¿Nos tomamos un café?
                 </h2>
                 <p className="mt-4 text-sm text-brand-ink/65">
-                  Déjanos tus datos y te respondemos a la brevedad.
+                  Escríbenos directo y coordinamos.
                 </p>
-                <div className="mt-9">
-                  <ContactForm />
+                <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={WA_WITH_MESSAGE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex flex-1 items-center justify-center gap-2.5 rounded-full bg-brand-lime px-6 py-4 text-sm font-semibold text-brand-ink transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-18px_rgba(37,41,67,0.6)]"
+                  >
+                    <WhatsAppIcon className="size-5" />
+                    Conversemos por WhatsApp
+                  </a>
+                  <a
+                    href={`mailto:${EMAIL}?subject=Hola%20Ren%C3%A9%2C%20me%20gustar%C3%ADa%20que%20nos%20tom%C3%A1ramos%20un%20caf%C3%A9%20para%20conversar%20de%20mi%20negocio`}
+                    className="group inline-flex flex-1 items-center justify-center gap-2.5 rounded-full bg-brand-blue px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-18px_rgba(37,41,67,0.7)]"
+                  >
+                    <Mail className="size-5" />
+                    Escríbenos un correo
+                  </a>
+                </div>
+                <div className="relative mt-8 min-h-[180px] flex-1 overflow-hidden rounded-[32px]">
+                  <img
+                    src={peopleCafeImg.url}
+                    alt="Reunión en un café para conversar sobre tu negocio"
+                    width={1600}
+                    height={1067}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
                 </div>
               </div>
             </Reveal>
@@ -498,7 +523,7 @@ function Index() {
                       <span className="min-w-0">
                         <span className="block font-semibold">WhatsApp</span>
                         <a href={WHATSAPP} className="text-white/75 hover:text-brand-lime">
-                          +56 9 XXXX XXXX
+                          +56 9 6206 0320
                         </a>
                       </span>
                     </li>
