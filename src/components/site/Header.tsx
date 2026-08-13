@@ -34,7 +34,7 @@ export function Header() {
           <a href="#inicio" className="flex min-w-0 items-center" aria-label="EGestión, inicio">
             <img
               src={logo.url}
-              alt="Equipo EGestión revisando indicadores financieros"
+              alt="EGestión"
               width={320}
               height={60}
               className="h-7 w-auto sm:h-8"
