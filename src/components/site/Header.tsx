@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import logo from "@/assets/eg-logo-web.png.asset.json";
+import logo from "@/assets/four-people-financial.jpeg.asset.json";
 
 const NAV = [
   { href: "#inicio", label: "Inicio" },
@@ -34,7 +34,7 @@ export function Header() {
           <a href="#inicio" className="flex min-w-0 items-center" aria-label="EGestión, inicio">
             <img
               src={logo.url}
-              alt="EGestión"
+              alt="Equipo EGestión revisando indicadores financieros"
               width={320}
               height={60}
               className="h-7 w-auto sm:h-8"
