@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
+import { useServerFn } from "@tanstack/react-start";
+import { sendContactMessage } from "@/lib/contact.functions";
 
 const schema = z.object({
   nombre: z.string().trim().min(1, "Cuéntanos tu nombre").max(100),
@@ -15,6 +17,7 @@ const field =
 
 export function ContactForm() {
   const [sending, setSending] = useState(false);
+  const send = useServerFn(sendContactMessage);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,12 +29,19 @@ export function ContactForm() {
       return;
     }
     setSending(true);
-    // TODO: conectar a un endpoint real (Formspree, email o Lovable Cloud).
-    console.log("Formulario EGestión:", parsed.data);
-    await new Promise((r) => setTimeout(r, 500));
-    setSending(false);
-    form.reset();
-    toast.success("¡Gracias! Te contactamos muy pronto.");
+    try {
+      const result = await send({ data: parsed.data });
+      if (!result.sent) {
+        toast.error("No pudimos enviar tu mensaje. Inténtalo nuevamente.");
+        return;
+      }
+      form.reset();
+      toast.success("¡Gracias! Te contactamos muy pronto.");
+    } catch {
+      toast.error("No pudimos enviar tu mensaje. Inténtalo nuevamente.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
