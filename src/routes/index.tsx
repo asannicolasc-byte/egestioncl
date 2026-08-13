@@ -16,9 +16,13 @@ import { Header } from "@/components/site/Header";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/Reveal";
+import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion.jpg";
 import coworkImg from "@/assets/cowork-andino.jpg";
-import logoWhiteGreen from "@/assets/logo_5.png.asset.json";
+import cafeImg from "@/assets/equipo-cafe.jpg";
+import valleImg from "@/assets/valle-andes.jpg";
+import egLime from "@/assets/eg-lime.png.asset.json";
+import logoVideo from "@/assets/egestion-logo-animado.mp4.asset.json";
 
 const WHATSAPP = "https://wa.me/56900000000"; // PLACEHOLDER: reemplazar por el número real
 const EMAIL = "rene.ponce@egestion.cl"; // PLACEHOLDER: reemplazar por el correo real
@@ -50,21 +54,21 @@ const SERVICIOS = [
     n: "01",
     title: "Asesoría tributaria ",
     icon: ShieldCheck,
-    featured: true,
+    tone: "blue" as const,
     text: "Planificamos tus impuestos a partir del análisis de tus obligaciones y beneficios tributarios, con visión estratégica: que pagues lo justo, sin sorpresas con el SII, y que tus impuestos jueguen a favor del crecimiento de tu negocio.",
   },
   {
     n: "02",
     title: "Asesoría de contabilidad",
     icon: Calculator,
-    featured: false,
+    tone: "lime" as const,
     text: "Registramos tu información según las normas vigentes y la convertimos en informes claros que reflejan la realidad de tu empresa, para decidir con datos reales.",
   },
   {
     n: "03",
     title: "Gestión de personas",
     icon: Users,
-    featured: false,
+    tone: "soft" as const,
     text: "Aplicamos la normativa laboral vigente para que enfrentes con tranquilidad el día a día de tu equipo: contratos y gente en regla, mejores relaciones laborales.",
   },
 ];
@@ -74,21 +78,25 @@ const PILARES = [
     icon: ShieldCheck,
     title: "Asesoría tributaria experta",
     text: "Impuestos al día, beneficiando siempre tu negocio.",
+    tone: "blue" as const,
   },
   {
     icon: Handshake,
     title: "Asesoría 1 a 1",
     text: "Nos aseguramos de explicarte todo de forma personalizada.",
+    tone: "soft" as const,
   },
   {
     icon: Calculator,
     title: "Un solo partner",
     text: "Contabilidad, impuestos, finanzas, contratos y personas.",
+    tone: "lime" as const,
   },
   {
     icon: TrendingUp,
     title: "De la idea al crecimiento",
     text: "Acompañamos al que parte y al que quiere crecer.",
+    tone: "white" as const,
   },
 ];
 
@@ -98,7 +106,6 @@ const STATS = [
   { n: "100%", l: "Atención personalizada", d: "Siempre hablas con quien conoce tu negocio." },
 ];
 
-
 const NAV = [
   { href: "#inicio", label: "Inicio" },
   { href: "#nosotros", label: "Nosotros" },
@@ -107,6 +114,29 @@ const NAV = [
   { href: "#contacto", label: "Contacto" },
 ];
 
+const CARD_TONES = {
+  blue: "bg-brand-blue text-white",
+  lime: "bg-brand-lime text-brand-ink",
+  soft: "bg-brand-soft text-brand-ink",
+  white: "bg-white text-brand-ink border border-brand-soft",
+};
+
+function ArrowBadge({ tone }: { tone: keyof typeof CARD_TONES }) {
+  const styles = {
+    blue: "bg-brand-lime text-brand-blue",
+    lime: "bg-brand-ink text-brand-lime",
+    soft: "bg-brand-blue text-brand-lime",
+    white: "bg-brand-soft text-brand-blue",
+  };
+  return (
+    <span
+      className={`grid size-10 shrink-0 place-items-center rounded-full transition-transform duration-300 group-hover:rotate-45 ${styles[tone]}`}
+    >
+      <ArrowUpRight className="size-4" />
+    </span>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-white">
@@ -114,55 +144,81 @@ function Index() {
 
       <main>
         {/* HERO */}
-        <section id="inicio" className="px-3 pt-3 sm:px-5 sm:pt-5">
-          <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[28px] bg-brand-ink">
-            <img
-              src={heroImg}
-              alt="Reunión de asesoría entre el equipo de EGestión y un cliente"
-              width={1600}
-              height={1000}
-              className="absolute inset-0 size-full object-cover opacity-70"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-ink/95 via-brand-ink/75 to-brand-ink/25" />
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "radial-gradient(90% 80% at 0% 100%, color-mix(in oklab, var(--brand-blue) 55%, transparent), transparent 60%)",
-              }}
-            />
+        <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
+          <div
+            aria-hidden
+            className="blob pointer-events-none absolute -top-32 -left-24 size-[28rem] bg-brand-blue/10 blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="blob pointer-events-none absolute -top-10 right-0 size-[22rem] bg-brand-lime/25 blur-3xl"
+          />
 
-            <div className="relative mx-auto flex min-h-[620px] max-w-6xl flex-col justify-end px-5 pt-36 pb-8 sm:min-h-[680px] sm:px-8 md:pt-44 lg:min-h-[760px]">
-              <Reveal className="max-w-3xl">
-                <Eyebrow tone="light">ASESORÍA CONTABLE Y ESTRATÉGICA </Eyebrow>
-                <h1 className="mt-6 text-[2.5rem] leading-[1.02] font-bold text-white sm:text-6xl lg:text-7xl">
-                  Queremos ver{"\n"}
-                  <span className="block text-brand-lime">crecer tu negocio</span>
-                </h1>
-                <p className="mt-7 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-                  Te acompañamos en cada decisión: Asesoría contable, tributaria y estratégica, finanzas y gestión de personas.
-                </p>
-                <div className="mt-9 flex flex-wrap items-center gap-3">
-                  <a
-                    href="#contacto"
-                    className="group inline-flex items-center gap-2 rounded-full bg-brand-lime py-2 pr-2 pl-6 text-sm font-semibold text-brand-blue transition-transform hover:scale-[1.03]"
-                  >
-                    Agenda una reunión
-                    <span className="grid size-9 place-items-center rounded-full bg-brand-blue">
-                      <ArrowUpRight className="size-4 text-brand-lime transition-transform group-hover:rotate-45" />
-                    </span>
-                  </a>
-                  <a
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/20"
-                  >
-                    Conversemos por WhatsApp
-                  </a>
+          <div className="relative mx-auto max-w-6xl">
+            <Reveal className="max-w-4xl">
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-lime px-4 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-brand-ink uppercase">
+                <span className="size-2 rounded-full bg-brand-blue" />
+                ASESORÍA CONTABLE Y ESTRATÉGICA{" "}
+              </span>
+              <h1 className="mt-7 text-[2.75rem] leading-[0.98] font-bold text-brand-ink sm:text-6xl lg:text-[5rem]">
+                Queremos ver{"\n"}
+                <span className="block text-brand-blue">crecer tu negocio</span>
+              </h1>
+              <p className="mt-7 max-w-xl text-base leading-relaxed text-brand-ink/65 sm:text-lg">
+                Te acompañamos en cada decisión: Asesoría contable, tributaria y estratégica,
+                finanzas y gestión de personas.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <a
+                  href="#contacto"
+                  className="group inline-flex items-center gap-2 rounded-full bg-brand-lime py-2 pr-2 pl-6 text-sm font-semibold text-brand-ink transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-18px_rgba(37,41,67,0.6)]"
+                >
+                  Agenda una reunión
+                  <span className="grid size-9 place-items-center rounded-full bg-brand-ink">
+                    <ArrowUpRight className="size-4 text-brand-lime transition-transform duration-300 group-hover:rotate-45" />
+                  </span>
+                </a>
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-brand-ink/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-blue hover:text-brand-blue"
+                >
+                  Conversemos por WhatsApp
+                </a>
+              </div>
+            </Reveal>
+
+            <div className="mt-12 grid gap-4 lg:grid-cols-[1.55fr_0.45fr]">
+              <Reveal delay={120}>
+                <div className="tab-corner relative overflow-hidden bg-brand-soft">
+                  <img
+                    src={heroImg}
+                    alt="Reunión de asesoría entre el equipo de EGestión y un cliente"
+                    width={1600}
+                    height={1104}
+                    className="h-[280px] w-full object-cover sm:h-[420px] lg:h-[460px]"
+                  />
                 </div>
               </Reveal>
-
+              <Reveal delay={220} className="grid gap-4">
+                <div className="flex h-full flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white">
+                  <span className="grid size-11 place-items-center rounded-2xl bg-brand-lime">
+                    <ShieldCheck className="size-5 text-brand-blue" />
+                  </span>
+                  <p className="mt-8 font-display text-2xl leading-tight font-bold">
+                    Tu empresa en buenas manos.
+                  </p>
+                </div>
+                <img
+                  src={valleImg}
+                  alt="Valle de Aconcagua, Los Andes, Chile"
+                  width={1200}
+                  height={900}
+                  loading="lazy"
+                  className="hidden h-40 w-full rounded-[32px] object-cover lg:block"
+                />
+              </Reveal>
             </div>
           </div>
         </section>
@@ -185,31 +241,63 @@ function Index() {
               </p>
               <a
                 href="#servicios"
-                className="mt-6 inline-flex items-center gap-2 border-b border-brand-blue/30 pb-1 text-sm font-semibold text-brand-blue transition-colors hover:border-brand-blue"
+                className="group mt-6 inline-flex items-center gap-2 rounded-full bg-brand-soft px-5 py-3 text-sm font-semibold text-brand-blue transition-all duration-300 hover:-translate-y-1 hover:bg-brand-blue hover:text-white"
               >
-                Ver nuestros servicios <ArrowRight className="size-4" />
+                Ver nuestros servicios
+                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-x-10 gap-y-10 border-t border-brand-ink/10 pt-10 text-center sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
-            {STATS.map((s, i) => (
-              <Reveal key={s.l} delay={i * 80}>
-                <div className="max-w-[220px]">
-                  <p className="font-display text-4xl font-bold text-brand-blue lg:text-5xl">
-                    {s.n}
-                  </p>
-                  <p className="mt-3 text-sm font-semibold text-brand-ink">{s.l}</p>
-                  <p className="mt-1.5 text-[13px] leading-relaxed text-brand-ink/55">{s.d}</p>
-                </div>
-              </Reveal>
-            ))}
+          <div className="mt-14 grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+            <Reveal>
+              <img
+                src={cafeImg}
+                alt="Equipo de EGestión conversando con un cliente"
+                width={1200}
+                height={1200}
+                loading="lazy"
+                className="h-full max-h-[420px] w-full rounded-[32px] object-cover"
+              />
+            </Reveal>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {STATS.map((s, i) => (
+                <Reveal
+                  key={s.l}
+                  delay={i * 110}
+                  className={i === 0 ? "sm:col-span-2" : ""}
+                >
+                  <div
+                    className={`lift h-full rounded-[32px] p-7 ${
+                      i === 0
+                        ? "bg-brand-lime text-brand-ink"
+                        : i === 1
+                          ? "bg-brand-soft text-brand-ink"
+                          : "bg-brand-blue text-white"
+                    }`}
+                  >
+                    <Counter
+                      value={s.n}
+                      className="font-display text-4xl font-bold lg:text-5xl"
+                    />
+                    <p className="mt-3 text-sm font-semibold">{s.l}</p>
+                    <p
+                      className={`mt-1.5 text-[13px] leading-relaxed ${
+                        i === 2 ? "text-white/70" : "text-brand-ink/60"
+                      }`}
+                    >
+                      {s.d}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* SERVICIOS */}
         <section id="servicios" className="px-3 sm:px-5">
-          <div className="mx-auto max-w-[1400px] rounded-[28px] bg-brand-ink px-5 py-20 text-white sm:px-8 md:py-28">
+          <div className="mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-20 text-white sm:px-8 md:py-28">
             <div className="mx-auto max-w-6xl">
               <Reveal>
                 <Eyebrow tone="light">Servicios</Eyebrow>
@@ -224,68 +312,63 @@ function Index() {
                 </Reveal>
                 <Reveal delay={100}>
                   <p className="max-w-2xl text-sm leading-relaxed text-white/60">
-                    Complementamos nuestra especialidad en asesoría tributaria, con la contabilidad{" "}<br />
-                    y la gestión de personas.
+                    Complementamos nuestra especialidad en asesoría tributaria, con la contabilidad{" "}
+                    <br />y la gestión de personas.
                   </p>
                 </Reveal>
               </div>
 
               <div className="mt-14 grid gap-4 lg:grid-cols-3">
                 {SERVICIOS.map((s, i) => (
-                  <Reveal key={s.title} delay={i * 90} className={s.featured ? "lg:row-span-1" : ""}>
+                  <Reveal key={s.title} delay={i * 120}>
                     <article
-                      className={`group flex h-full flex-col rounded-[24px] p-7 transition-colors md:p-9 ${
-                        s.featured
-                          ? "bg-brand-blue text-white lg:col-span-1"
-                          : "border border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"
-                      }`}
+                      className={`lift group flex h-full flex-col rounded-[32px] p-7 md:p-9 ${CARD_TONES[s.tone]}`}
                     >
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-start justify-between gap-4">
                         <span
                           className={`grid size-11 place-items-center rounded-2xl ${
-                            s.featured ? "bg-brand-lime" : "bg-white/10"
+                            s.tone === "blue"
+                              ? "bg-brand-lime text-brand-blue"
+                              : s.tone === "lime"
+                                ? "bg-brand-ink text-brand-lime"
+                                : "bg-brand-blue text-brand-lime"
                           }`}
                         >
-                          <s.icon
-                            className={`size-5 ${s.featured ? "text-brand-blue" : "text-brand-lime"}`}
-                          />
+                          <s.icon className="size-5" />
                         </span>
-                        <span
-                          className={`font-display text-sm font-semibold ${
-                            s.featured ? "text-brand-lime" : "text-white/35"
-                          }`}
-                        >
-                          {s.n}
-                        </span>
+                        <ArrowBadge tone={s.tone} />
                       </div>
-                      {s.featured && (
-                        <span className="mt-6 inline-flex w-fit rounded-full bg-brand-lime px-3.5 py-1 text-[10px] font-semibold tracking-[0.15em] text-brand-blue uppercase">
+                      {s.tone === "blue" && (
+                        <span className="mt-6 inline-flex w-fit rounded-full bg-brand-lime px-3.5 py-1 text-[10px] font-semibold tracking-[0.15em] text-brand-ink uppercase">
                           Nuestra especialidad
                         </span>
                       )}
                       <h3 className="mt-5 text-xl leading-snug font-bold sm:text-2xl">{s.title}</h3>
                       <p
                         className={`mt-4 flex-1 text-sm leading-relaxed ${
-                          s.featured ? "text-white/80" : "text-white/60"
+                          s.tone === "blue" ? "text-white/80" : "text-brand-ink/70"
                         }`}
                       >
                         {s.text}
                       </p>
-                      <a
-                        href="#contacto"
-                        className={`mt-8 inline-flex items-center gap-2 text-sm font-semibold ${
-                          s.featured ? "text-brand-lime" : "text-white"
-                        }`}
-                      >
-                        Quiero saber más
-                        <span
-                          className={`grid size-7 place-items-center rounded-full transition-transform group-hover:translate-x-1 ${
-                            s.featured ? "bg-brand-lime/20" : "bg-white/10"
+                      <div className="mt-8 flex items-center justify-between">
+                        <a
+                          href="#contacto"
+                          className={`inline-flex items-center gap-2 text-sm font-semibold ${
+                            s.tone === "blue" ? "text-brand-lime" : "text-brand-blue"
                           }`}
                         >
-                          <ArrowUpRight className="size-3.5" />
+                          Quiero saber más
+                          <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </a>
+                        <span
+                          className={`font-display text-sm font-semibold ${
+                            s.tone === "blue" ? "text-white/45" : "text-brand-ink/35"
+                          }`}
+                        >
+                          {s.n}
                         </span>
-                      </a>
+                      </div>
                     </article>
                   </Reveal>
                 ))}
@@ -308,13 +391,25 @@ function Index() {
           </Reveal>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PILARES.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80}>
-                <div className="h-full rounded-[24px] border border-brand-ink/10 bg-brand-soft p-7 transition-colors hover:border-brand-blue/30 hover:bg-white">
-                  <span className="grid size-12 place-items-center rounded-2xl bg-brand-blue">
-                    <p.icon className="size-5 text-brand-lime" />
+              <Reveal key={p.title} delay={i * 110}>
+                <div className={`lift h-full rounded-[32px] p-7 ${CARD_TONES[p.tone]}`}>
+                  <span
+                    className={`grid size-12 place-items-center rounded-2xl ${
+                      p.tone === "blue"
+                        ? "bg-brand-lime text-brand-blue"
+                        : p.tone === "lime"
+                          ? "bg-brand-ink text-brand-lime"
+                          : "bg-brand-blue text-brand-lime"
+                    }`}
+                  >
+                    <p.icon className="size-5" />
                   </span>
-                  <h3 className="mt-6 text-lg leading-snug font-bold text-brand-ink">{p.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-brand-ink/65">
+                  <h3 className="mt-6 text-lg leading-snug font-bold">{p.title}</h3>
+                  <p
+                    className={`mt-2.5 text-sm leading-relaxed ${
+                      p.tone === "blue" ? "text-white/75" : "text-brand-ink/65"
+                    }`}
+                  >
                     {p.text}
                   </p>
                 </div>
@@ -325,38 +420,42 @@ function Index() {
 
         {/* COWORK */}
         <section id="cowork" className="px-3 sm:px-5">
-          <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[28px] bg-brand-lime">
+          <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[40px] bg-brand-lime">
             <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-2">
               <Reveal>
-                <span className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase">
-                  <span className="size-2 rounded-[3px] bg-brand-blue" />
+                <span className="inline-flex items-center gap-2.5 rounded-full bg-brand-ink/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase">
+                  <span className="size-2 rounded-full bg-brand-blue" />
                   Un espacio de EGestión
                 </span>
                 <h2 className="mt-6 text-3xl leading-[1.1] font-bold text-brand-blue sm:text-4xl lg:text-[3rem]">
                   Cowork Andino
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-ink/75 sm:text-lg">
-                  Cowork Andino es una extensión de EGestión que le entrega a las personas un espacio para trabajar. Uno de los primeros coworks de la ciudad, hecho por alguien de la ciudad.
+                  Cowork Andino es una extensión de EGestión que le entrega a las personas un
+                  espacio para trabajar. Uno de los primeros coworks de la ciudad, hecho por alguien
+                  de la ciudad.
                 </p>
                 <a
                   href="#contacto"
-                  className="group mt-9 inline-flex items-center gap-2 rounded-full bg-brand-blue py-2 pr-2 pl-6 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
+                  className="group mt-9 inline-flex items-center gap-2 rounded-full bg-brand-blue py-2 pr-2 pl-6 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-18px_rgba(37,41,67,0.7)]"
                 >
                   Conoce el espacio
                   <span className="grid size-9 place-items-center rounded-full bg-brand-lime">
-                    <ArrowUpRight className="size-4 text-brand-blue transition-transform group-hover:rotate-45" />
+                    <ArrowUpRight className="size-4 text-brand-blue transition-transform duration-300 group-hover:rotate-45" />
                   </span>
                 </a>
               </Reveal>
-              <Reveal delay={120}>
-                <img
-                  src={coworkImg}
-                  alt="Interior del Cowork Andino en Los Andes"
-                  width={1200}
-                  height={900}
-                  loading="lazy"
-                  className="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_30px_60px_-30px_rgba(10,10,10,0.5)]"
-                />
+              <Reveal delay={140}>
+                <div className="tab-corner overflow-hidden bg-white/40">
+                  <img
+                    src={coworkImg}
+                    alt="Interior del Cowork Andino en Los Andes"
+                    width={1408}
+                    height={1056}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
               </Reveal>
             </div>
           </div>
@@ -367,9 +466,9 @@ function Index() {
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
-          <div className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="mt-8 grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <Reveal>
-              <div className="h-full rounded-[28px] border border-brand-ink/10 bg-white p-7 sm:p-10">
+              <div className="h-full rounded-[32px] border border-brand-soft bg-white p-7 shadow-[0_28px_60px_-45px_rgba(37,41,67,0.6)] sm:p-10">
                 <h2 className="text-3xl leading-tight font-bold text-brand-ink sm:text-4xl">
                   ¿Nos tomamos un café?
                 </h2>
@@ -383,7 +482,7 @@ function Index() {
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="flex h-full flex-col justify-between rounded-[28px] bg-brand-blue p-7 text-white sm:p-10">
+              <div className="flex h-full flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white sm:p-10">
                 <div>
                   <span className="grid size-12 place-items-center rounded-2xl bg-brand-lime">
                     <Coffee className="size-5 text-brand-blue" />
@@ -415,9 +514,7 @@ function Index() {
                       <MapPin className="mt-0.5 size-5 shrink-0 text-brand-lime" />
                       <span className="min-w-0">
                         <span className="block font-semibold">Ubicación</span>
-                        <span className="text-white/75">
-                          Los Andes, Región de Valparaíso, Chile
-                        </span>
+                        <span className="text-white/75">Los Andes, Región de Valparaíso, Chile</span>
                       </span>
                     </li>
                   </ul>
@@ -429,18 +526,35 @@ function Index() {
             </Reveal>
           </div>
         </section>
+
+        {/* VIDEO LOGO */}
+        <section className="bg-white px-5 pb-20">
+          <Reveal className="mx-auto max-w-6xl">
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded-[32px]">
+              <video
+                src={logoVideo.url}
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="Logo animado de EGestión"
+                className="h-auto w-full"
+              />
+            </div>
+          </Reveal>
+        </section>
       </main>
 
       <footer className="px-3 pb-3 sm:px-5 sm:pb-5">
-        <div className="mx-auto max-w-[1400px] rounded-[28px] bg-brand-ink px-5 py-14 text-white sm:px-8">
+        <div className="mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-14 text-white sm:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-10 md:grid-cols-3">
               <div>
                 <img
-                  src={logoWhiteGreen.url}
+                  src={egLime.url}
                   alt="EGestión"
-                  width={1920}
-                  height={941}
+                  width={797}
+                  height={607}
                   loading="lazy"
                   className="h-14 w-auto object-contain object-left"
                 />
@@ -455,7 +569,7 @@ function Index() {
                 <ul className="mt-5 space-y-2.5 text-sm text-white/75">
                   {NAV.map((n) => (
                     <li key={n.href}>
-                      <a href={n.href} className="hover:text-brand-lime">
+                      <a href={n.href} className="transition-colors hover:text-brand-lime">
                         {n.label}
                       </a>
                     </li>
@@ -468,12 +582,12 @@ function Index() {
                 </h2>
                 <ul className="mt-5 space-y-2.5 text-sm text-white/75">
                   <li>
-                    <a href={WHATSAPP} className="hover:text-brand-lime">
+                    <a href={WHATSAPP} className="transition-colors hover:text-brand-lime">
                       WhatsApp: +56 9 XXXX XXXX
                     </a>
                   </li>
                   <li>
-                    <a href={`mailto:${EMAIL}`} className="hover:text-brand-lime">
+                    <a href={`mailto:${EMAIL}`} className="transition-colors hover:text-brand-lime">
                       {EMAIL}
                     </a>
                   </li>
