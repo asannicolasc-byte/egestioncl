@@ -37,7 +37,7 @@ export function Header() {
               alt="EGestión"
               width={320}
               height={60}
-              className="h-[52px] w-auto sm:h-[68px]"
+              className="h-[57px] w-auto sm:h-[74px]"
             />
           </a>
 
