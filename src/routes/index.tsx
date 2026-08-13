@@ -19,7 +19,7 @@ import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
 import coworkImg from "@/assets/cowork-andino.jpg.asset.json";
-import cafeImg from "@/assets/equipo-cafe.jpg";
+import reneImg from "@/assets/rene-ponce.png.asset.json";
 import valleImg from "@/assets/valle-andes.jpg";
 import egLime from "@/assets/eg-lime.png.asset.json";
 import logoVideo from "@/assets/egestion-logo-animado.mp4.asset.json";
