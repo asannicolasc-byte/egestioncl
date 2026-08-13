@@ -21,7 +21,7 @@ import coworkImg from "@/assets/cowork-andino.jpg";
 import logoWhiteGreen from "@/assets/logo_5.png.asset.json";
 
 const WHATSAPP = "https://wa.me/56900000000"; // PLACEHOLDER: reemplazar por el número real
-const EMAIL = "contacto@egestion.cl"; // PLACEHOLDER: reemplazar por el correo real
+const EMAIL = "rene.ponce@egestion.cl"; // PLACEHOLDER: reemplazar por el correo real
 
 export const Route = createFileRoute("/")({
   head: () => ({
