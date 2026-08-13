@@ -20,7 +20,7 @@ import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
 import coworkImg from "@/assets/cowork-andino.jpg.asset.json";
 import reneImg from "@/assets/rene-ponce.png.asset.json";
-import valleImg from "@/assets/valle-andes.jpg";
+import taxImg from "@/assets/hero-tax-documents.jpg.asset.json";
 import egLime from "@/assets/eg-lime.png.asset.json";
 import logoVideo from "@/assets/egestion-logo-animado.mp4.asset.json";
 
@@ -201,8 +201,8 @@ function Index() {
                   />
                 </div>
               </Reveal>
-              <Reveal delay={220} className="grid gap-4">
-                <div className="flex h-full flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white">
+              <Reveal delay={220} className="grid h-full gap-4">
+                <div className="flex flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white">
                   <span className="grid size-11 place-items-center rounded-2xl bg-brand-lime">
                     <ShieldCheck className="size-5 text-brand-blue" />
                   </span>
@@ -211,12 +211,12 @@ function Index() {
                   </p>
                 </div>
                 <img
-                  src={valleImg}
-                  alt="Valle de Aconcagua, Los Andes, Chile"
+                  src={taxImg.url}
+                  alt="Revisión de documentos tributarios y financieros"
                   width={1200}
                   height={900}
                   loading="lazy"
-                  className="hidden h-40 w-full rounded-[32px] object-cover lg:block"
+                  className="hidden min-h-0 w-full flex-1 rounded-[32px] object-cover lg:block"
                 />
               </Reveal>
             </div>
