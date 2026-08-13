@@ -264,7 +264,6 @@ function Index() {
                 <div className="absolute inset-x-0 bottom-0 hidden h-[55%] translate-y-full flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-6 transition-transform duration-300 ease-out group-hover:translate-y-0 lg:flex">
                   <h3 className="text-lg font-bold text-white">René Ponce</h3>
                   <p className="text-sm font-semibold text-brand-lime">Fundador de EGestión</p>
-                  <p className="text-sm font-semibold text-brand-lime">Fundador de EGestión</p>
                 </div>
                 {/* Overlay móvil: siempre visible compacto */}
                 <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-4 lg:hidden">
