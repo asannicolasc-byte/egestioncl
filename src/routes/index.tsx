@@ -623,7 +623,7 @@ function Index() {
                 <ul className="mt-5 space-y-2.5 text-sm text-white/75">
                   <li>
                     <a href={WHATSAPP} className="transition-colors hover:text-brand-lime">
-                      WhatsApp: +56 9 XXXX XXXX
+                      WhatsApp: +56 9 6206 0320
                     </a>
                   </li>
                   <li>
