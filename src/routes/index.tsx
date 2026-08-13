@@ -200,7 +200,7 @@ function Index() {
 
             <div className="mt-12 grid gap-4 lg:grid-cols-[1.55fr_0.45fr]">
               <Reveal delay={120}>
-                <div className="tab-corner relative overflow-hidden bg-brand-soft">
+                <div className="relative overflow-hidden rounded-[32px] bg-brand-soft">
                   <img
                     src={heroImg.url}
                     alt="Reunión de asesoría entre el equipo de EGestión y un cliente"
@@ -210,7 +210,7 @@ function Index() {
                   />
                 </div>
               </Reveal>
-              <Reveal delay={220} className="grid h-full gap-4">
+              <Reveal delay={220} className="flex h-full flex-col gap-4">
                 <div className="flex flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white">
                   <span className="grid size-11 place-items-center rounded-2xl bg-brand-lime">
                     <ShieldCheck className="size-5 text-brand-blue" />
