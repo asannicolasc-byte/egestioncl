@@ -33,11 +33,11 @@ export function Header() {
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-2.5 sm:px-4 lg:flex lg:justify-between">
           <a href="#inicio" className="flex min-w-0 items-center" aria-label="EGestión, inicio">
             <img
-              src={egBlue.url}
+              src={logo.url}
               alt="EGestión"
-              width={797}
-              height={607}
-              className="h-9 w-auto sm:h-10"
+              width={320}
+              height={60}
+              className="h-7 w-auto sm:h-8"
             />
           </a>
 
