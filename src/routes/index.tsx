@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Eyebrow } from "@/components/site/Eyebrow";
-import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
@@ -23,9 +22,11 @@ import reneImg from "@/assets/rene-ponce.png.asset.json";
 import taxImg from "@/assets/hero-tax-documents.jpg.asset.json";
 import egLime from "@/assets/eg-lime.png.asset.json";
 import logoVideo from "@/assets/egestion-logo-animado.mp4.asset.json";
+import peopleCafeImg from "@/assets/people-cafe.jpg.asset.json";
 
-const WHATSAPP = "https://wa.me/56900000000"; // PLACEHOLDER: reemplazar por el número real
-const EMAIL = "rene.ponce@egestion.cl"; // PLACEHOLDER: reemplazar por el correo real
+const WHATSAPP = "https://wa.me/56962060320";
+const WA_WITH_MESSAGE = "https://wa.me/56962060320?text=Hola%20Ren%C3%A9%2C%20me%20gustar%C3%ADa%20que%20nos%20tom%C3%A1ramos%20un%20caf%C3%A9%20para%20conversar%20de%20mi%20negocio";
+const EMAIL = "rene.ponce@egestion.cl";
 
 export const Route = createFileRoute("/")({
   head: () => ({
