@@ -231,8 +231,11 @@ function Index() {
           <div className="mt-8 grid gap-10">
             <Reveal>
               <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
-                Somos un equipo de expertos en&nbsp;{"\n"}
-                <span className="text-brand-blue">asesoría contable, tributaria y estratégica</span>
+                Somos un equipo de expertos en&nbsp;&nbsp;{"\n"}
+                <span className="text-brand-blue">
+                  asesoría contable, tributaria{"\n"}
+                  &nbsp;y estratégica
+                </span>
               </h2>
             </Reveal>
             <Reveal delay={120}>
