@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Eyebrow } from "@/components/site/Eyebrow";
-import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
@@ -23,9 +22,11 @@ import reneImg from "@/assets/rene-ponce.png.asset.json";
 import taxImg from "@/assets/hero-tax-documents.jpg.asset.json";
 import egLime from "@/assets/eg-lime.png.asset.json";
 import logoVideo from "@/assets/egestion-logo-animado.mp4.asset.json";
+import peopleCafeImg from "@/assets/people-cafe.jpg.asset.json";
 
-const WHATSAPP = "https://wa.me/56900000000"; // PLACEHOLDER: reemplazar por el número real
-const EMAIL = "rene.ponce@egestion.cl"; // PLACEHOLDER: reemplazar por el correo real
+const WHATSAPP = "https://wa.me/56962060320";
+const WA_WITH_MESSAGE = "https://wa.me/56962060320?text=Hola%20Ren%C3%A9%2C%20me%20gustar%C3%ADa%20que%20nos%20tom%C3%A1ramos%20un%20caf%C3%A9%20para%20conversar%20de%20mi%20negocio";
+const EMAIL = "rene.ponce@egestion.cl";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -134,6 +135,14 @@ function ArrowBadge({ tone }: { tone: keyof typeof CARD_TONES }) {
     >
       <ArrowUpRight className="size-4" />
     </span>
+  );
+}
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004c-1.331 0-2.64-.353-3.787-1.021l-.272-.162-2.816.738.752-2.742-.177-.282A7.965 7.965 0 0 1 3.835 12c0-4.416 3.589-8.003 8.004-8.003 4.415 0 8.003 3.588 8.003 8.003 0 4.416-3.588 8.004-8.003 8.004M20.807 3.153A11.668 11.668 0 0 0 11.839 0C5.33 0 0 5.33 0 11.84c0 2.082.544 4.113 1.574 5.907L.052 24l6.305-1.654a11.85 11.85 0 0 0 5.482 1.343h.005c6.51 0 11.839-5.331 11.839-11.84 0-3.163-1.232-6.136-3.476-8.396" />
+    </svg>
   );
 }
 
@@ -471,15 +480,40 @@ function Index() {
           </Reveal>
           <div className="mt-8 grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <Reveal>
-              <div className="h-full rounded-[32px] border border-brand-soft bg-white p-7 shadow-[0_28px_60px_-45px_rgba(37,41,67,0.6)] sm:p-10">
+              <div className="flex h-full flex-col rounded-[32px] border border-brand-soft bg-white p-7 shadow-[0_28px_60px_-45px_rgba(37,41,67,0.6)] sm:p-10">
                 <h2 className="text-3xl leading-tight font-bold text-brand-ink sm:text-4xl">
                   ¿Nos tomamos un café?
                 </h2>
                 <p className="mt-4 text-sm text-brand-ink/65">
-                  Déjanos tus datos y te respondemos a la brevedad.
+                  Escríbenos directo y coordinamos.
                 </p>
-                <div className="mt-9">
-                  <ContactForm />
+                <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={WA_WITH_MESSAGE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex flex-1 items-center justify-center gap-2.5 rounded-full bg-brand-lime px-6 py-4 text-sm font-semibold text-brand-ink transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-18px_rgba(37,41,67,0.6)]"
+                  >
+                    <WhatsAppIcon className="size-5" />
+                    Conversemos por WhatsApp
+                  </a>
+                  <a
+                    href={`mailto:${EMAIL}?subject=Hola%20Ren%C3%A9%2C%20me%20gustar%C3%ADa%20que%20nos%20tom%C3%A1ramos%20un%20caf%C3%A9%20para%20conversar%20de%20mi%20negocio`}
+                    className="group inline-flex flex-1 items-center justify-center gap-2.5 rounded-full bg-brand-blue px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-18px_rgba(37,41,67,0.7)]"
+                  >
+                    <Mail className="size-5" />
+                    Escríbenos un correo
+                  </a>
+                </div>
+                <div className="relative mt-8 min-h-[180px] flex-1 overflow-hidden rounded-[32px]">
+                  <img
+                    src={peopleCafeImg.url}
+                    alt="Reunión en un café para conversar sobre tu negocio"
+                    width={1600}
+                    height={1067}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
                 </div>
               </div>
             </Reveal>
@@ -497,7 +531,7 @@ function Index() {
                       <span className="min-w-0">
                         <span className="block font-semibold">WhatsApp</span>
                         <a href={WHATSAPP} className="text-white/75 hover:text-brand-lime">
-                          +56 9 XXXX XXXX
+                          +56 9 6206 0320
                         </a>
                       </span>
                     </li>
@@ -589,7 +623,7 @@ function Index() {
                 <ul className="mt-5 space-y-2.5 text-sm text-white/75">
                   <li>
                     <a href={WHATSAPP} className="transition-colors hover:text-brand-lime">
-                      WhatsApp: +56 9 XXXX XXXX
+                      WhatsApp: +56 9 6206 0320
                     </a>
                   </li>
                   <li>
