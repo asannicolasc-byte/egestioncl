@@ -231,7 +231,7 @@ function Index() {
           <div className="mt-8 grid gap-10">
             <Reveal>
               <h2 className="text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
-                Somos un equipo de profesionales expertos en asesoría contable,&nbsp;
+                Somos un equipo de profesionales expertos en asesoría contable,{"\n"}
                 <span className="text-brand-blue">tributaria y estratégica</span>
               </h2>
             </Reveal>
