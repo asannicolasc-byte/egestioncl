@@ -172,8 +172,8 @@
 
 @utility reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @utility reveal-in {
@@ -181,6 +181,49 @@
   transform: none;
 }
 
+/* Elevación suave en tarjetas y botones */
+@utility lift {
+  transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease, border-color 300ms ease;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px -22px color-mix(in oklab, var(--brand-ink) 55%, transparent);
+  }
+}
+
+/* Subrayado animado del navbar */
+@utility nav-underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.3rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms ease;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Esquina recortada estilo squircle/tab */
+@utility tab-corner {
+  border-radius: 32px;
+  clip-path: polygon(0 0, calc(100% - 64px) 0, 100% 64px, 100% 100%, 0 100%);
+}
+
+@utility blob {
+  border-radius: 62% 38% 46% 54% / 54% 44% 56% 46%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .lift:hover { transform: none; }
 }
+
