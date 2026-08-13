@@ -197,7 +197,7 @@ function Index() {
                     alt="Reunión de asesoría entre el equipo de EGestión y un cliente"
                     width={1600}
                     height={1104}
-                    className="h-[280px] w-full object-cover sm:h-[420px] lg:h-[460px]"
+                    className="h-[280px] w-full object-cover sm:h-[420px] lg:h-[520px]"
                   />
                 </div>
               </Reveal>
