@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import logoHorizontal from "@/assets/logo_3.png.asset.json";
-import logoMark from "@/assets/logo_2.png.asset.json";
+import egBlue from "@/assets/eg-blue.png.asset.json";
 
 const NAV = [
   { href: "#inicio", label: "Inicio" },
@@ -23,42 +22,31 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
       <div
-        className={`mx-auto max-w-6xl rounded-[22px] border transition-all duration-300 ${
+        className={`mx-auto max-w-6xl rounded-[28px] transition-all duration-300 ${
           scrolled
-            ? "border-brand-ink/10 bg-white/85 shadow-[0_10px_40px_-18px_rgba(10,10,10,0.35)] backdrop-blur-xl"
-            : "border-white/15 bg-white/10 backdrop-blur-md"
+            ? "border border-brand-soft bg-white/80 shadow-[0_14px_40px_-24px_rgba(37,41,67,0.45)] backdrop-blur-xl"
+            : "border border-transparent bg-white/55 backdrop-blur-md"
         }`}
       >
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-2.5 sm:px-4 lg:flex lg:justify-between">
           <a href="#inicio" className="flex min-w-0 items-center" aria-label="EGestión, inicio">
             <img
-              src={logoHorizontal.url}
+              src={egBlue.url}
               alt="EGestión"
-              width={1920}
-              height={941}
-              className="hidden h-10 w-auto rounded-xl sm:block"
-            />
-            <img
-              src={logoMark.url}
-              alt="EGestión"
-              width={1146}
-              height={1146}
-              className="h-9 w-auto rounded-lg sm:hidden"
+              width={797}
+              height={607}
+              className="h-9 w-auto sm:h-10"
             />
           </a>
 
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Principal">
+          <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Principal">
             {NAV.map((n) => (
               <a
                 key={n.href}
                 href={n.href}
-                className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
-                  scrolled
-                    ? "text-brand-ink/70 hover:bg-brand-soft hover:text-brand-blue"
-                    : "text-white/85 hover:bg-white/15 hover:text-white"
-                }`}
+                className="nav-underline rounded-full px-3.5 py-2 text-sm font-medium text-brand-ink/75 transition-colors hover:text-brand-blue"
               >
                 {n.label}
               </a>
@@ -68,11 +56,11 @@ export function Header() {
           <div className="flex items-center gap-2">
             <a
               href="#contacto"
-              className="hidden items-center gap-1.5 rounded-full bg-brand-lime px-5 py-2.5 text-sm font-semibold text-brand-blue transition-transform hover:scale-[1.03] sm:inline-flex"
+              className="group hidden items-center gap-2 rounded-full bg-brand-lime py-1.5 pr-1.5 pl-5 text-sm font-semibold text-brand-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_-14px_rgba(37,41,67,0.6)] sm:inline-flex"
             >
               Agenda una reunión
-              <span className="grid size-5 place-items-center rounded-full bg-brand-blue">
-                <ArrowUpRight className="size-3 text-brand-lime" />
+              <span className="grid size-8 place-items-center rounded-full bg-brand-ink">
+                <ArrowUpRight className="size-4 text-brand-lime transition-transform duration-300 group-hover:rotate-45" />
               </span>
             </a>
             <button
@@ -80,11 +68,7 @@ export function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={open}
-              className={`inline-flex size-10 shrink-0 items-center justify-center rounded-full border transition-colors lg:hidden ${
-                scrolled
-                  ? "border-brand-ink/15 text-brand-blue"
-                  : "border-white/30 bg-white/10 text-white"
-              }`}
+              className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-brand-soft bg-white text-brand-blue transition-colors hover:bg-brand-soft lg:hidden"
             >
               {open ? <X className="size-5" /> : <Menu className="size-5" />}
             </button>
@@ -92,14 +76,17 @@ export function Header() {
         </div>
 
         {open && (
-          <nav className="border-t border-brand-ink/10 bg-white/95 px-3 py-3 backdrop-blur-xl lg:hidden" aria-label="Móvil">
+          <nav
+            className="rounded-b-[28px] border-t border-brand-soft bg-white/95 px-3 py-3 backdrop-blur-xl lg:hidden"
+            aria-label="Móvil"
+          >
             <ul className="flex flex-col gap-1">
               {NAV.map((n) => (
                 <li key={n.href}>
                   <a
                     href={n.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-xl px-3 py-2.5 text-base font-medium text-brand-ink hover:bg-brand-soft"
+                    className="block rounded-2xl px-3 py-2.5 text-base font-medium text-brand-ink transition-colors hover:bg-brand-soft"
                   >
                     {n.label}
                   </a>
@@ -109,7 +96,7 @@ export function Header() {
                 <a
                   href="#contacto"
                   onClick={() => setOpen(false)}
-                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-brand-blue px-5 py-3 text-sm font-semibold text-white"
+                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-brand-lime px-5 py-3 text-sm font-semibold text-brand-ink"
                 >
                   Agenda una reunión <ArrowUpRight className="size-4" />
                 </a>
