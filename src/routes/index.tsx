@@ -188,12 +188,10 @@ function Index() {
                   </span>
                 </a>
                 <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#servicios"
                   className="inline-flex items-center gap-2 rounded-full border border-brand-ink/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-blue hover:text-brand-blue"
                 >
-                  Conversemos por WhatsApp
+                  Ver servicios
                 </a>
               </div>
             </Reveal>
