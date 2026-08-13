@@ -448,7 +448,7 @@ function Index() {
               <Reveal delay={140}>
                 <div className="tab-corner overflow-hidden bg-white/40">
                   <img
-                    src={coworkImg}
+                    src={coworkImg.url}
                     alt="Interior del Cowork Andino en Los Andes"
                     width={1408}
                     height={1056}
