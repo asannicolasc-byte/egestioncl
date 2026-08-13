@@ -538,7 +538,10 @@ function Index() {
                 muted
                 playsInline
                 aria-label="Logo animado de EGestión"
-                className="h-auto w-full"
+                width={720}
+                height={720}
+                className="aspect-square w-full object-cover"
+
               />
             </div>
           </Reveal>
