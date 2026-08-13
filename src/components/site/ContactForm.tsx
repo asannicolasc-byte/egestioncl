@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
+import { useServerFn } from "@tanstack/react-start";
+import { sendContactMessage } from "@/lib/contact.functions";
 
 const schema = z.object({
   nombre: z.string().trim().min(1, "Cuéntanos tu nombre").max(100),
