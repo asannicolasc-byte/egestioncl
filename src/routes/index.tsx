@@ -193,7 +193,7 @@ function Index() {
               <Reveal delay={120}>
                 <div className="tab-corner relative overflow-hidden bg-brand-soft">
                   <img
-                    src={heroImg}
+                    src={heroImg.url}
                     alt="Reunión de asesoría entre el equipo de EGestión y un cliente"
                     width={1600}
                     height={1104}
