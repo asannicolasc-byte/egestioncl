@@ -213,10 +213,10 @@ function Index() {
                   <span className="grid size-11 place-items-center rounded-2xl bg-brand-lime">
                     <ShieldCheck className="size-5 text-brand-blue" />
                   </span>
-                  <p className="mt-2.5 font-display text-base leading-[1.1] font-bold">
-                    <span className="block">Ten claros tus números</span>
-                    <span className="block">desde el primer café.</span>
-                    <span className="block">¿Conversamos?</span>
+                  <p className="mt-2.5 font-display text-base leading-[1.1]">
+                    <span className="block font-light">Ten claros tus números</span>
+                    <span className="block font-light">desde el primer café.</span>
+                    <span className="block font-bold">¿Conversamos?</span>
                   </p>
                 </div>
                 <img
