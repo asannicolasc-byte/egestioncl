@@ -211,7 +211,7 @@ function Index() {
               <Reveal delay={220} className="flex h-full flex-col gap-4">
                 <div className="flex flex-col justify-between rounded-[32px] bg-brand-blue p-7 text-white">
                   <span className="grid size-11 place-items-center rounded-2xl bg-brand-lime">
-                    <ShieldCheck className="size-5 text-brand-blue" />
+                    <Coffee className="size-5 text-brand-blue" />
                   </span>
                   <p className="mt-2.5 font-display text-base leading-[1.1]">
                     <span className="block font-light">Ten claros tus números</span>
