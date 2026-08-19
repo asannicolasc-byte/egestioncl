@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import ogImage from "@/assets/og-egestion.jpg.asset.json";
+
 import {
   ArrowUpRight,
   ArrowRight,
