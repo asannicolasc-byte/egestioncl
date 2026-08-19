@@ -44,7 +44,11 @@ export const Route = createFileRoute("/")({
           "El partner estratégico que se sienta contigo: contabilidad, impuestos, finanzas y personas en Los Andes, Valle de Aconcagua.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://egestioncl.lovable.app/" },
+      { property: "og:image", content: `https://egestioncl.lovable.app${ogImage.url}` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `https://egestioncl.lovable.app${ogImage.url}` },
+
     ],
   }),
   component: Index,
