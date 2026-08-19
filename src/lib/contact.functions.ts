@@ -33,7 +33,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
     ];
 
     const html = `<div style="font-family:Arial,sans-serif;color:#0A0A0A">
-      <h2 style="color:#0447F3">Nuevo mensaje desde EGestión</h2>
+      <h2 style="color:#0946FF">Nuevo mensaje desde EGestión</h2>
       ${rows
         .map(
           ([label, value]) =>
