@@ -17,7 +17,6 @@ import {
 import { Header } from "@/components/site/Header";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
-import { Counter } from "@/components/site/Counter";
 import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
 import coworkImg from "@/assets/cowork-andino.jpg.asset.json";
 import reneImg from "@/assets/rene-ponce.png.asset.json";
@@ -111,7 +110,6 @@ const STATS = [
   { n: "+29 años", l: "asesorando empresas" },
   { n: "+100", l: "empresas confían en nosotros" },
   { n: "100%", l: "atención personalizada" },
-  { n: "Los Andes", l: "y todo el Valle de Aconcagua" },
 ];
 
 
@@ -283,24 +281,21 @@ function Index() {
                 </div>
               </div>
             </Reveal>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-3">
               {STATS.map((s, i) => (
                 <Reveal key={s.l} delay={i * 110}>
                   <div
-                    className={`lift h-full rounded-[32px] p-7 ${
+                    className={`lift flex h-full flex-col justify-center rounded-[32px] p-7 ${
                       i === 0
                         ? "bg-brand-lime text-brand-ink"
                         : i === 1
                           ? "bg-brand-soft text-brand-ink"
-                          : i === 2
-                            ? "bg-brand-blue text-white"
-                            : "bg-white text-brand-ink border border-brand-soft"
+                          : "bg-brand-blue text-white"
                     }`}
                   >
-                    <Counter
-                      value={s.n}
-                      className="font-display text-3xl font-bold lg:text-4xl"
-                    />
+                    <p className="font-display text-3xl font-bold lg:text-4xl">
+                      {s.n}
+                    </p>
                     <p className="mt-3 text-sm font-semibold">{s.l}</p>
                   </div>
                 </Reveal>
