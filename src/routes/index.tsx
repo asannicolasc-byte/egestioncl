@@ -220,9 +220,8 @@ function Index() {
                     <Coffee className="size-5 text-brand-blue" />
                   </span>
                   <p className="mt-2.5 font-display text-base leading-[1.1]">
-                    <span className="block font-light">Ten claros tus números</span>
-                    <span className="block font-light">desde el primer café.</span>
-                    <span className="block font-bold">¿Conversamos?</span>
+                    <span className="block font-light">¿Estás pensando en abrir tu negocio?</span>
+                    <span className="block font-bold">Partamos por un café.</span>
                   </p>
                 </div>
                 <img
