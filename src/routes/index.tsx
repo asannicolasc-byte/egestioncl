@@ -108,10 +108,12 @@ const PILARES = [
 ];
 
 const STATS = [
-  { n: "+XX", l: "Años de experiencia", d: "Trayectoria acompañando a empresas." },
-  { n: "+XXX", l: "Empresas acompañadas", d: "Desde emprendedores hasta empresas consolidadas." },
-  { n: "100%", l: "Atención personalizada", d: "Siempre hablas con quien conoce tu negocio." },
+  { n: "+29 años", l: "asesorando empresas" },
+  { n: "+100", l: "empresas confían en nosotros" },
+  { n: "100%", l: "atención personalizada" },
+  { n: "Los Andes", l: "y todo el Valle de Aconcagua" },
 ];
+
 
 const NAV = [
   { href: "#inicio", label: "Inicio" },
