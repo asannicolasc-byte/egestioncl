@@ -304,8 +304,6 @@ function Index() {
                     <p className="mt-3 text-sm font-semibold">{s.l}</p>
                   </div>
                 </Reveal>
-                  </div>
-                </Reveal>
               ))}
             </div>
           </div>
