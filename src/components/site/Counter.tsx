@@ -19,25 +19,40 @@ export function Counter({ value, className = "" }: { value: string; className?: 
       setN(target);
       return;
     }
+    let raf = 0;
+    const run = () => {
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        setN(Math.round(target * eased));
+        if (p < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    };
     const io = new IntersectionObserver(
       (entries) => {
         if (!entries[0]?.isIntersecting) return;
         io.disconnect();
-        const duration = 1400;
-        const start = performance.now();
-        const tick = (now: number) => {
-          const p = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          setN(Math.round(target * eased));
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
+        clearTimeout(fallback);
+        run();
       },
-      { threshold: 0.4 },
+      { threshold: 0.1 },
     );
     io.observe(el);
-    return () => io.disconnect();
+    // Safety net: never leave the number stuck at 0
+    const fallback = window.setTimeout(() => {
+      io.disconnect();
+      setN(target);
+    }, 2500);
+    return () => {
+      io.disconnect();
+      clearTimeout(fallback);
+      cancelAnimationFrame(raf);
+    };
   }, [target]);
+
 
   const display =
     target === null || n === null ? value : value.replace(/\d+/, String(n));
