@@ -257,16 +257,16 @@ function Index() {
             </Reveal>
           </div>
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+          <div className="mt-8 grid gap-4">
             <Reveal>
-              <div className="group relative h-full max-h-[420px] w-full overflow-hidden rounded-[32px]">
+              <div className="group relative aspect-video w-full overflow-hidden rounded-[32px]">
                 <img
                   src={reneImg.url}
                   alt="René Ponce, fundador de EGestión"
                   width={1200}
                   height={1200}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-105"
+                  className="h-full w-full object-cover object-center transition-transform duration-[400ms] ease-out group-hover:scale-105"
                 />
                 {/* Overlay desktop: aparece al hacer hover */}
                 <div className="absolute inset-x-0 bottom-0 hidden h-[55%] translate-y-full flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-6 transition-transform duration-300 ease-out group-hover:translate-y-0 lg:flex">
@@ -280,11 +280,11 @@ function Index() {
                 </div>
               </div>
             </Reveal>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {STATS.map((s, i) => (
                 <Reveal key={s.l} delay={i * 110}>
                   <div
-                    className={`lift flex h-full flex-col justify-center rounded-[32px] p-7 ${
+                    className={`lift flex aspect-square flex-col justify-center rounded-[32px] p-7 ${
                       i === 0
                         ? "bg-brand-lime text-brand-ink"
                         : i === 1
