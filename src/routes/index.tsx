@@ -285,32 +285,25 @@ function Index() {
             </Reveal>
             <div className="grid gap-4 sm:grid-cols-2">
               {STATS.map((s, i) => (
-                <Reveal
-                  key={s.l}
-                  delay={i * 110}
-                  className={i === 0 ? "sm:col-span-2" : ""}
-                >
+                <Reveal key={s.l} delay={i * 110}>
                   <div
                     className={`lift h-full rounded-[32px] p-7 ${
                       i === 0
                         ? "bg-brand-lime text-brand-ink"
                         : i === 1
                           ? "bg-brand-soft text-brand-ink"
-                          : "bg-brand-blue text-white"
+                          : i === 2
+                            ? "bg-brand-blue text-white"
+                            : "bg-white text-brand-ink border border-brand-soft"
                     }`}
                   >
                     <Counter
                       value={s.n}
-                      className="font-display text-4xl font-bold lg:text-5xl"
+                      className="font-display text-3xl font-bold lg:text-4xl"
                     />
                     <p className="mt-3 text-sm font-semibold">{s.l}</p>
-                    <p
-                      className={`mt-1.5 text-[13px] leading-relaxed ${
-                        i === 2 ? "text-white/70" : "text-brand-ink/60"
-                      }`}
-                    >
-                      {s.d}
-                    </p>
+                  </div>
+                </Reveal>
                   </div>
                 </Reveal>
               ))}
