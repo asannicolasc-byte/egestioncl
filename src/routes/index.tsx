@@ -293,8 +293,8 @@ function Index() {
                    : "bg-brand-blue/40";
                  return (
                    <Reveal key={s.l} delay={i * 110}>
-                     <div
-                       className={`lift flex aspect-square w-full flex-col justify-center rounded-[32px] p-[20px] text-left ${
+<div
+                       className={`lift flex aspect-square w-full flex-col justify-center rounded-[32px] p-[20px] text-left md:size-[96px] lg:size-[130px] ${
                          isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
                        }`}
                      >
