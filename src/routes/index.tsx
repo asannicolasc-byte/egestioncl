@@ -297,7 +297,7 @@ function Index() {
                            : "bg-brand-blue text-white"
                      }`}
                    >
-                     <p className="font-display text-[clamp(12px,4vw,18px)] leading-none font-bold whitespace-nowrap sm:text-[32px] md:text-[24px] lg:text-[34px]">
+                     <p className="font-display text-[clamp(11px,3.8vw,18px)] leading-none font-bold whitespace-nowrap sm:text-[32px] md:text-[24px] lg:text-[34px]">
                        {s.n}
                      </p>
                      <p className="text-[11px] leading-[1.3] font-normal sm:text-[13px]">
