@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import logo from "@/assets/eg-logo-web-2.png.asset.json";
+import logo from "@/assets/eg-logo-web-2.png";
 
 const NAV = [
   { href: "#inicio", label: "Inicio" },
@@ -33,7 +33,7 @@ export function Header() {
         <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-3 py-1 sm:px-4 lg:flex lg:justify-between">
           <a href="#inicio" className="flex min-w-0 items-center" aria-label="EGestión, inicio">
             <img
-              src={logo.url}
+              src={logo}
               alt="EGestión"
               width={320}
               height={60}

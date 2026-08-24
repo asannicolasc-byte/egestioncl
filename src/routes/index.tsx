@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import ogImage from "@/assets/og-egestion.jpg.asset.json";
+import ogImage from "@/assets/og-egestion.jpg";
 
 import {
   ArrowUpRight,
@@ -17,13 +17,13 @@ import {
 import { Header } from "@/components/site/Header";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
-import heroImg from "@/assets/hero-reunion-2.jpg.asset.json";
-import coworkImg from "@/assets/cowork-andino.jpg.asset.json";
-import reneImg from "@/assets/rene-ponce.png.asset.json";
-import taxImg from "@/assets/hero-tax-documents.jpg.asset.json";
-import egLime from "@/assets/eg-lime.png.asset.json";
-import logoVideo from "@/assets/egestion-logo-animado.mp4.asset.json";
-import peopleCafeImg from "@/assets/people-cafe.jpg.asset.json";
+import heroImg from "@/assets/hero-reunion-2.jpg";
+import coworkImg from "@/assets/cowork-andino.jpg";
+import reneImg from "@/assets/rene-ponce.png";
+import taxImg from "@/assets/hero-tax-documents.jpg";
+import egLime from "@/assets/eg-lime.png";
+import logoVideo from "@/assets/egestion-logo-animado.mp4";
+import peopleCafeImg from "@/assets/people-cafe.jpg";
 
 const WHATSAPP = "https://wa.me/56962060320";
 const WA_WITH_MESSAGE = "https://wa.me/56962060320?text=Hola%20Ren%C3%A9%2C%20me%20gustar%C3%ADa%20que%20nos%20tom%C3%A1ramos%20un%20caf%C3%A9%20para%20conversar%20de%20mi%20negocio";
@@ -46,9 +46,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://egestioncl.lovable.app/" },
-      { property: "og:image", content: `https://egestioncl.lovable.app${ogImage.url}` },
+      { property: "og:image", content: `https://egestioncl.lovable.app${ogImage}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `https://egestioncl.lovable.app${ogImage.url}` },
+      { name: "twitter:image", content: `https://egestioncl.lovable.app${ogImage}` },
 
     ],
   }),
@@ -211,7 +211,7 @@ function Index() {
               <Reveal delay={120}>
                 <div className="relative overflow-hidden rounded-[32px] bg-brand-soft">
                   <img
-                    src={heroImg.url}
+                    src={heroImg}
                     alt="Reunión de asesoría entre el equipo de EGestión y un cliente"
                     width={1600}
                     height={1104}
@@ -230,7 +230,7 @@ function Index() {
                   </p>
                 </div>
                 <img
-                  src={taxImg.url}
+                  src={taxImg}
                   alt="Revisión de documentos tributarios y financieros"
                   width={1200}
                   height={900}
@@ -266,7 +266,7 @@ function Index() {
             <Reveal>
               <div className="group relative aspect-video w-full overflow-hidden rounded-[32px] md:aspect-auto md:h-[320px] lg:h-[420px]">
                  <img
-                   src={reneImg.url}
+                   src={reneImg}
                    alt="René Ponce, fundador de EGestión"
                    width={1200}
                    height={1200}
@@ -474,7 +474,7 @@ function Index() {
               <Reveal delay={140}>
                 <div className="tab-corner overflow-hidden bg-white/40">
                   <img
-                    src={coworkImg.url}
+                    src={coworkImg}
                     alt="Interior del Cowork Andino en Los Andes"
                     width={1408}
                     height={1056}
@@ -521,7 +521,7 @@ function Index() {
                 </div>
                 <div className="relative mt-8 min-h-[180px] flex-1 overflow-hidden rounded-[32px]">
                   <img
-                    src={peopleCafeImg.url}
+                    src={peopleCafeImg}
                     alt="Reunión en un café para conversar sobre tu negocio"
                     width={1600}
                     height={1067}
@@ -583,7 +583,7 @@ function Index() {
           <Reveal className="mx-auto max-w-6xl">
             <div className="mx-auto w-full max-w-md overflow-hidden rounded-[32px]">
               <video
-                src={logoVideo.url}
+                src={logoVideo}
                 autoPlay
                 loop
                 muted
@@ -605,7 +605,7 @@ function Index() {
             <div className="grid gap-10 md:grid-cols-3">
               <div>
                 <img
-                  src={egLime.url}
+                  src={egLime}
                   alt="EGestión"
                   width={797}
                   height={607}
