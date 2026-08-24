@@ -294,22 +294,22 @@ function Index() {
                  return (
                    <Reveal key={s.l} delay={i * 110}>
 <div
-                        className={`lift flex aspect-square w-full min-w-0 flex-col justify-center overflow-hidden rounded-[32px] border-box p-[18px] text-left md:size-[96px] lg:size-[130px] ${
+                        className={`lift flex aspect-square w-full min-w-0 flex-col justify-end overflow-hidden rounded-[32px] border-box p-[18px] text-left md:size-[96px] lg:size-[130px] ${
                           isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
                         }`}
                       >
                         <p
                           className={`min-w-0 max-w-full font-display whitespace-nowrap font-extrabold leading-[1] tracking-[-0.02em] ${
                             isBlue ? "text-white" : "text-brand-blue"
-                          } text-[clamp(28px,4.5vw,56px)]`}
+                          } text-[clamp(20px,4.5vw,52px)]`}
                         >
                           {s.n}
                         </p>
                         <div
-                          className={`mt-2 mb-[10px] h-px w-full min-w-0 ${dividerColor}`}
+                          className={`mt-1.5 mb-2 h-px w-full min-w-0 ${dividerColor}`}
                         />
                         <p
-                          className={`min-w-0 text-[12px] font-bold leading-[1.3] break-words ${
+                          className={`min-w-0 text-[11px] font-bold leading-[1.2] break-words md:text-[10px] lg:text-[12px] ${
                             isBlue ? "text-white" : "text-[#252944]"
                           }`}
                         >
