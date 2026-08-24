@@ -301,7 +301,7 @@ function Index() {
                         <p
                           className={`min-w-0 max-w-full font-display whitespace-nowrap font-extrabold leading-[1] tracking-[-0.02em] ${
                             isBlue ? "text-white" : "text-brand-blue"
-                          } text-[clamp(20px,4.5vw,52px)] md:text-[20px]`}
+                          } text-[22px] sm:text-[26px] lg:text-[52px]`}
                         >
                           {s.n}
                         </p>
