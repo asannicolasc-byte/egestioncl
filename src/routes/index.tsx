@@ -309,7 +309,7 @@ function Index() {
                           className={`mt-2 mb-[10px] h-px w-full min-w-0 ${dividerColor}`}
                         />
                         <p
-                          className={`min-w-0 text-[12px] font-bold leading-[1.3] overflow-wrap-break-word ${
+                          className={`min-w-0 text-[12px] font-bold leading-[1.3] break-words ${
                             isBlue ? "text-white" : "text-[#252944]"
                           }`}
                         >
