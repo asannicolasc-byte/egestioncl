@@ -257,9 +257,9 @@ function Index() {
             </Reveal>
           </div>
 
-          <div className="mt-8 grid gap-6 md:h-[380px] md:grid-cols-[38%_1fr] lg:h-[460px]">
-            <Reveal className="h-full">
-              <div className="group relative aspect-[4/3] max-h-[300px] w-full overflow-hidden rounded-[32px] md:aspect-auto md:h-full md:max-h-none">
+          <div className="mt-8 grid gap-6 md:mx-auto md:w-fit md:grid-cols-[auto_160px] lg:grid-cols-[auto_200px]">
+            <Reveal>
+              <div className="group relative aspect-[4/3] max-h-[300px] w-full overflow-hidden rounded-[32px] md:aspect-[3/4] md:h-[520px] md:w-auto md:max-h-none lg:h-[640px]">
                 <img
                   src={reneImg.url}
                   alt="René Ponce, fundador de EGestión"
@@ -280,11 +280,11 @@ function Index() {
                 </div>
               </div>
             </Reveal>
-            <div className="grid grid-cols-1 gap-6 md:h-full md:grid-rows-3">
+            <div className="grid grid-cols-3 gap-3 md:grid-cols-1 md:grid-rows-3 md:gap-5">
               {STATS.map((s, i) => (
-                <Reveal key={s.l} delay={i * 110} className="md:h-full">
+                <Reveal key={s.l} delay={i * 110}>
                   <div
-                    className={`lift flex h-full items-center gap-5 rounded-[32px] px-7 py-6 md:px-8 ${
+                    className={`lift flex aspect-square w-full flex-col justify-between rounded-[32px] p-3 md:h-[160px] md:w-[160px] md:p-5 lg:h-[200px] lg:w-[200px] ${
                       i === 0
                         ? "bg-brand-lime text-brand-ink"
                         : i === 1
@@ -292,10 +292,12 @@ function Index() {
                           : "bg-brand-blue text-white"
                     }`}
                   >
-                    <p className="font-display text-xl font-bold whitespace-nowrap lg:text-2xl">
+                    <p className="font-display text-sm font-bold whitespace-nowrap sm:text-base md:text-[24px] lg:text-[27px]">
                       {s.n}
                     </p>
-                    <p className="text-sm leading-snug font-normal">{s.l}</p>
+                    <p className="text-[10px] leading-snug font-normal sm:text-xs md:text-[13px] lg:text-sm">
+                      {s.l}
+                    </p>
                   </div>
                 </Reveal>
               ))}
