@@ -528,7 +528,7 @@ function Index() {
                   <h3 className="mt-6 text-xl font-bold">Escríbenos directo</h3>
                   <ul className="mt-8 space-y-6 text-sm">
                     <li className="flex items-start gap-3">
-                      <MessageCircle className="mt-0.5 size-5 shrink-0 text-brand-lime" />
+                      <WhatsAppIcon className="mt-0.5 text-brand-lime" />
                       <span className="min-w-0">
                         <span className="block font-semibold">WhatsApp</span>
                         <a href={WHATSAPP} className="text-white/75 hover:text-brand-lime">
