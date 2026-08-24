@@ -294,28 +294,28 @@ function Index() {
                  return (
                    <Reveal key={s.l} delay={i * 110}>
 <div
-                       className={`lift flex aspect-square w-full flex-col justify-center rounded-[32px] p-[20px] text-left md:size-[96px] lg:size-[130px] ${
-                         isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
-                       }`}
-                     >
-                       <p
-                         className={`font-display whitespace-nowrap leading-[0.95] font-extrabold ${
-                           isBlue ? "text-white" : "text-brand-blue"
-                         } text-[clamp(15px,7vw,44px)] md:text-[36px] lg:text-[44px]`}
-                       >
-                         {s.n}
-                       </p>
-                       <div
-                         className={`my-2 h-px w-full ${dividerColor}`}
-                       />
-                       <p
-                         className={`text-[10px] font-bold leading-[1.25] md:text-[11px] lg:text-[13px] ${
-                           isBlue ? "text-white" : "text-[#252944]"
-                         }`}
-                       >
-                         {s.l}
-                       </p>
-                     </div>
+                        className={`lift flex aspect-square w-full min-w-0 flex-col justify-end overflow-hidden rounded-[32px] border-box p-[14px] text-left sm:p-[16px] md:size-[96px] md:p-[12px] lg:size-[130px] lg:p-[18px] ${
+                          isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
+                        }`}
+                      >
+                        <p
+                          className={`min-w-0 max-w-full font-display whitespace-nowrap font-extrabold leading-[1] tracking-[-0.02em] ${
+                            isBlue ? "text-white" : "text-brand-blue"
+                          } text-[24px] sm:text-[26px] md:text-[20px] lg:text-[52px]`}
+                        >
+                          {s.n}
+                        </p>
+                        <div
+                          className={`mt-1.5 mb-2 h-px w-full min-w-0 ${dividerColor}`}
+                        />
+                        <p
+                          className={`min-w-0 text-[11px] font-bold leading-[1.2] break-words md:text-[10px] lg:text-[12px] ${
+                            isBlue ? "text-white" : "text-[#252944]"
+                          }`}
+                        >
+                          {s.l}
+                        </p>
+                      </div>
                    </Reveal>
                  );
                })}
