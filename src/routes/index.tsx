@@ -107,7 +107,7 @@ const PILARES = [
 ];
 
 const STATS = [
-  { n: "+29 años", l: "asesorando empresas" },
+  { n: "+29", l: "años asesorando empresas" },
   { n: "+100", l: "empresas confían en nosotros" },
   { n: "100%", l: "atención personalizada" },
 ];
@@ -264,14 +264,14 @@ function Index() {
 
           <div className="mt-8 grid gap-[10px] md:grid-cols-[1fr_96px] md:gap-6 lg:grid-cols-[1fr_130px]">
             <Reveal>
-              <div className="group relative aspect-[4/3] max-h-[300px] w-full overflow-hidden rounded-[32px] md:aspect-[9/16] md:h-[520px] md:w-auto md:max-h-none lg:h-[640px]">
+              <div className="group relative aspect-video w-full overflow-hidden rounded-[32px] md:aspect-auto md:h-[320px] lg:h-[420px]">
                  <img
                    src={reneImg.url}
                    alt="René Ponce, fundador de EGestión"
                    width={1200}
                    height={1200}
                    loading="lazy"
-                   className="h-full w-full object-cover object-[50%_12%] transition-transform duration-[400ms] ease-out group-hover:scale-105"
+                   className="h-full w-full object-cover object-[50%_25%] transition-transform duration-[400ms] ease-out group-hover:scale-105"
                  />
                 {/* Overlay desktop: aparece al hacer hover */}
                 <div className="absolute inset-x-0 bottom-0 hidden h-[55%] translate-y-full flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-6 transition-transform duration-300 ease-out group-hover:translate-y-0 lg:flex">
@@ -285,11 +285,11 @@ function Index() {
                 </div>
               </div>
             </Reveal>
-            <div className="grid grid-cols-3 gap-3 md:grid-cols-1 md:grid-rows-3 md:gap-5">
-              {STATS.map((s, i) => (
-                <Reveal key={s.l} delay={i * 110}>
-                  <div
-                    className={`lift flex aspect-square w-full flex-col justify-end gap-1 rounded-[32px] p-3 text-left sm:p-4 md:h-[160px] md:w-[160px] md:p-5 lg:h-[200px] lg:w-[200px] ${
+            <div className="grid grid-cols-3 gap-[10px] md:grid-cols-1 md:grid-rows-3 md:gap-4 lg:gap-[15px]">
+               {STATS.map((s, i) => (
+                 <Reveal key={s.l} delay={i * 110}>
+                   <div
+                     className={`lift flex aspect-square w-full flex-col justify-end gap-0.5 rounded-[32px] p-2.5 text-left sm:p-[14px] md:size-[96px] lg:size-[130px] ${
                        i === 0
                          ? "bg-brand-lime text-brand-ink"
                          : i === 1
@@ -297,10 +297,10 @@ function Index() {
                            : "bg-brand-blue text-white"
                      }`}
                    >
-                     <p className="font-display text-[clamp(11px,3.8vw,18px)] leading-none font-bold whitespace-nowrap sm:text-[32px] md:text-[24px] lg:text-[34px]">
+                     <p className="font-display text-[clamp(16px,6vw,30px)] leading-none font-bold whitespace-nowrap md:text-[24px] lg:text-[30px]">
                        {s.n}
                      </p>
-                     <p className="text-[11px] leading-[1.3] font-normal sm:text-[13px]">
+                     <p className="text-[10px] leading-[1.25] font-normal">
                        {s.l}
                      </p>
                   </div>
