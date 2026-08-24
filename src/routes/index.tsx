@@ -294,7 +294,7 @@ function Index() {
                  return (
                    <Reveal key={s.l} delay={i * 110}>
 <div
-                        className={`lift flex aspect-square w-full min-w-0 flex-col justify-end overflow-hidden rounded-[32px] border-box p-[18px] text-left md:size-[96px] lg:size-[130px] ${
+                        className={`lift flex aspect-square w-full min-w-0 flex-col justify-end overflow-hidden rounded-[32px] border-box p-[14px] text-left sm:p-[16px] md:size-[96px] md:p-[12px] lg:size-[130px] lg:p-[18px] ${
                           isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
                         }`}
                       >
