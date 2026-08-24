@@ -243,13 +243,13 @@ function Index() {
         </section>
 
         {/* NOSOTROS */}
-        <section id="nosotros" className="mx-auto max-w-6xl px-5 py-24 md:py-32">
+        <section id="nosotros" className="mx-auto max-w-6xl px-5 py-12 md:py-16">
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
           <div className="mt-8 grid">
             <Reveal>
-              <h2 className="mb-4 text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3.25rem]">
+              <h2 className="mb-4 text-2xl leading-[1.12] font-bold text-brand-ink sm:text-[29px] lg:text-[2.6rem]">
                 <span className="text-brand-ink">Somos un equipo de expertos en</span>
                 <span className="block text-brand-blue">asesoría contable, tributaria</span>
                 <span className="block text-brand-blue">y estratégica</span>
@@ -262,7 +262,7 @@ function Index() {
             </Reveal>
           </div>
 
-          <div className="mt-8 grid gap-6 md:mx-auto md:w-fit md:grid-cols-[auto_160px] lg:grid-cols-[auto_200px]">
+          <div className="mt-8 grid gap-[10px] md:grid-cols-[1fr_96px] md:gap-6 lg:grid-cols-[1fr_130px]">
             <Reveal>
               <div className="group relative aspect-[4/3] max-h-[300px] w-full overflow-hidden rounded-[32px] md:aspect-[9/16] md:h-[520px] md:w-auto md:max-h-none lg:h-[640px]">
                  <img
