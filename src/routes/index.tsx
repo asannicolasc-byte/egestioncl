@@ -286,26 +286,39 @@ function Index() {
               </div>
             </Reveal>
             <div className="grid grid-cols-3 gap-[10px] md:grid-cols-1 md:grid-rows-3 md:gap-4 lg:gap-[15px]">
-               {STATS.map((s, i) => (
-                 <Reveal key={s.l} delay={i * 110}>
-                   <div
-                     className={`lift flex aspect-square w-full flex-col justify-end gap-0.5 rounded-[32px] p-2.5 text-left sm:p-[14px] md:size-[96px] lg:size-[130px] ${
-                       i === 0
-                         ? "bg-brand-lime text-brand-ink"
-                         : i === 1
-                           ? "bg-brand-soft text-brand-ink"
-                           : "bg-brand-blue text-white"
-                     }`}
-                   >
-                     <p className="font-display text-[clamp(16px,6vw,30px)] leading-none font-bold whitespace-nowrap md:text-[24px] lg:text-[30px]">
-                       {s.n}
-                     </p>
-                     <p className="text-[10px] leading-[1.25] font-normal">
-                       {s.l}
-                     </p>
-                  </div>
-                </Reveal>
-              ))}
+{STATS.map((s, i) => {
+                 const isBlue = i === 2;
+                 const dividerColor = isBlue
+                   ? "bg-white/40"
+                   : "bg-brand-blue/40";
+                 return (
+                   <Reveal key={s.l} delay={i * 110}>
+                     <div
+                       className={`lift flex aspect-square w-full flex-col justify-center rounded-[32px] p-[20px] text-left ${
+                         isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
+                       }`}
+                     >
+                       <p
+                         className={`font-display whitespace-nowrap leading-[0.95] font-extrabold ${
+                           isBlue ? "text-white" : "text-brand-blue"
+                         } text-[clamp(15px,7vw,44px)] md:text-[36px] lg:text-[44px]`}
+                       >
+                         {s.n}
+                       </p>
+                       <div
+                         className={`my-2 h-px w-full ${dividerColor}`}
+                       />
+                       <p
+                         className={`text-[10px] font-bold leading-[1.25] md:text-[11px] lg:text-[13px] ${
+                           isBlue ? "text-white" : "text-[#252944]"
+                         }`}
+                       >
+                         {s.l}
+                       </p>
+                     </div>
+                   </Reveal>
+                 );
+               })}
             </div>
           </div>
 
