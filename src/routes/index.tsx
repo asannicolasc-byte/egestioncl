@@ -12,7 +12,7 @@ import {
   TrendingUp,
   Mail,
   MapPin,
-  MessageCircle,
+  
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Eyebrow } from "@/components/site/Eyebrow";
