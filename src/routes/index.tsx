@@ -294,28 +294,28 @@ function Index() {
                  return (
                    <Reveal key={s.l} delay={i * 110}>
 <div
-                       className={`lift flex aspect-square w-full flex-col justify-center rounded-[32px] p-[20px] text-left md:size-[96px] lg:size-[130px] ${
-                         isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
-                       }`}
-                     >
-                       <p
-                         className={`font-display whitespace-nowrap leading-[0.95] font-extrabold ${
-                           isBlue ? "text-white" : "text-brand-blue"
-                         } text-[clamp(15px,7vw,44px)] md:text-[36px] lg:text-[44px]`}
-                       >
-                         {s.n}
-                       </p>
-                       <div
-                         className={`my-2 h-px w-full ${dividerColor}`}
-                       />
-                       <p
-                         className={`text-[10px] font-bold leading-[1.25] md:text-[11px] lg:text-[13px] ${
-                           isBlue ? "text-white" : "text-[#252944]"
-                         }`}
-                       >
-                         {s.l}
-                       </p>
-                     </div>
+                        className={`lift flex aspect-square w-full min-w-0 flex-col justify-center overflow-hidden rounded-[32px] border-box p-[18px] text-left md:size-[96px] lg:size-[130px] ${
+                          isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
+                        }`}
+                      >
+                        <p
+                          className={`min-w-0 max-w-full font-display whitespace-nowrap font-extrabold leading-[1] tracking-[-0.02em] ${
+                            isBlue ? "text-white" : "text-brand-blue"
+                          } text-[clamp(28px,4.5vw,56px)]`}
+                        >
+                          {s.n}
+                        </p>
+                        <div
+                          className={`mt-2 mb-[10px] h-px w-full min-w-0 ${dividerColor}`}
+                        />
+                        <p
+                          className={`min-w-0 text-[12px] font-bold leading-[1.3] overflow-wrap-break-word ${
+                            isBlue ? "text-white" : "text-[#252944]"
+                          }`}
+                        >
+                          {s.l}
+                        </p>
+                      </div>
                    </Reveal>
                  );
                })}
