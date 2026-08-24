@@ -292,25 +292,25 @@ function Index() {
                    ? "bg-white/40"
                    : "bg-brand-blue/40";
                  return (
-                   <Reveal key={s.l} delay={i * 110}>
+                    <Reveal key={s.l} delay={i * 110} className="min-w-0 max-w-full">
 <div
-                        className={`lift flex aspect-square w-full min-w-0 flex-col justify-end overflow-hidden rounded-[32px] border-box p-[14px] text-left sm:p-[16px] md:size-[96px] md:p-[12px] lg:size-[130px] lg:p-[18px] ${
+                         className={`lift stat-card box-border flex aspect-square w-full min-w-0 max-w-full flex-col justify-center overflow-hidden rounded-[32px] p-[18px] text-left md:size-[96px] lg:size-[130px] ${
                           isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
                         }`}
                       >
                         <p
-                          className={`min-w-0 max-w-full font-display whitespace-nowrap font-extrabold leading-[1] tracking-[-0.02em] ${
+                           className={`stat-number block min-w-0 max-w-full font-display whitespace-nowrap font-extrabold ${
                             isBlue ? "text-white" : "text-brand-blue"
-                          } text-[24px] sm:text-[26px] md:text-[20px] lg:text-[52px]`}
+                           }`}
                         >
                           {s.n}
                         </p>
                         <div
-                          className={`mt-1.5 mb-2 h-px w-full min-w-0 ${dividerColor}`}
+                           className={`mt-2 mb-2.5 h-px w-full min-w-0 max-w-full shrink-0 ${dividerColor}`}
                         />
                         <p
-                          className={`min-w-0 text-[11px] font-bold leading-[1.2] break-words md:text-[10px] lg:text-[12px] ${
-                            isBlue ? "text-white" : "text-[#252944]"
+                           className={`min-w-0 max-w-full text-[12px] font-bold leading-[1.3] break-words [overflow-wrap:break-word] ${
+                             isBlue ? "text-white" : "text-brand-ink"
                           }`}
                         >
                           {s.l}

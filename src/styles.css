@@ -226,6 +226,16 @@
   border-radius: 62% 38% 46% 54% / 54% 44% 56% 46%;
 }
 
+.stat-card {
+  container-type: inline-size;
+}
+
+.stat-number {
+  font-size: 30cqw;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .lift:hover { transform: none; }
