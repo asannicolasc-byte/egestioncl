@@ -18,6 +18,7 @@ import { Header } from "@/components/site/Header";
 
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
+import RibbonText from "@/components/RibbonText";
 import heroImg from "@/assets/hero-reunion-2.jpg";
 import coworkImg from "@/assets/cowork-andino.jpg";
 import reneImg from "@/assets/rene-ponce.png";
