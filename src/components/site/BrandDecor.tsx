@@ -8,36 +8,63 @@ type Ribbon = {
   zone: React.CSSProperties;
   /** hide below lg when the section is too cramped */
   lgOnly?: boolean;
-  /** path drawn in a 200x200 viewBox, always starting/ending outside it */
+  /**
+   * Chained cubic beziers in a 300x300 viewBox. Every path starts and ends
+   * outside the box and loops back over itself at least once (a coil, not a
+   * swoosh). Rendered with preserveAspectRatio="meet" so the stroke keeps a
+   * constant thickness along its whole length.
+   */
   d: string;
   color: string;
   width: number;
-  mobile?: boolean;
 };
+
+/* coil that enters top-right, loops, exits bottom */
+const COIL_A =
+  "M380 -60 C 300 30, 190 20, 170 100 C 152 172, 250 200, 268 140 C 284 86, 190 60, 140 120 C 88 182, 130 280, 60 360";
+/* mirrored coil, runs roughly parallel to COIL_A */
+const COIL_B =
+  "M420 20 C 340 110, 240 100, 222 178 C 206 246, 296 272, 312 216 C 326 166, 240 140, 192 196 C 142 254, 180 340, 110 420";
+/* coil that enters bottom-left, loops, exits right */
+const COIL_C =
+  "M-70 360 C 20 300, 30 200, 110 190 C 180 182, 200 268, 142 280 C 88 291, 62 200, 128 158 C 196 114, 300 168, 370 110";
 
 const HERO_RIBBONS: Ribbon[] = [
   {
-    // top-right corner, winds and doubles back
-    zone: { top: 0, right: 0, width: "24%", height: "165px" },
-    d: "M240 -40 C 150 30, 230 80, 140 110 C 70 134, 160 170, 120 240",
+    // right edge, upper — pairs with the next one
+    zone: { top: "20px", right: 0, width: "20%", height: "430px" },
+    d: COIL_A,
     color: BLUE,
-    width: 22,
-    mobile: true,
+    width: 26,
   },
   {
-    // right edge lower, overlaps the first in the corner
-    zone: { bottom: 0, right: 0, width: "20%", height: "9%" },
-    lgOnly: true,
-    d: "M250 -40 C 160 20, 210 90, 130 130 C 70 160, 150 200, 120 250",
+    // right edge, overlapping the first, roughly parallel
+    zone: { top: "20px", right: 0, width: "20%", height: "430px" },
+    d: COIL_B,
     color: LIME,
-    width: 20,
-    mobile: true,
+    width: 22,
   },
   {
-    // far bottom-left corner, below the buttons
-    zone: { bottom: 0, left: 0, width: "14%", height: "7%" },
+    // bottom edge, right side
+    zone: { bottom: 0, right: 0, width: "16%", height: "150px" },
     lgOnly: true,
-    d: "M-40 240 C 40 190, -20 130, 60 110 C 130 92, 90 170, 160 200 C 200 218, 220 250, 210 290",
+    d: COIL_C,
+    color: LIME,
+    width: 22,
+  },
+  {
+    // bottom edge, below the CTA buttons / left corner
+    zone: { bottom: 0, left: 0, width: "12%", height: "130px" },
+    lgOnly: true,
+    d: COIL_A,
+    color: BLUE,
+    width: 20,
+  },
+  {
+    // small curl in the top-left corner, above the nav
+    zone: { top: 0, left: 0, width: "8%", height: "130px" },
+    lgOnly: true,
+    d: COIL_C,
     color: LIME,
     width: 18,
   },
@@ -46,26 +73,24 @@ const HERO_RIBBONS: Ribbon[] = [
 const SECTION_RIBBONS: Ribbon[] = [
   {
     // top-right corner band (inside the section's top padding)
-    zone: { top: 0, right: 0, width: "20%", height: "40px" },
-    d: "M260 -60 C 170 20, 250 70, 150 100 C 80 122, 170 160, 130 240",
+    zone: { top: 0, right: 0, width: "18%", height: "150px" },
+    d: COIL_A,
     color: BLUE,
-    width: 22,
-    mobile: true,
+    width: 24,
   },
   {
-    // bottom-right corner band, overlapping the top one along the edge
-    zone: { bottom: 0, right: 0, width: "18%", height: "42px" },
-    d: "M250 -50 C 170 20, 220 100, 140 130 C 80 152, 160 200, 130 260",
+    // bottom-right corner band, parallel and overlapping along the edge
+    zone: { bottom: 0, right: 0, width: "16%", height: "150px" },
+    d: COIL_B,
     color: LIME,
-    width: 18,
-    mobile: true,
+    width: 20,
   },
   {
     // bottom-left corner band
-    zone: { bottom: 0, left: 0, width: "18%", height: "42px" },
-    d: "M-60 250 C 30 200, -30 140, 60 110 C 130 88, 80 180, 150 210 C 200 232, 220 260, 210 300",
+    zone: { bottom: 0, left: 0, width: "16%", height: "150px" },
+    d: COIL_C,
     color: LIME,
-    width: 18,
+    width: 20,
   },
 ];
 
@@ -89,8 +114,8 @@ export function BrandDecor({ variant }: { variant: Variant }) {
           key={i}
           className={`absolute overflow-hidden ${r.lgOnly ? "hidden lg:block" : ""}`}
           style={r.zone}
-          viewBox="0 0 200 200"
-          preserveAspectRatio="none"
+          viewBox="0 0 300 300"
+          preserveAspectRatio="xMidYMid meet"
           fill="none"
           aria-hidden="true"
           focusable="false"
@@ -101,6 +126,7 @@ export function BrandDecor({ variant }: { variant: Variant }) {
             stroke={r.color}
             strokeWidth={r.width}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ))}
