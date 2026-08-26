@@ -1,38 +1,65 @@
 import React from "react";
 
 export default function BrandRibbons() {
+
   return (
+
     <svg
+
       aria-hidden="true"
+
       viewBox="0 0 1440 900"
-      preserveAspectRatio="xMidYMid slice"
+
+      preserveAspectRatio="none"
+
       style={{
+
         position: "absolute",
+
         inset: 0,
+
         width: "100%",
+
         height: "100%",
+
         pointerEvents: "none",
+
         zIndex: 0,
+
       }}
+
     >
+
       <g fill="none" strokeLinecap="round" strokeLinejoin="round">
-        {/* Right edge: two long parallel winding tubes, one curls back over itself */}
+
         <path
-          d="M1540 -80 C 1240 60 1120 220 1230 330 C 1330 430 1450 380 1400 270 C 1350 165 1150 240 1120 420 C 1090 610 1260 690 1230 850 C 1210 960 1300 1010 1520 1040"
+
+          d="M1500 120 C 1380 140 1300 220 1360 290 C 1420 360 1300 420 1240 360 C 1180 300 1280 220 1340 270 C 1400 320 1360 460 1280 520 C 1200 580 1240 700 1340 720 C 1440 740 1480 820 1440 940"
+
+          stroke="#F0F7D8" strokeWidth="26" />
+
+        <path
+
+          d="M1500 260 C 1400 300 1330 370 1390 440 C 1450 510 1350 600 1300 560 C 1250 520 1330 450 1380 500 C 1430 550 1420 700 1480 780"
+
+          stroke="#EDF0FF" strokeWidth="20" />
+
+        <path
+
+          d="M-40 880 C 60 800 160 860 140 930 C 120 990 40 970 60 910 C 80 860 180 870 240 940"
+
           stroke="#F0F7D8" strokeWidth="24" />
+
         <path
-          d="M1560 60 C 1330 190 1240 320 1330 430 C 1420 540 1300 660 1330 790 C 1355 900 1450 950 1560 970"
-          stroke="#EDF0FF" strokeWidth="22" />
-        {/* Bottom edge */}
-        <path
-          d="M-100 980 C 90 860 210 990 360 930 C 510 870 560 980 700 960 C 830 942 940 1010 1040 1090"
-          stroke="#F0F7D8" strokeWidth="24" className="brand-ribbon-mobile-hide" />
-        {/* Top-left curl */}
-        <path
-          d="M-90 30 C 30 -60 150 -20 140 70 C 132 150 40 160 44 96 C 48 44 130 34 200 -60"
-          stroke="#EDF0FF" strokeWidth="20" className="brand-ribbon-mobile-hide" />
+
+          d="M-40 60 C 40 -10 140 30 120 100 C 100 165 20 150 40 95 C 55 55 130 50 190 -20"
+
+          stroke="#EDF0FF" strokeWidth="20" />
+
       </g>
 
     </svg>
+
   );
+
 }
