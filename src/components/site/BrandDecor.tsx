@@ -102,7 +102,7 @@ export function BrandDecor({ variant }: { variant: Variant }) {
       <svg
         className="absolute inset-0 h-full w-full"
         viewBox="0 0 1200 700"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="none"
         fill="none"
         aria-hidden="true"
         focusable="false"
