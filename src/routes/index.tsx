@@ -246,7 +246,8 @@ function Index() {
         </section>
 
         {/* NOSOTROS */}
-        <section id="nosotros" className="mx-auto max-w-6xl px-5 py-12 md:py-16">
+        <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
+          <BrandDecor variant="section" />
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
@@ -407,7 +408,8 @@ function Index() {
         </section>
 
         {/* POR QUÉ */}
-        <section className="mx-auto max-w-6xl px-5 py-24 md:py-32">
+        <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
+          <BrandDecor variant="section" />
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
             <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3rem]">
@@ -491,7 +493,8 @@ function Index() {
         </section>
 
         {/* CONTACTO */}
-        <section id="contacto" className="mx-auto max-w-6xl px-5 py-24 md:py-32">
+        <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
+          <BrandDecor variant="section" />
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
@@ -604,7 +607,7 @@ function Index() {
 
       <footer className="px-3 pb-3 sm:px-5 sm:pb-5">
         <div className="relative overflow-hidden mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-14 text-white sm:px-8">
-          <BrandDecor variant="footer" />
+          
           <div className="relative z-10 mx-auto max-w-6xl">
             <div className="grid gap-10 md:grid-cols-3">
 
