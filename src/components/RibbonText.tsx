@@ -27,6 +27,7 @@ export default function RibbonText() {
       width={size}
       height={size}
       viewBox={viewBox}
+      className="ribbon-text"
       style={{
         position: "absolute",
         top: "180px",
