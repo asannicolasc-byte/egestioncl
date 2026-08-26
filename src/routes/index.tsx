@@ -15,7 +15,7 @@ import {
   
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
-import { BrandDecor } from "@/components/site/BrandDecor";
+import BrandRibbons from "@/components/BrandRibbons";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-reunion-2.jpg";
@@ -174,7 +174,7 @@ function Index() {
             aria-hidden
             className="blob pointer-events-none absolute -top-10 right-0 size-[22rem] bg-brand-lime/25 blur-3xl"
           />
-          <BrandDecor variant="hero" />
+          <BrandRibbons />
 
           <div className="relative z-10 mx-auto max-w-6xl">
 
@@ -247,7 +247,7 @@ function Index() {
 
         {/* NOSOTROS */}
         <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandDecor variant="section" />
+          <BrandRibbons />
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
@@ -409,7 +409,7 @@ function Index() {
 
         {/* POR QUÉ */}
         <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandDecor variant="section" />
+          <BrandRibbons />
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
             <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3rem]">
@@ -494,7 +494,7 @@ function Index() {
 
         {/* CONTACTO */}
         <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandDecor variant="section" />
+          <BrandRibbons />
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
