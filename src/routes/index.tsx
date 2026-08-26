@@ -602,9 +602,11 @@ function Index() {
       </main>
 
       <footer className="px-3 pb-3 sm:px-5 sm:pb-5">
-        <div className="mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-14 text-white sm:px-8">
-          <div className="mx-auto max-w-6xl">
+        <div className="relative overflow-hidden mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-14 text-white sm:px-8">
+          <BrandDecor variant="footer" />
+          <div className="relative z-10 mx-auto max-w-6xl">
             <div className="grid gap-10 md:grid-cols-3">
+
               <div>
                 <img
                   src={egLime}
