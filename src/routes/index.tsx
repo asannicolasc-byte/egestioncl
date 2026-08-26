@@ -246,7 +246,7 @@ function Index() {
         </section>
 
         {/* NOSOTROS */}
-        <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*]:relative [&>*]:z-10">
+        <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <BrandDecor variant="section" />
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
@@ -408,7 +408,7 @@ function Index() {
         </section>
 
         {/* POR QUÉ */}
-        <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*]:relative [&>*]:z-10">
+        <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <BrandDecor variant="section" />
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
@@ -493,7 +493,7 @@ function Index() {
         </section>
 
         {/* CONTACTO */}
-        <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*]:relative [&>*]:z-10">
+        <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <BrandDecor variant="section" />
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
