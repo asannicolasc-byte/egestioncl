@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+const D = "M-40 470 C 90 470 130 300 250 250 C 340 212 430 250 440 330 C 450 415 350 460 290 410 C 230 360 300 250 400 262 C 500 274 540 400 660 400";
+
 export default function RibbonText() {
   const [width, setWidth] = useState(1440);
 
@@ -13,24 +15,21 @@ export default function RibbonText() {
   if (width < 1024) return null;
 
   const isXL = width >= 1280;
-  const size = isXL ? 440 : 360;
-  const viewBox = isXL ? "0 0 440 440" : "0 0 360 360";
-  const c = isXL ? 220 : 180;
-  const r = isXL ? 180 : 148;
-  const strokeWidth = isXL ? 46 : 40;
-  const fontSize = isXL ? 18 : 16;
-  const right = isXL ? 80 : 50;
+  const svgWidth = isXL ? 660 : 500;
+  const svgHeight = isXL ? 560 : 430;
+  const right = isXL ? -40 : -30;
+  const fontSize = isXL ? 16 : 14;
 
   return (
     <svg
       aria-hidden="true"
-      width={size}
-      height={size}
-      viewBox={viewBox}
+      width={svgWidth}
+      height={svgHeight}
+      viewBox="0 0 660 560"
       className="ribbon-text"
       style={{
         position: "absolute",
-        top: "180px",
+        top: "150px",
         right: `${right}px`,
         pointerEvents: "none",
         zIndex: 0,
@@ -38,29 +37,19 @@ export default function RibbonText() {
       }}
     >
       <defs>
-        <path
-          id="ringPath"
-          d={`M${c} ${c - r} A${r} ${r} 0 1 1 ${c - 0.1} ${c - r}`}
-          fill="none"
-        />
+        <path id="ribbonFlow" d={D} fill="none" />
       </defs>
-      <circle
-        cx={c}
-        cy={c}
-        r={r}
-        fill="none"
-        stroke="#C0E12D"
-        strokeWidth={strokeWidth}
-      />
+      <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="58" strokeLinecap="round" />
+      <path d={D} fill="none" stroke="#C0E12D" strokeWidth="44" strokeLinecap="round" />
       <text
         fill="#252944"
         fontSize={fontSize}
         fontWeight="500"
-        letterSpacing="2"
+        letterSpacing="1.5"
         style={{ textTransform: "uppercase" }}
       >
-        <textPath href="#ringPath" startOffset="0">
-          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
+        <textPath href="#ribbonFlow" startOffset="0">
+          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
         </textPath>
       </text>
     </svg>
