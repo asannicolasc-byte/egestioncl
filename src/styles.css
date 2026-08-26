@@ -235,16 +235,10 @@
 
 /* Halftone de marca */
 @utility brand-halftone {
-  background-image: radial-gradient(circle, #0946FF 1.1px, transparent 1.1px);
-  background-size: 13px 13px;
-  opacity: 0.16;
+  background-image: radial-gradient(circle, #0946FF 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity: 0.13;
   pointer-events: none;
-}
-
-@media (max-width: 639px) {
-  .brand-decor-shape {
-    opacity: 0.14 !important;
-  }
 }
 
 

@@ -1,209 +1,87 @@
 type Variant = "hero" | "footer";
 
-type ShapeName = "smile" | "tail" | "ring" | "dot" | "arc" | "bar";
+const LIME_1 = "#E4F3AC";
+const LIME_2 = "#EDF7C6";
+const BLUE_1 = "#D3DEFF";
+const BLUE_2 = "#E2E8FF";
 
-const LIME = "#C0E12D";
-const BLUE = "#0946FF";
-
-function BrandShape({
-  name,
-  color,
-  opacity,
-  rotate,
-  size,
-  style,
-  className,
-}: {
-  name: ShapeName;
+type Ribbon = {
+  d: string;
   color: string;
-  opacity: number;
-  rotate: number;
-  size: string;
-  style?: React.CSSProperties;
-  className?: string;
-}) {
-  return (
-    <svg
-      viewBox="0 0 80 80"
-      aria-hidden="true"
-      focusable="false"
-      className={`brand-decor-shape absolute ${className ?? ""}`}
-      style={{
-        ...style,
-        width: size,
-        height: size,
-        color,
-        opacity,
-        transform: `rotate(${rotate}deg)`,
-        pointerEvents: "none",
-      }}
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-    >
-      {name === "smile" && <path d="M4 22 Q40 60 76 22" strokeWidth={16} />}
-      {name === "tail" && <path d="M56 8 L56 48 Q56 76 20 72" strokeWidth={16} />}
-      {name === "ring" && (
-        <>
-          <path d="M72 40 A30 30 0 1 0 48 70" strokeWidth={15} />
-          <path d="M42 34 H72" strokeWidth={13} />
-        </>
-      )}
-      {name === "dot" && <circle cx="40" cy="40" r="24" fill="currentColor" stroke="none" />}
-      {name === "arc" && <path d="M10 70 A38 38 0 0 1 70 10" strokeWidth={16} />}
-      {name === "bar" && (
-        <rect x="0" y="31" width="80" height="18" rx="9" fill="currentColor" stroke="none" />
-      )}
-    </svg>
-  );
-}
-
-type Placement = {
-  name: ShapeName;
-  color: string;
-  opacity: number;
-  rotate: number;
-  size: string;
-  style: React.CSSProperties;
+  width: number;
   mobile?: boolean;
 };
 
-const HERO: Placement[] = [
+/* viewBox: 0 0 1200 700 — every path starts and ends outside these bounds */
+
+const HERO_RIBBONS: Ribbon[] = [
   {
-    name: "arc",
-    color: LIME,
-    opacity: 0.26,
-    rotate: -22,
-    size: "clamp(180px, 26vw, 340px)",
-    style: { top: "-8%", right: "-7%" },
+    // right edge, winds and doubles back
+    d: "M1320 -80 C 1080 60, 1240 250, 1020 330 C 830 400, 1080 520, 1000 660 C 950 750, 1120 790, 1300 760",
+    color: BLUE_1,
+    width: 34,
     mobile: true,
   },
   {
-    name: "tail",
-    color: BLUE,
-    opacity: 0.22,
-    rotate: 196,
-    size: "clamp(120px, 15vw, 210px)",
-    style: { top: "26%", left: "-6%" },
+    // bottom-left loop
+    d: "M-120 800 C 80 700, -40 560, 180 520 C 380 484, 300 660, 520 700 C 660 726, 700 790, 660 860",
+    color: LIME_1,
+    width: 30,
     mobile: true,
   },
   {
-    name: "smile",
-    color: LIME,
-    opacity: 0.24,
-    rotate: 9,
-    size: "clamp(100px, 12vw, 170px)",
-    style: { bottom: "-6%", left: "18%" },
+    // top-left sweep
+    d: "M-140 60 C 60 -60, 200 120, 380 40 C 520 -22, 560 60, 520 160 C 480 260, 300 220, 240 320",
+    color: LIME_2,
+    width: 26,
   },
   {
-    name: "bar",
-    color: BLUE,
-    opacity: 0.22,
-    rotate: -38,
-    size: "clamp(90px, 11vw, 150px)",
-    style: { top: "8%", left: "31%" },
-  },
-  {
-    name: "ring",
-    color: LIME,
-    opacity: 0.2,
-    rotate: 47,
-    size: "clamp(110px, 14vw, 190px)",
-    style: { bottom: "4%", right: "-5%" },
+    // right cluster overlap
+    d: "M1340 220 C 1140 250, 1180 420, 980 470 C 840 504, 900 600, 1060 620 C 1200 638, 1280 700, 1260 800",
+    color: BLUE_2,
+    width: 24,
     mobile: true,
   },
   {
-    name: "smile",
-    color: BLUE,
-    opacity: 0.2,
-    rotate: 14,
-    size: "clamp(90px, 10vw, 130px)",
-    style: { top: "58%", right: "22%" },
-  },
-  {
-    name: "dot",
-    color: BLUE,
-    opacity: 0.35,
-    rotate: 14,
-    size: "26px",
-    style: { top: "14%", left: "12%" },
-    mobile: true,
-  },
-  {
-    name: "dot",
-    color: LIME,
-    opacity: 0.35,
-    rotate: -38,
-    size: "20px",
-    style: { bottom: "16%", right: "34%" },
+    d: "M-100 380 C 60 300, 60 480, 200 520 C 320 554, 260 660, 100 700 C 20 720, -60 780, -40 840",
+    color: BLUE_2,
+    width: 22,
   },
 ];
 
-const FOOTER: Placement[] = [
+const FOOTER_RIBBONS: Ribbon[] = [
   {
-    name: "arc",
-    color: BLUE,
-    opacity: 0.28,
-    rotate: 196,
-    size: "clamp(170px, 24vw, 320px)",
-    style: { bottom: "-12%", left: "-8%" },
+    d: "M1340 -60 C 1120 40, 1220 220, 1020 300 C 850 368, 1060 460, 1020 600 C 996 690, 1120 780, 1320 800",
+    color: LIME_1,
+    width: 34,
     mobile: true,
   },
   {
-    name: "smile",
-    color: LIME,
-    opacity: 0.24,
-    rotate: -22,
-    size: "clamp(110px, 14vw, 190px)",
-    style: { top: "-9%", right: "6%" },
+    d: "M-140 760 C 100 700, -20 540, 200 480 C 400 426, 340 620, 560 680 C 700 718, 740 780, 700 860",
+    color: BLUE_1,
+    width: 30,
     mobile: true,
   },
   {
-    name: "bar",
-    color: BLUE,
-    opacity: 0.22,
-    rotate: 47,
-    size: "clamp(90px, 11vw, 150px)",
-    style: { top: "34%", left: "22%" },
+    d: "M-160 100 C 40 -40, 220 140, 400 60 C 540 -2, 600 100, 540 200 C 480 300, 320 260, 260 360",
+    color: BLUE_2,
+    width: 26,
   },
   {
-    name: "ring",
-    color: LIME,
-    opacity: 0.22,
-    rotate: 9,
-    size: "clamp(130px, 17vw, 240px)",
-    style: { bottom: "8%", right: "-7%" },
+    d: "M1360 300 C 1160 330, 1200 480, 1000 520 C 860 548, 920 640, 1080 660 C 1220 678, 1300 740, 1280 840",
+    color: LIME_2,
+    width: 24,
     mobile: true,
   },
   {
-    name: "tail",
-    color: BLUE,
-    opacity: 0.2,
-    rotate: -38,
-    size: "clamp(90px, 12vw, 160px)",
-    style: { top: "6%", left: "38%" },
-  },
-  {
-    name: "smile",
-    color: BLUE,
-    opacity: 0.2,
-    rotate: 14,
-    size: "clamp(90px, 10vw, 130px)",
-    style: { bottom: "26%", left: "8%" },
-  },
-  {
-    name: "dot",
-    color: LIME,
-    opacity: 0.35,
-    rotate: 47,
-    size: "24px",
-    style: { top: "22%", right: "28%" },
-    mobile: true,
+    d: "M-120 320 C 40 240, 40 420, 180 460 C 300 494, 240 600, 80 640 C 0 660, -80 720, -60 780",
+    color: LIME_2,
+    width: 22,
   },
 ];
 
 export function BrandDecor({ variant }: { variant: Variant }) {
-  const shapes = variant === "hero" ? HERO : FOOTER;
+  const ribbons = variant === "hero" ? HERO_RIBBONS : FOOTER_RIBBONS;
   const mask =
     variant === "hero"
       ? "linear-gradient(to bottom, black 0%, transparent 80%)"
@@ -220,18 +98,26 @@ export function BrandDecor({ variant }: { variant: Variant }) {
         className="brand-halftone absolute inset-0"
         style={{ maskImage: mask, WebkitMaskImage: mask }}
       />
-      {shapes.map((s, i) => (
-        <BrandShape
-          key={i}
-          name={s.name}
-          color={s.color}
-          opacity={s.opacity}
-          rotate={s.rotate}
-          size={s.size}
-          style={s.style}
-          className={s.mobile ? "" : "hidden sm:block"}
-        />
-      ))}
+      <svg
+        className="absolute inset-0 h-full w-full"
+        viewBox="0 0 1200 700"
+        preserveAspectRatio="xMidYMid slice"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        {ribbons.map((r, i) => (
+          <path
+            key={i}
+            d={r.d}
+            fill="none"
+            stroke={r.color}
+            strokeWidth={r.width}
+            strokeLinecap="round"
+            className={r.mobile ? "" : "hidden md:block"}
+          />
+        ))}
+      </svg>
     </div>
   );
 }
