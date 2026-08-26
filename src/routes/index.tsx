@@ -173,8 +173,10 @@ function Index() {
             aria-hidden
             className="blob pointer-events-none absolute -top-10 right-0 size-[22rem] bg-brand-lime/25 blur-3xl"
           />
+          <BrandDecor variant="hero" />
 
-          <div className="relative mx-auto max-w-6xl">
+          <div className="relative z-10 mx-auto max-w-6xl">
+
             <Reveal className="max-w-4xl">
               <span className="inline-flex items-center gap-2 rounded-full bg-brand-lime px-4 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-brand-ink uppercase">
                 <span className="size-2 rounded-full bg-brand-blue" />
