@@ -247,27 +247,11 @@
 }
 
 /* Decorative ribbon text in hero */
-.ribbon-text {
-  position: absolute;
-  top: 180px;
-  right: 80px;
-  pointer-events: none;
-  z-index: 0;
-  user-select: none;
-}
-
-@media (max-width: 1279.98px) {
-  .ribbon-text {
-    width: 360px;
-    height: 360px;
-    right: 50px;
-  }
-}
-
 @media (max-width: 1023.98px) {
   .ribbon-text {
     display: none;
   }
 }
+
 
 
