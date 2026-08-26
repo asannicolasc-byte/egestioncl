@@ -233,12 +233,26 @@
   pointer-events: none;
 }
 
-/* Cintas de marca: ocultar las dos últimas bajo 768px */
-@media (max-width: 767.98px) {
-  .brand-ribbon-mobile-hide {
-    display: none;
+/* Tubos decorativos de marca */
+@media (max-width: 1023.98px) {
+  .brand-tube {
+    width: calc(var(--tube-w) * 0.7) !important;
   }
 }
+
+@media (max-width: 767.98px) {
+  .brand-tube:not(.brand-tube-hero) {
+    display: none !important;
+  }
+  .brand-tube-hero {
+    width: 220px !important;
+    top: -40px !important;
+    right: -70px !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
+}
+
 
 
 
