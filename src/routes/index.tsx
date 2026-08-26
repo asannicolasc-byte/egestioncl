@@ -244,7 +244,7 @@ function Index() {
 
         {/* NOSOTROS */}
         <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandTube src={tubeBlueS} width={380} bottom="-150px" left="-190px" rotate={-8} />
+          <BrandTube src={tubeBlueS} width={380} bottom="-210px" left="-230px" rotate={-8} />
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
@@ -492,7 +492,7 @@ function Index() {
 
         {/* CONTACTO */}
         <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandTube src={tubeBlueLoop} width={360} top="-170px" left="-200px" rotate={12} />
+          <BrandTube src={tubeBlueLoop} width={360} top="-150px" left="-180px" rotate={12} />
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
