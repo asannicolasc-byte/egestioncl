@@ -4,61 +4,62 @@ const LIME = "#F0F7D8";
 const BLUE = "#EDF0FF";
 
 type Ribbon = {
+  /** zone box the ribbon lives in — keeps decor in the outer margins */
+  zone: React.CSSProperties;
+  /** path drawn in a 200x200 viewBox, always starting/ending outside it */
   d: string;
   color: string;
   width: number;
   mobile?: boolean;
 };
 
-/* viewBox: 0 0 1200 700 — every path starts and ends outside these bounds */
-
 const HERO_RIBBONS: Ribbon[] = [
   {
-    // right edge, winds and doubles back
-    d: "M1320 -80 C 1160 60, 1280 250, 1120 340 C 1000 408, 1170 520, 1090 660 C 1040 748, 1160 790, 1310 760",
+    // top-right corner, winds and doubles back
+    zone: { top: 0, right: 0, width: "34%", height: "34%" },
+    d: "M240 -40 C 150 30, 230 80, 140 110 C 70 134, 160 170, 120 240",
     color: BLUE,
-    width: 26,
-    mobile: true,
-  },
-  {
-    // right cluster, overlaps the first in the corner
-    d: "M1340 180 C 1220 240, 1260 430, 1090 490 C 980 528, 1020 610, 1140 640 C 1250 668, 1310 720, 1290 820",
-    color: LIME,
     width: 22,
     mobile: true,
   },
   {
-    // far bottom-left corner, below the buttons
-    d: "M-180 820 C -60 770, -120 660, 10 626 C 120 598, 60 700, 140 742 C 200 774, 214 830, 180 900",
+    // right edge lower, overlaps the first in the corner
+    zone: { bottom: 0, right: 0, width: "28%", height: "30%" },
+    d: "M250 -40 C 160 20, 210 90, 130 130 C 70 160, 150 200, 120 250",
     color: LIME,
     width: 20,
+    mobile: true,
   },
   {
-    // bottom-right, cropped by both edges
-    d: "M1340 620 C 1200 640, 1120 700, 1140 780 C 1156 846, 1260 860, 1340 890",
-    color: BLUE,
+    // far bottom-left corner, below the buttons
+    zone: { bottom: 0, left: 0, width: "16%", height: "16%" },
+    d: "M-40 240 C 40 190, -20 130, 60 110 C 130 92, 90 170, 160 200 C 200 218, 220 250, 210 290",
+    color: LIME,
     width: 18,
   },
 ];
 
 const SECTION_RIBBONS: Ribbon[] = [
   {
-    // right edge
-    d: "M1320 -60 C 1200 60, 1280 200, 1150 300 C 1050 376, 1190 470, 1140 620 C 1110 712, 1210 780, 1330 810",
+    // top-right corner band (inside the section's top padding)
+    zone: { top: 0, right: 0, width: "26%", height: "86px" },
+    d: "M260 -60 C 170 20, 250 70, 150 100 C 80 122, 170 160, 130 240",
     color: BLUE,
-    width: 24,
+    width: 22,
     mobile: true,
   },
   {
-    // right edge, overlapping in the bottom corner
-    d: "M1350 300 C 1240 350, 1270 470, 1170 530 C 1096 574, 1140 640, 1240 672 C 1320 698, 1360 750, 1340 840",
+    // bottom-right corner band, overlapping the top one along the edge
+    zone: { bottom: 0, right: 0, width: "22%", height: "80px" },
+    d: "M250 -50 C 170 20, 220 100, 140 130 C 80 152, 160 200, 130 260",
     color: LIME,
-    width: 20,
+    width: 18,
     mobile: true,
   },
   {
-    // left edge
-    d: "M-180 120 C -70 20, -110 220, 10 260 C 110 294, 40 400, -50 452 C -120 492, -170 560, -150 660",
+    // bottom-left corner band
+    zone: { bottom: 0, left: 0, width: "22%", height: "80px" },
+    d: "M-60 250 C 30 200, -30 140, 60 110 C 130 88, 80 180, 150 210 C 200 232, 220 260, 210 300",
     color: LIME,
     width: 18,
   },
@@ -71,7 +72,7 @@ export function BrandDecor({ variant }: { variant: Variant }) {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 z-0 select-none overflow-hidden"
+      className="pointer-events-none absolute inset-0 z-0 hidden select-none overflow-hidden md:block"
     >
       {variant === "hero" && (
         <div
@@ -79,26 +80,26 @@ export function BrandDecor({ variant }: { variant: Variant }) {
           style={{ maskImage: mask, WebkitMaskImage: mask }}
         />
       )}
-      <svg
-        className="absolute inset-0 h-full w-full"
-        viewBox="0 0 1200 700"
-        preserveAspectRatio="none"
-        fill="none"
-        aria-hidden="true"
-        focusable="false"
-      >
-        {ribbons.map((r, i) => (
+      {ribbons.map((r, i) => (
+        <svg
+          key={i}
+          className="absolute overflow-hidden"
+          style={r.zone}
+          viewBox="0 0 200 200"
+          preserveAspectRatio="none"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
           <path
-            key={i}
             d={r.d}
             fill="none"
             stroke={r.color}
             strokeWidth={r.width}
             strokeLinecap="round"
-            className={r.mobile ? "" : "hidden md:block"}
           />
-        ))}
-      </svg>
+        </svg>
+      ))}
     </div>
   );
 }
