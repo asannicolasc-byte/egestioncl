@@ -48,13 +48,13 @@ export default function BrandRibbons() {
 
           d="M-40 880 C 60 800 160 860 140 930 C 120 990 40 970 60 910 C 80 860 180 870 240 940"
 
-          stroke="#F0F7D8" strokeWidth="24" />
+          stroke="#F0F7D8" strokeWidth="24" className="brand-ribbon-mobile-hide" />
 
         <path
 
           d="M-40 60 C 40 -10 140 30 120 100 C 100 165 20 150 40 95 C 55 55 130 50 190 -20"
 
-          stroke="#EDF0FF" strokeWidth="20" />
+          stroke="#EDF0FF" strokeWidth="20" className="brand-ribbon-mobile-hide" />
 
       </g>
 
