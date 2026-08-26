@@ -52,34 +52,39 @@ const HERO_RIBBONS: Ribbon[] = [
 
 const FOOTER_RIBBONS: Ribbon[] = [
   {
-    d: "M1340 -60 C 1120 40, 1220 220, 1020 300 C 850 368, 1060 460, 1020 600 C 996 690, 1120 780, 1320 800",
+    // right edge, winding and cropped
+    d: "M1340 -80 C 1220 40, 1290 200, 1150 300 C 1050 372, 1210 470, 1150 620 C 1116 706, 1220 790, 1340 820",
     color: LIME_1,
-    width: 34,
-    mobile: true,
-  },
-  {
-    d: "M-140 760 C 100 700, -20 540, 200 480 C 400 426, 340 620, 560 680 C 700 718, 740 780, 700 860",
-    color: BLUE_1,
     width: 30,
     mobile: true,
   },
   {
-    d: "M-160 100 C 40 -40, 220 140, 400 60 C 540 -2, 600 100, 540 200 C 480 300, 320 260, 260 360",
-    color: BLUE_2,
-    width: 26,
-  },
-  {
-    d: "M1360 300 C 1160 330, 1200 480, 1000 520 C 860 548, 920 640, 1080 660 C 1220 678, 1300 740, 1280 840",
-    color: LIME_2,
-    width: 24,
+    // bottom-left corner
+    d: "M-180 760 C -40 700, -110 580, 20 540 C 130 508, 70 640, 160 690 C 226 726, 240 800, 200 880",
+    color: BLUE_1,
+    width: 28,
     mobile: true,
   },
   {
-    d: "M-120 320 C 40 240, 40 420, 180 460 C 300 494, 240 600, 80 640 C 0 660, -80 720, -60 780",
+    // top-left corner
+    d: "M-180 120 C -60 -20, 60 90, 100 30 C 140 -30, 190 40, 150 130 C 116 206, 20 200, -20 280",
+    color: BLUE_2,
+    width: 24,
+  },
+  {
+    // right cluster overlap
+    d: "M1360 260 C 1250 300, 1290 440, 1180 500 C 1100 544, 1140 620, 1240 650 C 1330 677, 1370 720, 1350 820",
     color: LIME_2,
     width: 22,
+    mobile: true,
+  },
+  {
+    d: "M-160 380 C -60 320, -60 470, 20 510 C 96 548, 50 630, -40 670 C -100 696, -150 750, -130 820",
+    color: LIME_2,
+    width: 20,
   },
 ];
+
 
 export function BrandDecor({ variant }: { variant: Variant }) {
   const ribbons = variant === "hero" ? HERO_RIBBONS : FOOTER_RIBBONS;
