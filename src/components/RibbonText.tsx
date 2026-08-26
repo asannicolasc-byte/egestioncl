@@ -17,7 +17,7 @@ export default function RibbonText() {
   const isXL = width >= 1280;
   const svgWidth = isXL ? 1360 : 1050;
   const svgHeight = isXL ? 1000 : 772;
-  const right = isXL ? -430 : -360;
+  const right = isXL ? -310 : -250;
   const fontSize = isXL ? 18 : 17;
 
   return (
