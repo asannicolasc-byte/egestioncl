@@ -15,6 +15,7 @@ import {
   
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
+import { BrandDecor } from "@/components/site/BrandDecor";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-reunion-2.jpg";
