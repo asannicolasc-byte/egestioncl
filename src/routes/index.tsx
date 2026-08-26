@@ -17,9 +17,7 @@ import {
 import { Header } from "@/components/site/Header";
 import BrandTube from "@/components/BrandTube";
 import tubeLimeLoop from "@/assets/tube-lime-loop.png";
-import tubeLimeS from "@/assets/tube-lime-s.png";
 import tubeBlueS from "@/assets/tube-blue-s.png";
-import tubeBlueWave from "@/assets/tube-blue-wave.png";
 import tubeBlueLoop from "@/assets/tube-blue-loop.png";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
@@ -171,7 +169,8 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
-          <BrandTube src={tubeLimeLoop} width={520} top="-40px" right="-230px" rotate={15} variant="hero" />
+          <BrandTube src={tubeLimeLoop} width={520} top="-200px" right="-360px" rotate={15} variant="hero" />
+          <BrandTube src={tubeBlueS} width={300} bottom="-110px" left="-190px" rotate={-10} />
 
           <div className="relative z-10 mx-auto max-w-6xl">
 
@@ -243,8 +242,9 @@ function Index() {
         </section>
 
         {/* NOSOTROS */}
-        <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandTube src={tubeBlueS} width={380} bottom="-210px" left="-230px" rotate={-8} />
+        <section id="nosotros" className="relative overflow-hidden">
+          <BrandTube src={tubeBlueS} width={380} bottom="-150px" left="-240px" rotate={-8} />
+          <div className="mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
@@ -323,12 +323,12 @@ function Index() {
             </div>
           </div>
 
+          </div>
         </section>
 
         {/* SERVICIOS */}
         <section id="servicios" className="px-3 sm:px-5">
           <div className="relative overflow-hidden mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-20 text-white sm:px-8 md:py-28">
-            <BrandTube src={tubeLimeS} width={440} top="-50px" right="-150px" rotate={24} />
             <div className="relative z-10 mx-auto max-w-6xl">
               <Reveal>
                 <Eyebrow tone="light">Servicios</Eyebrow>
@@ -449,7 +449,6 @@ function Index() {
         {/* COWORK */}
         <section id="cowork" className="px-3 sm:px-5">
           <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[40px] bg-brand-lime">
-            <BrandTube src={tubeBlueWave} width={560} bottom="-200px" right="-270px" rotate={-14} />
             <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-2">
               <Reveal>
                 <span className="inline-flex items-center gap-2.5 rounded-full bg-brand-ink/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase">
@@ -491,8 +490,9 @@ function Index() {
         </section>
 
         {/* CONTACTO */}
-        <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandTube src={tubeBlueLoop} width={360} top="-150px" left="-180px" rotate={12} />
+        <section id="contacto" className="relative overflow-hidden">
+          <BrandTube src={tubeBlueLoop} width={360} top="-190px" left="-190px" rotate={12} />
+          <div className="mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
@@ -579,6 +579,7 @@ function Index() {
                 </p>
               </div>
             </Reveal>
+          </div>
           </div>
         </section>
 
