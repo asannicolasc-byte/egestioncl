@@ -487,12 +487,12 @@ function Index() {
               </Reveal>
             </div>
           </div>
-        <section id="contacto" className="relative overflow-hidden">
+        </section>
 
-          <div className="mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
         {/* CONTACTO */}
-        <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
+        <section id="contacto" className="relative overflow-hidden">
           <BrandTube src={tubeBlueLoop} width={360} top="-60px" left="-120px" rotate={12} />
+          <div className="mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
