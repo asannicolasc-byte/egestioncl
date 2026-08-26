@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const D = "M-40 470 C 90 470 130 300 250 250 C 340 212 430 250 440 330 C 450 415 350 460 290 410 C 230 360 300 250 400 262 C 500 274 540 400 660 400";
+const D = "M-120 620 C 120 620 200 380 420 330 C 600 288 760 380 762 520 C 764 660 600 720 500 640 C 400 560 470 400 640 396 C 820 392 900 560 1120 560";
 
 export default function RibbonText() {
   const [width, setWidth] = useState(1440);
@@ -15,21 +15,21 @@ export default function RibbonText() {
   if (width < 1024) return null;
 
   const isXL = width >= 1280;
-  const svgWidth = isXL ? 660 : 500;
-  const svgHeight = isXL ? 560 : 430;
-  const right = isXL ? -40 : -30;
-  const fontSize = isXL ? 16 : 14;
+  const svgWidth = isXL ? 1000 : 780;
+  const svgHeight = isXL ? 820 : 640;
+  const right = isXL ? -260 : -220;
+  const fontSize = isXL ? 19 : 17;
 
   return (
     <svg
       aria-hidden="true"
       width={svgWidth}
       height={svgHeight}
-      viewBox="0 0 660 560"
+      viewBox="0 0 1000 820"
       className="ribbon-text"
       style={{
         position: "absolute",
-        top: "150px",
+        top: "60px",
         right: `${right}px`,
         pointerEvents: "none",
         zIndex: 0,
@@ -39,17 +39,17 @@ export default function RibbonText() {
       <defs>
         <path id="ribbonFlow" d={D} fill="none" />
       </defs>
-      <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="58" strokeLinecap="round" />
-      <path d={D} fill="none" stroke="#C0E12D" strokeWidth="44" strokeLinecap="round" />
+      <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="74" />
+      <path d={D} fill="none" stroke="#C0E12D" strokeWidth="58" />
       <text
         fill="#252944"
         fontSize={fontSize}
         fontWeight="500"
-        letterSpacing="1.5"
+        letterSpacing="2"
         style={{ textTransform: "uppercase" }}
       >
         <textPath href="#ribbonFlow" startOffset="0">
-          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
+          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
         </textPath>
       </text>
     </svg>
