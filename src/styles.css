@@ -226,6 +226,20 @@
   border-radius: 62% 38% 46% 54% / 54% 44% 56% 46%;
 }
 
+/* Trama de puntos decorativa de marca */
+@utility brand-dots {
+  background-image: radial-gradient(circle, #dfe0ed 1.2px, transparent 1.2px);
+  background-size: 14px 14px;
+  pointer-events: none;
+}
+
+@media (max-width: 639px) {
+  .brand-decor-shape {
+    opacity: 0.12 !important;
+  }
+}
+
+
 .stat-card {
   container-type: inline-size;
 }

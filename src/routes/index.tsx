@@ -15,6 +15,7 @@ import {
   
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
+import { BrandDecor } from "@/components/site/BrandDecor";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-reunion-2.jpg";
@@ -173,8 +174,10 @@ function Index() {
             aria-hidden
             className="blob pointer-events-none absolute -top-10 right-0 size-[22rem] bg-brand-lime/25 blur-3xl"
           />
+          <BrandDecor variant="hero" />
 
-          <div className="relative mx-auto max-w-6xl">
+          <div className="relative z-10 mx-auto max-w-6xl">
+
             <Reveal className="max-w-4xl">
               <span className="inline-flex items-center gap-2 rounded-full bg-brand-lime px-4 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-brand-ink uppercase">
                 <span className="size-2 rounded-full bg-brand-blue" />
@@ -600,9 +603,11 @@ function Index() {
       </main>
 
       <footer className="px-3 pb-3 sm:px-5 sm:pb-5">
-        <div className="mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-14 text-white sm:px-8">
-          <div className="mx-auto max-w-6xl">
+        <div className="relative overflow-hidden mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-14 text-white sm:px-8">
+          <BrandDecor variant="footer" />
+          <div className="relative z-10 mx-auto max-w-6xl">
             <div className="grid gap-10 md:grid-cols-3">
+
               <div>
                 <img
                   src={egLime}
