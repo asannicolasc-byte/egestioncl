@@ -15,7 +15,12 @@ import {
   
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
-import BrandRibbons from "@/components/BrandRibbons";
+import BrandTube from "@/components/BrandTube";
+import tubeLimeLoop from "@/assets/tube-lime-loop.png";
+import tubeLimeS from "@/assets/tube-lime-s.png";
+import tubeBlueS from "@/assets/tube-blue-s.png";
+import tubeBlueWave from "@/assets/tube-blue-wave.png";
+import tubeBlueLoop from "@/assets/tube-blue-loop.png";
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-reunion-2.jpg";
@@ -166,7 +171,7 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
-          <BrandRibbons />
+          <BrandTube src={tubeLimeLoop} width={520} top="-40px" right="-230px" rotate={15} variant="hero" />
 
           <div className="relative z-10 mx-auto max-w-6xl">
 
@@ -239,7 +244,7 @@ function Index() {
 
         {/* NOSOTROS */}
         <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandRibbons />
+          <BrandTube src={tubeBlueS} width={380} bottom="-210px" left="-230px" rotate={-8} />
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
@@ -322,8 +327,9 @@ function Index() {
 
         {/* SERVICIOS */}
         <section id="servicios" className="px-3 sm:px-5">
-          <div className="mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-20 text-white sm:px-8 md:py-28">
-            <div className="mx-auto max-w-6xl">
+          <div className="relative overflow-hidden mx-auto max-w-[1400px] rounded-[40px] bg-brand-ink px-5 py-20 text-white sm:px-8 md:py-28">
+            <BrandTube src={tubeLimeS} width={440} top="-50px" right="-150px" rotate={24} />
+            <div className="relative z-10 mx-auto max-w-6xl">
               <Reveal>
                 <Eyebrow tone="light">Servicios</Eyebrow>
               </Reveal>
@@ -401,7 +407,6 @@ function Index() {
 
         {/* POR QUÉ */}
         <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandRibbons />
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
             <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3rem]">
@@ -443,8 +448,9 @@ function Index() {
 
         {/* COWORK */}
         <section id="cowork" className="px-3 sm:px-5">
-          <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[40px] bg-brand-lime">
-            <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-2">
+          <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[40px] bg-brand-lime">
+            <BrandTube src={tubeBlueWave} width={560} bottom="-200px" right="-270px" rotate={-14} />
+            <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-2">
               <Reveal>
                 <span className="inline-flex items-center gap-2.5 rounded-full bg-brand-ink/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase">
                   <span className="size-2 rounded-full bg-brand-blue" />
@@ -486,7 +492,7 @@ function Index() {
 
         {/* CONTACTO */}
         <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <BrandRibbons />
+          <BrandTube src={tubeBlueLoop} width={360} top="-150px" left="-180px" rotate={12} />
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
