@@ -166,14 +166,6 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
-          <div
-            aria-hidden
-            className="blob pointer-events-none absolute -top-32 -left-24 size-[28rem] bg-brand-blue/10 blur-3xl"
-          />
-          <div
-            aria-hidden
-            className="blob pointer-events-none absolute -top-10 right-0 size-[22rem] bg-brand-lime/25 blur-3xl"
-          />
           <BrandRibbons />
 
           <div className="relative z-10 mx-auto max-w-6xl">
