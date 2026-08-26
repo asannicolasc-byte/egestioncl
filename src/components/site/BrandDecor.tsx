@@ -6,6 +6,8 @@ const BLUE = "#EDF0FF";
 type Ribbon = {
   /** zone box the ribbon lives in — keeps decor in the outer margins */
   zone: React.CSSProperties;
+  /** hide below lg when the section is too cramped */
+  lgOnly?: boolean;
   /** path drawn in a 200x200 viewBox, always starting/ending outside it */
   d: string;
   color: string;
@@ -25,6 +27,7 @@ const HERO_RIBBONS: Ribbon[] = [
   {
     // right edge lower, overlaps the first in the corner
     zone: { bottom: 0, right: 0, width: "20%", height: "9%" },
+    lgOnly: true,
     d: "M250 -40 C 160 20, 210 90, 130 130 C 70 160, 150 200, 120 250",
     color: LIME,
     width: 20,
@@ -33,6 +36,7 @@ const HERO_RIBBONS: Ribbon[] = [
   {
     // far bottom-left corner, below the buttons
     zone: { bottom: 0, left: 0, width: "14%", height: "7%" },
+    lgOnly: true,
     d: "M-40 240 C 40 190, -20 130, 60 110 C 130 92, 90 170, 160 200 C 200 218, 220 250, 210 290",
     color: LIME,
     width: 18,
@@ -83,7 +87,7 @@ export function BrandDecor({ variant }: { variant: Variant }) {
       {ribbons.map((r, i) => (
         <svg
           key={i}
-          className="absolute overflow-hidden"
+          className={`absolute overflow-hidden ${r.lgOnly ? "hidden lg:block" : ""}`}
           style={r.zone}
           viewBox="0 0 200 200"
           preserveAspectRatio="none"
