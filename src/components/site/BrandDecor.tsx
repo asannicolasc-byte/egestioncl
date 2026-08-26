@@ -16,7 +16,7 @@ type Ribbon = {
 const HERO_RIBBONS: Ribbon[] = [
   {
     // top-right corner, winds and doubles back
-    zone: { top: 0, right: 0, width: "34%", height: "34%" },
+    zone: { top: 0, right: 0, width: "24%", height: "165px" },
     d: "M240 -40 C 150 30, 230 80, 140 110 C 70 134, 160 170, 120 240",
     color: BLUE,
     width: 22,
@@ -24,7 +24,7 @@ const HERO_RIBBONS: Ribbon[] = [
   },
   {
     // right edge lower, overlaps the first in the corner
-    zone: { bottom: 0, right: 0, width: "28%", height: "30%" },
+    zone: { bottom: 0, right: 0, width: "20%", height: "9%" },
     d: "M250 -40 C 160 20, 210 90, 130 130 C 70 160, 150 200, 120 250",
     color: LIME,
     width: 20,
@@ -32,7 +32,7 @@ const HERO_RIBBONS: Ribbon[] = [
   },
   {
     // far bottom-left corner, below the buttons
-    zone: { bottom: 0, left: 0, width: "16%", height: "16%" },
+    zone: { bottom: 0, left: 0, width: "14%", height: "7%" },
     d: "M-40 240 C 40 190, -20 130, 60 110 C 130 92, 90 170, 160 200 C 200 218, 220 250, 210 290",
     color: LIME,
     width: 18,
@@ -42,7 +42,7 @@ const HERO_RIBBONS: Ribbon[] = [
 const SECTION_RIBBONS: Ribbon[] = [
   {
     // top-right corner band (inside the section's top padding)
-    zone: { top: 0, right: 0, width: "26%", height: "86px" },
+    zone: { top: 0, right: 0, width: "20%", height: "40px" },
     d: "M260 -60 C 170 20, 250 70, 150 100 C 80 122, 170 160, 130 240",
     color: BLUE,
     width: 22,
@@ -50,7 +50,7 @@ const SECTION_RIBBONS: Ribbon[] = [
   },
   {
     // bottom-right corner band, overlapping the top one along the edge
-    zone: { bottom: 0, right: 0, width: "22%", height: "80px" },
+    zone: { bottom: 0, right: 0, width: "18%", height: "42px" },
     d: "M250 -50 C 170 20, 220 100, 140 130 C 80 152, 160 200, 130 260",
     color: LIME,
     width: 18,
@@ -58,7 +58,7 @@ const SECTION_RIBBONS: Ribbon[] = [
   },
   {
     // bottom-left corner band
-    zone: { bottom: 0, left: 0, width: "22%", height: "80px" },
+    zone: { bottom: 0, left: 0, width: "18%", height: "42px" },
     d: "M-60 250 C 30 200, -30 140, 60 110 C 130 88, 80 180, 150 210 C 200 232, 220 260, 210 300",
     color: LIME,
     width: 18,
