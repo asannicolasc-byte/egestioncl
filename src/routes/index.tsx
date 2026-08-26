@@ -19,8 +19,6 @@ import BrandTube from "@/components/BrandTube";
 import tubeLimeLoop from "@/assets/tube-lime-loop.png";
 import tubeBlueS from "@/assets/tube-blue-s.png";
 import tubeBlueLoop from "@/assets/tube-blue-loop.png";
-import tubeBlueWave from "@/assets/tube-blue-wave.png";
-import tubeLimeS from "@/assets/tube-lime-s.png";
 
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
