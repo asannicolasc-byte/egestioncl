@@ -171,7 +171,7 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
-          <BrandTube src={tubeLimeLoop} width={520} top="-90px" right="-170px" rotate={15} variant="hero" />
+          <BrandTube src={tubeLimeLoop} width={520} top="-40px" right="-230px" rotate={15} variant="hero" />
 
           <div className="relative z-10 mx-auto max-w-6xl">
 
