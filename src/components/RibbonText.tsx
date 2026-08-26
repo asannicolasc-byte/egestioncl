@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const D = "M-120 620 C 120 620 200 380 420 330 C 600 288 760 380 762 520 C 764 660 600 720 500 640 C 400 560 470 400 640 396 C 820 392 900 560 1120 560";
+const D = "M940 -120 C 860 80 784 220 760 360 C 732 536 840 640 972 612 C 1096 584 1132 432 1024 368 C 924 308 804 372 780 488 C 760 600 840 700 960 792 C 1080 884 1200 940 1400 1000";
 
 export default function RibbonText() {
   const [width, setWidth] = useState(1440);
@@ -15,21 +15,21 @@ export default function RibbonText() {
   if (width < 1024) return null;
 
   const isXL = width >= 1280;
-  const svgWidth = isXL ? 1000 : 780;
-  const svgHeight = isXL ? 820 : 640;
-  const right = isXL ? -260 : -220;
-  const fontSize = isXL ? 19 : 17;
+  const svgWidth = isXL ? 1360 : 1050;
+  const svgHeight = isXL ? 1000 : 772;
+  const right = isXL ? -310 : -250;
+  const fontSize = isXL ? 18 : 17;
 
   return (
     <svg
       aria-hidden="true"
       width={svgWidth}
       height={svgHeight}
-      viewBox="0 0 1000 820"
+      viewBox="0 0 1360 1000"
       className="ribbon-text"
       style={{
         position: "absolute",
-        top: "60px",
+        top: "-100px",
         right: `${right}px`,
         pointerEvents: "none",
         zIndex: 0,
@@ -45,11 +45,11 @@ export default function RibbonText() {
         fill="#252944"
         fontSize={fontSize}
         fontWeight="500"
-        letterSpacing="2"
+        letterSpacing="2.2"
         style={{ textTransform: "uppercase" }}
       >
         <textPath href="#ribbonFlow" startOffset="0">
-          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
+          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
         </textPath>
       </text>
     </svg>
