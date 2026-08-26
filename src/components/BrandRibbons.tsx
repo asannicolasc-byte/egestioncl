@@ -16,22 +16,23 @@ export default function BrandRibbons() {
       }}
     >
       <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+        {/* Right edge: two long parallel winding tubes, one curls back over itself */}
         <path
-          d="M1520 -60 C 1380 40 1300 160 1380 250 C 1460 340 1560 300 1520 200 C 1480 100 1300 200 1290 360 C 1280 520 1420 600 1400 760 C 1385 880 1300 940 1180 1000"
-          stroke="#F0F7D8" strokeWidth="26" />
+          d="M1540 -80 C 1240 60 1120 220 1230 330 C 1330 430 1450 380 1400 270 C 1350 165 1150 240 1120 420 C 1090 610 1260 690 1230 850 C 1210 960 1300 1010 1520 1040"
+          stroke="#F0F7D8" strokeWidth="24" />
         <path
-          d="M1520 120 C 1420 220 1360 300 1420 390 C 1480 480 1420 620 1480 720 C 1530 805 1500 900 1420 1000"
-          stroke="#EDF0FF" strokeWidth="20" />
+          d="M1560 60 C 1330 190 1240 320 1330 430 C 1420 540 1300 660 1330 790 C 1355 900 1450 950 1560 970"
+          stroke="#EDF0FF" strokeWidth="22" />
+        {/* Bottom edge */}
         <path
-          d="M1560 620 C 1440 700 1400 800 1460 880 C 1520 960 1470 1040 1380 1080"
-          stroke="#E7F2C2" strokeWidth="22" />
-        <path
-          d="M-80 1000 C 60 900 140 980 260 920 C 380 860 420 950 540 930 C 640 913 700 970 780 1040"
+          d="M-100 980 C 90 860 210 990 360 930 C 510 870 560 980 700 960 C 830 942 940 1010 1040 1090"
           stroke="#F0F7D8" strokeWidth="24" className="brand-ribbon-mobile-hide" />
+        {/* Top-left curl */}
         <path
-          d="M-80 20 C 20 -50 120 -10 110 70 C 100 145 20 150 26 90 C 32 40 110 30 170 -40"
-          stroke="#EDF0FF" strokeWidth="18" className="brand-ribbon-mobile-hide" />
+          d="M-90 30 C 30 -60 150 -20 140 70 C 132 150 40 160 44 96 C 48 44 130 34 200 -60"
+          stroke="#EDF0FF" strokeWidth="20" className="brand-ribbon-mobile-hide" />
       </g>
+
     </svg>
   );
 }
