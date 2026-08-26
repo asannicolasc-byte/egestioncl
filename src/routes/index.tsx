@@ -169,7 +169,7 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
-          <BrandTube src={tubeLimeLoop} width={520} top="-230px" right="-300px" rotate={15} variant="hero" />
+          <BrandTube src={tubeLimeLoop} width={520} top="-230px" right="-420px" rotate={15} variant="hero" />
           <BrandTube src={tubeBlueS} width={300} bottom="-150px" left="-240px" rotate={-10} />
 
           <div className="relative z-10 mx-auto max-w-6xl">
@@ -242,8 +242,9 @@ function Index() {
         </section>
 
         {/* NOSOTROS */}
-        <section id="nosotros" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
+        <section id="nosotros" className="relative overflow-hidden">
           <BrandTube src={tubeBlueS} width={380} bottom="-70px" left="-130px" rotate={-8} />
+          <div className="mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <Reveal>
             <Eyebrow>Quiénes somos</Eyebrow>
           </Reveal>
@@ -322,6 +323,7 @@ function Index() {
             </div>
           </div>
 
+          </div>
         </section>
 
         {/* SERVICIOS */}
@@ -485,8 +487,9 @@ function Index() {
               </Reveal>
             </div>
           </div>
-        </section>
+        <section id="contacto" className="relative overflow-hidden">
 
+          <div className="mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
         {/* CONTACTO */}
         <section id="contacto" className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
           <BrandTube src={tubeBlueLoop} width={360} top="-60px" left="-120px" rotate={12} />
@@ -576,6 +579,7 @@ function Index() {
                 </p>
               </div>
             </Reveal>
+          </div>
           </div>
         </section>
 
