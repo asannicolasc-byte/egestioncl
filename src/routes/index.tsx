@@ -167,8 +167,9 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
+          <RibbonText />
 
-          <div className="relative z-10 mx-auto max-w-6xl">
+          <div className="relative z-[1] mx-auto max-w-6xl">
 
             <Reveal className="max-w-4xl">
               <span className="inline-flex items-center gap-2 rounded-full bg-brand-lime px-4 py-1.5 text-[11px] font-semibold tracking-[0.18em] text-brand-ink uppercase">
