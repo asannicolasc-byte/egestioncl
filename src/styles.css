@@ -226,32 +226,6 @@
   border-radius: 62% 38% 46% 54% / 54% 44% 56% 46%;
 }
 
-/* Trama de puntos decorativa de marca */
-@utility brand-dots {
-  background-image: radial-gradient(circle, #dfe0ed 1.2px, transparent 1.2px);
-  background-size: 14px 14px;
-  pointer-events: none;
-}
-
-/* Tubos decorativos de marca */
-@media (max-width: 1023.98px) {
-  .brand-tube {
-    width: calc(var(--tube-w) * 0.7) !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .brand-tube:not(.brand-tube-hero) {
-    display: none !important;
-  }
-  .brand-tube-hero {
-    width: 220px !important;
-    top: -40px !important;
-    right: -70px !important;
-    bottom: auto !important;
-    left: auto !important;
-  }
-}
 
 
 

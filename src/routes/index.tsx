@@ -15,10 +15,6 @@ import {
   
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
-import BrandTube from "@/components/BrandTube";
-import tubeLimeLoop from "@/assets/tube-lime-loop.png";
-import tubeBlueS from "@/assets/tube-blue-s.png";
-import tubeBlueLoop from "@/assets/tube-blue-loop.png";
 
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
@@ -170,7 +166,6 @@ function Index() {
       <main>
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden px-3 pt-28 pb-6 sm:px-5 sm:pt-32">
-          <BrandTube src={tubeLimeLoop} width={520} top="-200px" right="-360px" rotate={15} variant="hero" />
           <BrandTube src={tubeBlueS} width={300} bottom="-110px" left="-190px" rotate={-10} />
 
           <div className="relative z-10 mx-auto max-w-6xl">
@@ -244,7 +239,6 @@ function Index() {
 
         {/* NOSOTROS */}
         <section id="nosotros" className="relative overflow-hidden px-3 py-20 sm:px-5">
-          <BrandTube src={tubeBlueS} width={380} bottom="-70px" left="-130px" rotate={-8} />
 
           <div className="relative z-10 mx-auto max-w-6xl">
             <Reveal>
@@ -408,7 +402,7 @@ function Index() {
         </section>
 
         {/* POR QUÉ */}
-        <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
+        <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32">
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
             <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3rem]">
@@ -492,9 +486,8 @@ function Index() {
         </section>
 
         {/* CONTACTO */}
-        <section id="contacto" className="relative overflow-hidden">
-          <BrandTube src={tubeBlueLoop} width={360} top="-190px" left="-190px" rotate={12} />
-          <div className="mx-auto max-w-6xl px-5 py-24 md:py-32 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
+        <section id="contacto">
+          <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
           <Reveal>
             <Eyebrow>Contacto</Eyebrow>
           </Reveal>
