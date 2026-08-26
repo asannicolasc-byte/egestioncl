@@ -39,7 +39,7 @@ export default function RibbonText() {
         style={{ textTransform: "uppercase" }}
       >
         <textPath href="#ribbonCurve" startOffset="0">
-          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
+          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
         </textPath>
       </text>
     </svg>
