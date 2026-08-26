@@ -11,7 +11,7 @@ type Ribbon = {
   /**
    * Chained cubic beziers in a 300x300 viewBox. Every path starts and ends
    * outside the box and loops back over itself at least once (a coil, not a
-   * swoosh). Rendered with preserveAspectRatio="slice" so the stroke keeps a
+   * swoosh). Rendered with preserveAspectRatio="meet" so the stroke keeps a
    * constant thickness along its whole length.
    */
   d: string;
@@ -32,21 +32,21 @@ const COIL_C =
 const HERO_RIBBONS: Ribbon[] = [
   {
     // right edge, upper — pairs with the next one
-    zone: { top: 0, right: 0, width: "24%", height: "165px" },
+    zone: { top: "20px", right: 0, width: "20%", height: "430px" },
     d: COIL_A,
     color: BLUE,
     width: 26,
   },
   {
     // right edge, overlapping the first, roughly parallel
-    zone: { top: 0, right: 0, width: "24%", height: "165px" },
+    zone: { top: "20px", right: 0, width: "20%", height: "430px" },
     d: COIL_B,
     color: LIME,
     width: 22,
   },
   {
     // bottom edge, right side
-    zone: { bottom: 0, right: 0, width: "20%", height: "9%" },
+    zone: { bottom: 0, right: 0, width: "16%", height: "150px" },
     lgOnly: true,
     d: COIL_C,
     color: LIME,
@@ -54,7 +54,7 @@ const HERO_RIBBONS: Ribbon[] = [
   },
   {
     // bottom edge, below the CTA buttons / left corner
-    zone: { bottom: 0, left: 0, width: "14%", height: "7%" },
+    zone: { bottom: 0, left: 0, width: "12%", height: "130px" },
     lgOnly: true,
     d: COIL_A,
     color: BLUE,
@@ -62,7 +62,7 @@ const HERO_RIBBONS: Ribbon[] = [
   },
   {
     // small curl in the top-left corner, above the nav
-    zone: { top: 0, left: 0, width: "9%", height: "110px" },
+    zone: { top: 0, left: 0, width: "8%", height: "130px" },
     lgOnly: true,
     d: COIL_C,
     color: LIME,
@@ -73,21 +73,21 @@ const HERO_RIBBONS: Ribbon[] = [
 const SECTION_RIBBONS: Ribbon[] = [
   {
     // top-right corner band (inside the section's top padding)
-    zone: { top: 0, right: 0, width: "20%", height: "40px" },
+    zone: { top: 0, right: 0, width: "18%", height: "150px" },
     d: COIL_A,
     color: BLUE,
     width: 24,
   },
   {
     // bottom-right corner band, parallel and overlapping along the edge
-    zone: { bottom: 0, right: 0, width: "18%", height: "42px" },
+    zone: { bottom: 0, right: 0, width: "16%", height: "150px" },
     d: COIL_B,
     color: LIME,
     width: 20,
   },
   {
     // bottom-left corner band
-    zone: { bottom: 0, left: 0, width: "18%", height: "42px" },
+    zone: { bottom: 0, left: 0, width: "16%", height: "150px" },
     d: COIL_C,
     color: LIME,
     width: 20,
@@ -115,7 +115,7 @@ export function BrandDecor({ variant }: { variant: Variant }) {
           className={`absolute overflow-hidden ${r.lgOnly ? "hidden lg:block" : ""}`}
           style={r.zone}
           viewBox="0 0 300 300"
-          preserveAspectRatio="xMidYMid slice"
+          preserveAspectRatio="xMidYMid meet"
           fill="none"
           aria-hidden="true"
           focusable="false"
