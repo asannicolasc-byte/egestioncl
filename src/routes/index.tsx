@@ -19,8 +19,6 @@ import BrandTube from "@/components/BrandTube";
 import tubeLimeLoop from "@/assets/tube-lime-loop.png";
 import tubeBlueS from "@/assets/tube-blue-s.png";
 import tubeBlueLoop from "@/assets/tube-blue-loop.png";
-import tubeBlueWave from "@/assets/tube-blue-wave.png";
-import tubeLimeS from "@/assets/tube-lime-s.png";
 
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
@@ -245,35 +243,10 @@ function Index() {
         </section>
 
         {/* NOSOTROS */}
-        <section id="nosotros" className="relative overflow-hidden bg-[#252944] px-10 py-20">
-          <div className="pointer-events-none absolute inset-0 z-[1]">
-            <BrandTube
-              src={tubeLimeLoop}
-              width={620}
-              top="-120px"
-              right="-140px"
-              rotate={18}
-              className="brand-tube-canvas brand-tube-canvas-hero"
-            />
-            <BrandTube
-              src={tubeBlueWave}
-              width={700}
-              bottom="-160px"
-              left="-200px"
-              rotate={-12}
-              className="brand-tube-canvas"
-            />
-            <BrandTube
-              src={tubeLimeS}
-              width={420}
-              top="40%"
-              left="-160px"
-              rotate={40}
-              className="brand-tube-canvas"
-            />
-          </div>
+        <section id="nosotros" className="relative overflow-hidden px-3 py-20 sm:px-5">
+          <BrandTube src={tubeBlueS} width={380} bottom="-70px" left="-130px" rotate={-8} />
 
-          <div className="relative z-[2] mx-auto max-w-[1100px] rounded-[24px] bg-white p-7 md:p-10 lg:p-16">
+          <div className="relative z-10 mx-auto max-w-6xl">
             <Reveal>
               <Eyebrow>Quiénes somos</Eyebrow>
             </Reveal>
