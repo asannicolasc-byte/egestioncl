@@ -241,7 +241,7 @@
 }
 
 @media (max-width: 767.98px) {
-  .brand-tube:not(.brand-tube-hero) {
+  .brand-tube:not(.brand-tube-hero):not(.brand-tube-canvas-hero) {
     display: none !important;
   }
   .brand-tube-hero {
@@ -251,7 +251,29 @@
     bottom: auto !important;
     left: auto !important;
   }
+  .brand-tube-canvas-hero {
+    display: block !important;
+    width: 240px !important;
+    top: -40px !important;
+    right: -70px !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
 }
+
+/* Tubos grandes del canvas oscuro de "Quiénes somos" */
+@media (max-width: 1023.98px) {
+  .brand-tube-canvas {
+    width: calc(var(--tube-w) * 0.65) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .brand-tube-canvas:not(.brand-tube-canvas-hero) {
+    display: none !important;
+  }
+}
+
 
 
 

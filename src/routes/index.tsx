@@ -19,6 +19,9 @@ import BrandTube from "@/components/BrandTube";
 import tubeLimeLoop from "@/assets/tube-lime-loop.png";
 import tubeBlueS from "@/assets/tube-blue-s.png";
 import tubeBlueLoop from "@/assets/tube-blue-loop.png";
+import tubeBlueWave from "@/assets/tube-blue-wave.png";
+import tubeLimeS from "@/assets/tube-lime-s.png";
+
 import { Eyebrow } from "@/components/site/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-reunion-2.jpg";
@@ -242,60 +245,86 @@ function Index() {
         </section>
 
         {/* NOSOTROS */}
-        <section id="nosotros" className="relative overflow-hidden">
-          <BrandTube src={tubeBlueS} width={380} bottom="-150px" left="-240px" rotate={-8} />
-          <div className="mx-auto max-w-6xl px-5 py-12 md:py-16 [&>*:not([aria-hidden])]:relative [&>*:not([aria-hidden])]:z-10">
-          <Reveal>
-            <Eyebrow>Quiénes somos</Eyebrow>
-          </Reveal>
-          <div className="mt-8 grid">
-            <Reveal>
-              <h2 className="mb-4 text-2xl leading-[1.12] font-bold text-brand-ink sm:text-[29px] lg:text-[2.6rem]">
-                <span className="text-brand-ink">Somos un equipo de expertos en</span>
-                <span className="block text-brand-blue">asesoría contable, tributaria</span>
-                <span className="block text-brand-blue">y estratégica</span>
-              </h2>
-            </Reveal>
-            <Reveal delay={120}>
-              <p className="mt-0 max-w-3xl text-base leading-relaxed text-brand-ink/70">
-                Te explicamos qué significa cada número y qué hacer con él.{" "}
-              </p>
-            </Reveal>
+        <section id="nosotros" className="relative overflow-hidden bg-[#252944] px-10 py-20">
+          <div className="pointer-events-none absolute inset-0 z-[1]">
+            <BrandTube
+              src={tubeLimeLoop}
+              width={620}
+              top="-120px"
+              right="-140px"
+              rotate={18}
+              className="brand-tube-canvas brand-tube-canvas-hero"
+            />
+            <BrandTube
+              src={tubeBlueWave}
+              width={700}
+              bottom="-160px"
+              left="-200px"
+              rotate={-12}
+              className="brand-tube-canvas"
+            />
+            <BrandTube
+              src={tubeLimeS}
+              width={420}
+              top="40%"
+              left="-160px"
+              rotate={40}
+              className="brand-tube-canvas"
+            />
           </div>
 
-          <div className="mt-8 grid gap-[10px] md:grid-cols-[1fr_96px] md:gap-6 lg:grid-cols-[1fr_130px]">
+          <div className="relative z-[2] mx-auto max-w-[1100px] rounded-[24px] bg-white p-7 md:p-10 lg:p-16">
             <Reveal>
-              <div className="group relative aspect-video w-full overflow-hidden rounded-[32px] md:aspect-auto md:h-[320px] lg:h-[420px]">
-                 <img
-                   src={reneImg}
-                   alt="René Ponce, fundador de EGestión"
-                   width={1200}
-                   height={1200}
-                   loading="lazy"
-                   className="h-full w-full object-cover object-[50%_25%] transition-transform duration-[400ms] ease-out group-hover:scale-105"
-                 />
-                {/* Overlay desktop: aparece al hacer hover */}
-                <div className="absolute inset-x-0 bottom-0 hidden h-[55%] translate-y-full flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-6 transition-transform duration-300 ease-out group-hover:translate-y-0 lg:flex">
-                  <h3 className="text-lg font-bold text-white">René Ponce</h3>
-                  <p className="text-sm font-semibold text-brand-lime">Fundador de EGestión</p>
-                </div>
-                {/* Overlay móvil: siempre visible compacto */}
-                <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-4 lg:hidden">
-                  <h3 className="text-base font-bold text-white">René Ponce</h3>
-                  <p className="text-xs font-semibold text-brand-lime">Fundador de EGestión</p>
-                </div>
-              </div>
+              <Eyebrow>Quiénes somos</Eyebrow>
             </Reveal>
-            <div className="grid grid-cols-3 gap-[10px] md:grid-cols-1 md:grid-rows-3 md:gap-4 lg:gap-[15px]">
-{STATS.map((s, i) => {
-                 const isBlue = i === 2;
-                 const dividerColor = isBlue
-                   ? "bg-white/40"
-                   : "bg-brand-blue/40";
-                 return (
+            <div className="mt-8 grid">
+              <Reveal>
+                <h2 className="mb-4 text-2xl leading-[1.12] font-bold text-brand-ink sm:text-[29px] lg:text-[2.6rem]">
+                  <span className="text-brand-ink">Somos un equipo de expertos en</span>
+                  <span className="block text-brand-blue">asesoría contable, tributaria</span>
+                  <span className="block text-brand-blue">y estratégica</span>
+                </h2>
+              </Reveal>
+              <Reveal delay={120}>
+                <p className="mt-0 max-w-3xl text-base leading-relaxed text-brand-ink/70">
+                  Te explicamos qué significa cada número y qué hacer con él.{" "}
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="mt-8 grid gap-[10px] md:grid-cols-[1fr_96px] md:gap-6 lg:grid-cols-[1fr_130px]">
+              <Reveal>
+                <div className="group relative aspect-video w-full overflow-hidden rounded-[32px] md:aspect-auto md:h-[320px] lg:h-[420px]">
+                   <img
+                     src={reneImg}
+                     alt="René Ponce, fundador de EGestión"
+                     width={1200}
+                     height={1200}
+                     loading="lazy"
+                     className="h-full w-full object-cover object-[50%_25%] transition-transform duration-[400ms] ease-out group-hover:scale-105"
+                   />
+                  {/* Overlay desktop: aparece al hacer hover */}
+                  <div className="absolute inset-x-0 bottom-0 hidden h-[55%] translate-y-full flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-6 transition-transform duration-300 ease-out group-hover:translate-y-0 lg:flex">
+                    <h3 className="text-lg font-bold text-white">René Ponce</h3>
+                    <p className="text-sm font-semibold text-brand-lime">Fundador de EGestión</p>
+                  </div>
+                  {/* Overlay móvil: siempre visible compacto */}
+                  <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-[#252943]/85 to-transparent p-4 lg:hidden">
+                    <h3 className="text-base font-bold text-white">René Ponce</h3>
+                    <p className="text-xs font-semibold text-brand-lime">Fundador de EGestión</p>
+                  </div>
+                </div>
+              </Reveal>
+              <div className="grid grid-cols-3 gap-[10px] md:grid-cols-1 md:grid-rows-3 md:gap-4 lg:gap-[15px]">
+                {STATS.map((s, i) => {
+                  const isBlue = i === 2;
+                  const dividerColor = isBlue
+                    ? "bg-white/40"
+                    : "bg-brand-blue/40";
+                  return (
                     <Reveal key={s.l} delay={i * 110} className="min-w-0 max-w-full">
-<div
-                         className={`lift stat-card box-border flex aspect-square w-full min-w-0 max-w-full flex-col justify-center overflow-hidden rounded-[32px] p-[18px] text-left md:size-[96px] lg:size-[130px] ${
+                      <div
+                        className={`lift stat-card box-border flex aspect-square w-full min-w-0 max-w-full flex-col justify-center overflow-hidden rounded-[32px] p-[18px] text-left md:size-[96px] lg:size-[130px] ${
                           isBlue ? "bg-brand-blue" : i === 1 ? "bg-brand-soft" : "bg-brand-lime"
                         }`}
                       >
@@ -312,19 +341,19 @@ function Index() {
                         <p
                            className={`min-w-0 max-w-full text-[12px] font-bold leading-[1.3] break-words [overflow-wrap:break-word] ${
                              isBlue ? "text-white" : "text-brand-ink"
-                          }`}
+                           }`}
                         >
                           {s.l}
                         </p>
                       </div>
-                   </Reveal>
-                 );
-               })}
+                    </Reveal>
+                  );
+                })}
+              </div>
             </div>
           </div>
-
-          </div>
         </section>
+
 
         {/* SERVICIOS */}
         <section id="servicios" className="px-3 sm:px-5">

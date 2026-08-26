@@ -10,6 +10,7 @@ type Props = {
   rotate?: number;
   /** "hero" keeps the tube visible on phones; others hide under 768px */
   variant?: "hero" | "section";
+  className?: string;
 };
 
 export default function BrandTube({
@@ -21,13 +22,14 @@ export default function BrandTube({
   right,
   rotate = 0,
   variant = "section",
+  className = "",
 }: Props) {
   return (
     <img
       src={src}
       alt=""
       aria-hidden="true"
-      className={`brand-tube ${variant === "hero" ? "brand-tube-hero" : ""}`}
+      className={`brand-tube ${variant === "hero" ? "brand-tube-hero" : ""} ${className}`}
       style={
         {
           position: "absolute",
@@ -47,3 +49,4 @@ export default function BrandTube({
     />
   );
 }
+
