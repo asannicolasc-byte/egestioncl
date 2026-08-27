@@ -87,7 +87,7 @@ export default function RibbonText() {
       </g>
 
       <g mask="url(#ribbonFrontMask)" filter="url(#ribbonFrontShadow)">
-        <path d={D_FRONT} fill="none" stroke="#FFFFFF" strokeWidth="70" />
+        <rect x="0" y="0" width="1360" height="1000" fill="#FFFFFF" />
         <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="74" />
         <path d={D} fill="none" stroke="#C0E12D" strokeWidth="58" />
         {textEl("ribbonFlow-front")}
