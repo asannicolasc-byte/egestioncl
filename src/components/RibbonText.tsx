@@ -77,9 +77,6 @@ export default function RibbonText() {
             strokeLinecap="round"
           />
         </mask>
-        <filter id="ribbonFrontShadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dy="2" stdDeviation="6" floodColor="#252944" floodOpacity="0.14" />
-        </filter>
       </defs>
 
       <g id="ribbonLayer">
