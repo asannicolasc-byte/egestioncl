@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const D = "M940 -120 C 860 80 784 220 760 360 C 732 536 840 640 972 612 C 1096 584 1132 432 1024 368 C 924 308 804 372 780 488 C 760 600 840 700 960 792 C 1080 884 1200 940 1400 1000";
+const RIBBON_TEXT = "Tu empresa en buenas manos · ";
 
 export default function RibbonText() {
   const [width, setWidth] = useState(1440);
@@ -18,7 +19,7 @@ export default function RibbonText() {
   const svgWidth = isXL ? 1360 : 1050;
   const svgHeight = isXL ? 1000 : 772;
   const right = isXL ? -310 : -250;
-  const fontSize = isXL ? 18 : 17;
+  const fontSize = isXL ? 22 : 21;
 
   return (
     <svg
@@ -46,10 +47,12 @@ export default function RibbonText() {
         fontSize={fontSize}
         fontWeight="500"
         letterSpacing="2.2"
+        dy="0.35em"
+        textAnchor="start"
         style={{ textTransform: "uppercase" }}
       >
         <textPath href="#ribbonFlow" startOffset="0">
-          Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos · Tu empresa en buenas manos ·
+          {RIBBON_TEXT.repeat(25)}
         </textPath>
       </text>
     </svg>
