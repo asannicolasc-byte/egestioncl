@@ -570,9 +570,6 @@ function Index() {
                     </li>
                   </ul>
                 </div>
-                <p className="mt-10 font-display text-lg font-semibold text-brand-lime">
-                  Tu empresa en buenas manos.
-                </p>
               </div>
             </Reveal>
           </div>
