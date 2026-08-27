@@ -255,7 +255,7 @@ function Index() {
               </Reveal>
               <Reveal delay={120}>
                 <p className="mt-0 max-w-3xl text-base leading-relaxed text-brand-ink/70">
-                  Te explicamos qué significa cada número y qué hacer con él.{" "}
+                  Te explicamos qué significa cada número y te ayudamos a gestionarlo.
                 </p>
               </Reveal>
             </div>
