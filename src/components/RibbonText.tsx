@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 const D = "M940 -120 C 860 80 784 220 760 360 C 732 536 840 640 972 612 C 1096 584 1132 432 1024 368 C 924 308 804 372 780 488 C 760 600 840 700 960 792 C 1080 884 1200 940 1400 1000";
-// Sub-segment of D that passes in FRONT through the self-crossing.
+// Sub-segment of D that passes in FRONT through the self-crossing (segments 4-5, verbatim from D).
 const D_FRONT = "M1024 368 C 924 308 804 372 780 488 C 760 600 840 700 960 792";
+// Length of D up to the start of D_FRONT, so the duplicated text keeps the exact same rhythm.
+const FRONT_START = 1234.864;
 const RIBBON_TEXT = "Tu empresa en buenas manos · ";
 
 export default function RibbonText() {
@@ -23,7 +25,7 @@ export default function RibbonText() {
   const right = isXL ? -310 : -250;
   const fontSize = isXL ? 22 : 21;
 
-  const textEl = (id: string) => (
+  const textEl = (id: string, offset: number) => (
     <text
       fill="#252944"
       fontSize={fontSize}
@@ -33,7 +35,7 @@ export default function RibbonText() {
       textAnchor="start"
       style={{ textTransform: "uppercase" }}
     >
-      <textPath href={`#${id}`} startOffset="0">
+      <textPath href={`#${id}`} startOffset={offset}>
         {RIBBON_TEXT.repeat(25)}
       </textPath>
     </text>
@@ -57,7 +59,7 @@ export default function RibbonText() {
     >
       <defs>
         <path id="ribbonFlow" d={D} fill="none" />
-        <path id="ribbonFlow-front" d={D} fill="none" />
+        <path id="ribbonFlow-front" d={D_FRONT} fill="none" />
         <mask
           id="ribbonFrontMask"
           maskUnits="userSpaceOnUse"
@@ -83,14 +85,13 @@ export default function RibbonText() {
       <g id="ribbonLayer">
         <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="74" />
         <path d={D} fill="none" stroke="#C0E12D" strokeWidth="58" />
-        {textEl("ribbonFlow")}
+        {textEl("ribbonFlow", 0)}
       </g>
 
       <g mask="url(#ribbonFrontMask)" filter="url(#ribbonFrontShadow)">
-        <rect x="0" y="0" width="1360" height="1000" fill="#FFFFFF" />
-        <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="74" />
-        <path d={D} fill="none" stroke="#C0E12D" strokeWidth="58" />
-        {textEl("ribbonFlow-front")}
+        <path d={D_FRONT} fill="none" stroke="#FFFFFF" strokeWidth="70" />
+        <path d={D_FRONT} fill="none" stroke="#C0E12D" strokeWidth="58" />
+        {textEl("ribbonFlow-front", -FRONT_START)}
       </g>
     </svg>
   );
