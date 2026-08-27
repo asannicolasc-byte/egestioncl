@@ -457,9 +457,7 @@ function Index() {
                   Cowork Andino
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-ink/75 sm:text-lg">
-                  Cowork Andino es una extensión de EGestión que le entrega a las personas un
-                  espacio para trabajar. Uno de los primeros coworks de la ciudad, hecho por alguien
-                  de la ciudad.
+                  Cowork Andino es una extensión de EGestión que le entrega a las personas un espacio para trabajar, para acompañar a los que emprenden en Los Andes. Un lugar para trabajar, encontrarse y hacer crecer proyectos.
                 </p>
                 <a
                   href="#contacto"
