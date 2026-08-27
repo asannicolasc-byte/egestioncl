@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 const D = "M940 -120 C 860 80 784 220 760 360 C 732 536 840 640 972 612 C 1096 584 1132 432 1024 368 C 924 308 804 372 780 488 C 760 600 840 700 960 792 C 1080 884 1200 940 1400 1000";
+// Sub-segment of D that passes in FRONT through the self-crossing.
+const D_FRONT = "M1024 368 C 924 308 804 372 780 488 C 760 600 840 700 960 792";
 const RIBBON_TEXT = "Tu empresa en buenas manos · ";
 
 export default function RibbonText() {
@@ -21,6 +23,22 @@ export default function RibbonText() {
   const right = isXL ? -310 : -250;
   const fontSize = isXL ? 22 : 21;
 
+  const textEl = (id: string) => (
+    <text
+      fill="#252944"
+      fontSize={fontSize}
+      fontWeight="500"
+      letterSpacing="2.2"
+      dy="0.35em"
+      textAnchor="start"
+      style={{ textTransform: "uppercase" }}
+    >
+      <textPath href={`#${id}`} startOffset="0">
+        {RIBBON_TEXT.repeat(25)}
+      </textPath>
+    </text>
+  );
+
   return (
     <svg
       aria-hidden="true"
@@ -39,22 +57,41 @@ export default function RibbonText() {
     >
       <defs>
         <path id="ribbonFlow" d={D} fill="none" />
+        <path id="ribbonFlow-front" d={D} fill="none" />
+        <mask
+          id="ribbonFrontMask"
+          maskUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="1360"
+          height="1000"
+        >
+          <rect x="0" y="0" width="1360" height="1000" fill="black" />
+          <path
+            d={D_FRONT}
+            stroke="white"
+            strokeWidth="88"
+            fill="none"
+            strokeLinecap="round"
+          />
+        </mask>
+        <filter id="ribbonFrontShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dy="2" stdDeviation="6" floodColor="#252944" floodOpacity="0.14" />
+        </filter>
       </defs>
-      <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="74" />
-      <path d={D} fill="none" stroke="#C0E12D" strokeWidth="58" />
-      <text
-        fill="#252944"
-        fontSize={fontSize}
-        fontWeight="500"
-        letterSpacing="2.2"
-        dy="0.35em"
-        textAnchor="start"
-        style={{ textTransform: "uppercase" }}
-      >
-        <textPath href="#ribbonFlow" startOffset="0">
-          {RIBBON_TEXT.repeat(25)}
-        </textPath>
-      </text>
+
+      <g id="ribbonLayer">
+        <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="74" />
+        <path d={D} fill="none" stroke="#C0E12D" strokeWidth="58" />
+        {textEl("ribbonFlow")}
+      </g>
+
+      <g mask="url(#ribbonFrontMask)" filter="url(#ribbonFrontShadow)">
+        <path d={D_FRONT} fill="none" stroke="#FFFFFF" strokeWidth="70" />
+        <path d={D} fill="none" stroke="#FFFFFF" strokeWidth="74" />
+        <path d={D} fill="none" stroke="#C0E12D" strokeWidth="58" />
+        {textEl("ribbonFlow-front")}
+      </g>
     </svg>
   );
 }
