@@ -77,7 +77,7 @@ const SERVICIOS = [
     title: "Gestión de personas",
     icon: Users,
     tone: "soft" as const,
-    text: "Aplicamos la normativa laboral vigente para que enfrentes con tranquilidad el día a día de tu equipo: contratos y gente en regla, mejores relaciones laborales.",
+    text: "Contratos, liquidaciones y normativa laboral al día, para que el día a día con tu equipo sea tranquilo",
   },
 ];
 
