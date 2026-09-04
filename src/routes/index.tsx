@@ -247,10 +247,10 @@ function Index() {
             </Reveal>
             <div className="mt-8 grid">
               <Reveal>
-                <h2 className="mb-4 text-2xl leading-[1.12] font-bold text-brand-ink sm:text-[29px] lg:text-[2.6rem]">
-                  <span className="text-brand-ink">Somos un equipo de expertos en</span>
-                  <span className="block text-brand-blue">asesoría contable, tributaria</span>
-                  <span className="block text-brand-blue">y estratégica</span>
+                <h2 className="mb-4 text-2xl leading-[1.12] font-bold text-brand-navy sm:text-[29px] lg:text-[2.6rem]">
+                  <span className="text-brand-navy">Somos un equipo de expertos en</span>
+                  <span className="block text-brand-navy">asesoría contable, tributaria</span>
+                  <span className="block text-brand-navy">y estratégica</span>
                 </h2>
               </Reveal>
               <Reveal delay={120}>
@@ -407,7 +407,7 @@ function Index() {
         <section className="relative overflow-hidden mx-auto max-w-6xl px-5 py-24 md:py-32">
           <Reveal>
             <Eyebrow>Por qué EGestión</Eyebrow>
-            <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-ink sm:text-4xl lg:text-[3rem]">
+            <h2 className="mt-8 max-w-3xl text-3xl leading-[1.12] font-bold text-brand-navy sm:text-4xl lg:text-[3rem]">
               Entendemos tu negocio&nbsp;
               <br />
               y&nbsp;te acompañamos&nbsp;
@@ -494,7 +494,7 @@ function Index() {
           <div className="mt-8 grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <Reveal>
               <div className="flex h-full flex-col rounded-[32px] border border-brand-soft bg-white p-7 shadow-[0_28px_60px_-45px_rgba(37,41,67,0.6)] sm:p-10">
-                <h2 className="text-3xl leading-tight font-bold text-brand-ink sm:text-4xl">
+                <h2 className="text-3xl leading-tight font-bold text-brand-navy sm:text-4xl">
                   ¿Nos tomamos un café?
                 </h2>
                 <p className="mt-4 text-sm text-brand-ink/65">
