@@ -77,7 +77,7 @@ const SERVICIOS = [
     title: "Gestión de personas",
     icon: Users,
     tone: "soft" as const,
-    text: "Contratos, liquidaciones y normativa laboral al día, para que el día a día con tu equipo sea tranquilo",
+    text: "Contratos, liquidaciones y normativa laboral al día, para que lideres a tu equipo con total tranquilidad.",
   },
 ];
 
@@ -103,7 +103,7 @@ const PILARES = [
   {
     icon: TrendingUp,
     title: "De la idea al crecimiento",
-    text: "Acompañamos al que parte y al que quiere crecer.",
+    text: "Acompañamos al que emprende y al que quiere crecer.",
     tone: "white" as const,
   },
 ];
@@ -176,12 +176,12 @@ function Index() {
                 <span className="size-2 rounded-full bg-brand-blue" />
                 ASESORÍA CONTABLE Y ESTRATÉGICA{" "}
               </span>
-              <h1 className="mt-7 text-[2.75rem] leading-[0.98] font-bold text-brand-ink sm:text-6xl lg:text-[5rem]">
+              <h1 className="mt-7 text-[2.75rem] leading-[0.98] font-bold text-brand-navy sm:text-6xl lg:text-[5rem]">
                 Queremos ver{"\n"}
-                <span className="block text-brand-blue">crecer tu negocio</span>
+                <span className="block text-brand-navy">crecer tu negocio</span>
               </h1>
               <p className="mt-7 max-w-xl text-base leading-relaxed text-brand-ink/65 sm:text-lg">
-                Te acompañamos en cada decisión: Asesoría contable, tributaria y estratégica,
+                Te acompañamos en cada decisión: Asesoría contable, tributaria,
                 finanzas y gestión de personas.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -222,7 +222,7 @@ function Index() {
                   </span>
                   <p className="mt-2.5 font-display text-base leading-[1.1]">
                     <span className="block font-light">¿Estás pensando en abrir tu negocio?</span>
-                    <span className="block font-bold">Partamos por un café.</span>
+                    <span className="block font-bold">Conversemos con un café.</span>
                   </p>
                 </div>
                 <img
@@ -457,7 +457,7 @@ function Index() {
                   Cowork Andino
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-ink/75 sm:text-lg">
-                  Cowork Andino es una extensión de EGestión que le entrega a las personas un espacio para trabajar, para acompañar a los que emprenden en Los Andes. Un lugar para trabajar, encontrarse y hacer crecer proyectos.
+                  Cowork Andino es una extensión de EGestión que le entrega a las personas un espacio para trabajar, para acompañar a los que emprenden en Los Andes. Un lugar para encontrarse y hacer crecer proyectos.
                 </p>
                 <a
                   href="#contacto"
