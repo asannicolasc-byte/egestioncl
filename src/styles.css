@@ -60,6 +60,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-brand-blue: var(--brand-blue);
+  --color-brand-navy: var(--brand-navy);
   --color-brand-lime: var(--brand-lime);
   --color-brand-ink: var(--brand-ink);
   --color-brand-soft: var(--brand-soft);
@@ -74,6 +75,7 @@
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
   --brand-blue: oklch(0.5105 0.2741 264.03);
+  --brand-navy: #1e2a6e;
   --brand-lime: oklch(0.8563 0.1922 120.21);
   --brand-ink: oklch(0.2901 0.0478 276.32);
   --brand-soft: oklch(0.909 0.0178 279.04);
